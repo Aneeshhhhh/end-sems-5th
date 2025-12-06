@@ -1,0 +1,55 @@
+**Definition**
+Use of IoT devices, sensors, controllers, and networks to automate industrial processes with minimal human intervention.
+
+**Types**
+
+* **Process automation** (chemical, oil, pharma)
+* **Factory automation** (assembly lines, robotics)
+* **Building automation** (HVAC, lighting)
+* **Safety automation** (fault detection, alarms)
+
+**Working / Steps**
+
+1. Sensors collect data (temperature, pressure, vibration).
+2. IoT devices send data to controllers (PLC, SCADA, IoT gateways).
+3. Controllers analyze and execute actions (switch ON/OFF, adjust speed).
+4. Data forwarded to cloud for monitoring and analytics.
+5. System triggers alerts and optimizes processes in real time.
+
+**Diagram (text-based)**
+
+```
+[Sensors] → [PLC/IoT Controller] → [Gateway] → [Cloud/SCADA] → [Dashboard]
+                     │
+                     └──→ Actuators (Motors, Valves)
+```
+
+**Advantages**
+
+* Increased production efficiency
+* Reduced human error
+* Real-time monitoring
+* Predictive maintenance
+* Lower operational costs
+
+**Disadvantages**
+
+* High installation cost
+* Cybersecurity risks
+* Requires skilled technicians
+* System downtime affects entire workflow
+
+**Examples**
+
+* Automated assembly lines
+* Robotic welding and painting
+* Smart packaging systems
+* Conveyor belt automation
+
+**Applications**
+
+* Manufacturing
+* Automotive plants
+* Food and beverage production
+* Oil & gas
+* Power generation and utilities

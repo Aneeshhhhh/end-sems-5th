@@ -1,0 +1,60 @@
+**Definition**
+Commercial Building Automation refers to using IoT sensors, controllers, and a Building Management System (BMS) to automatically control HVAC, lighting, security, elevators, and energy systems in commercial buildings.
+
+**Types**
+
+* **HVAC automation**
+* **Lighting automation**
+* **Security & access control**
+* **Energy management systems**
+* **Fire & safety automation**
+
+**Working / Steps**
+
+1. Sensors measure temperature, occupancy, light levels, air quality.
+2. Data sent to controllers and BMS.
+3. BMS decides actions: adjust AC, dim lights, lock doors, trigger alarms.
+4. Actuators execute changes.
+5. Cloud/BMS dashboard shows real-time building status.
+
+**Diagram (text-based)**
+
+```
+[Sensors] → [BMS Controller] → [Actuators]
+                   │
+                   ▼
+               [Dashboard]
+```
+
+**Advantages**
+
+* Reduced energy consumption
+* Enhanced occupant comfort
+* Improved security
+* Predictive maintenance
+* Centralized control
+
+**Disadvantages**
+
+* High installation cost
+* Integration complexity
+* Cybersecurity risks
+* Requires skilled staff
+
+**Examples**
+
+* Automated office HVAC
+* Motion-based lighting
+* Smart access control systems
+* Fire detection and suppression automation
+
+**Applications**
+
+* Office buildings
+* Malls
+* Hotels
+* Hospitals
+* Airports
+
+**Short Note (Exam-ready)**
+Commercial building automation uses IoT-enabled sensors and a BMS to monitor and control HVAC, lighting, security, and energy systems. It reduces energy usage, improves comfort, enhances safety, and allows centralized, intelligent management of large commercial buildings.

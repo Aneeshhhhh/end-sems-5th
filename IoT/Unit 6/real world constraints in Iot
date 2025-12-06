@@ -1,0 +1,57 @@
+* **Resource Constraints**
+
+  * Limited CPU, memory, and storage in IoT devices
+  * Low battery capacity requiring energy-efficient protocols
+  * Restricted computation at the edge
+
+* **Network Constraints**
+
+  * Low bandwidth and unreliable connectivity
+  * High latency for remote cloud communication
+  * Use of heterogeneous protocols (WiFi, Zigbee, LoRa) complicates communication
+
+* **Scalability Constraints**
+
+  * Large number of devices generating massive data
+  * Need for scalable storage and processing
+  * Device management becomes complex at scale
+
+* **Security Constraints**
+
+  * Weak encryption due to resource limits
+  * Vulnerability to attacks (spoofing, jamming, MITM)
+  * Difficulty in secure authentication and firmware updates
+
+* **Privacy Constraints**
+
+  * Sensitive personal/environmental data collection
+  * Risk of unauthorized access or misuse
+  * Need for strong data protection policies
+
+* **Environmental Constraints**
+
+  * Extreme temperature, humidity, dust, vibration
+  * Physical damage affecting sensor accuracy
+  * Outdoor deployment issues (weather, corrosion)
+
+* **Interoperability Constraints**
+
+  * Multiple vendors and incompatible standards
+  * Difficulty in integrating old and new devices
+  * Need for middleware or common data models
+
+* **Cost Constraints**
+
+  * High deployment and maintenance cost
+  * Connectivity and cloud storage expenses
+  * Replacement/repair cost for devices
+
+* **Regulatory Constraints**
+
+  * Compliance with data protection laws (GDPR)
+  * Spectrum regulations for wireless communication
+
+* **Usability Constraints**
+
+  * Limited user expertise for configuring devices
+  * Complex interfaces for monitoring and maintenance

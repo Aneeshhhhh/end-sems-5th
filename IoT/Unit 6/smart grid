@@ -1,0 +1,65 @@
+**Definition**
+A smart grid is an electricity network that uses IoT sensors, communication technologies, and analytics to monitor, control, and optimize power generation, transmission, and distribution in real time.
+
+**Types**
+
+* **Advanced Metering Infrastructure (AMI)**
+* **Smart distribution grid**
+* **Smart transmission grid**
+* **Microgrids**
+* **Renewable-integrated grids**
+
+**Working / Steps**
+
+1. Smart meters/sensors measure voltage, load, frequency, and consumption.
+2. IoT communication (RF, Zigbee, LTE, PLC) sends data to utility control centers.
+3. Analytics detect faults, demand patterns, and overloads.
+4. Automated control systems adjust supply, reroute power, or balance loads.
+5. Consumers receive real-time usage data for demand-side management.
+6. Integration with renewables ensures stable and optimized energy flow.
+
+**Diagram (text-based)**
+
+```
+[Power Generation] 
+        │
+        ▼
+[Transmission Lines] ── Sensors ──>
+        │
+        ▼
+[Distribution Network] ── Smart Meters ──>
+        │
+        ▼
+[Consumers] ←── Cloud/Utility Control Center ── Analytics & Control
+```
+
+**Advantages**
+
+* Real-time monitoring and control
+* Reduced power losses
+* Faster fault detection and isolation
+* Supports renewable energy integration
+* Better demand-response management
+* Improved reliability and efficiency
+
+**Disadvantages**
+
+* High deployment cost
+* Requires strong cybersecurity
+* Complexity in integration with legacy grids
+* Privacy concerns due to detailed consumption data
+
+**Examples**
+
+* Smart meters used in households
+* Automatic outage detection systems
+* Solar panel–integrated microgrids
+* Dynamic pricing programs
+
+**Applications**
+
+* Urban smart energy management
+* Renewable energy balancing
+* Preventive maintenance in utilities
+* Rural electrification with microgrids
+* Smart homes and industries with optimized power usage

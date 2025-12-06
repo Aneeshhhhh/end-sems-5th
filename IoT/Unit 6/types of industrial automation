@@ -1,0 +1,74 @@
+**Definition**
+Types of industrial automation classify how industries automate processes using machines, controllers, and IoT technologies to improve productivity, accuracy, and efficiency.
+
+**Types**
+
+1. **Fixed (Hard) Automation**
+
+   * Designed for high-volume, repetitive tasks.
+   * Machinery is fixed and cannot be easily changed.
+   * Example: automated assembly lines.
+
+2. **Programmable Automation**
+
+   * Equipment can be reprogrammed for different product batches.
+   * Suitable for batch production.
+   * Example: CNC machines.
+
+3. **Flexible (Soft) Automation**
+
+   * Rapid changeover between products with minimal reconfiguration.
+   * Supports varied product ranges.
+   * Example: robotic cells.
+
+4. **Integrated Automation**
+
+   * Fully automated system combining PLCs, SCADA, robotics, IoT, and analytics.
+   * End-to-end automation from design to production.
+
+**Working / Steps**
+
+1. Sensors collect real-time data.
+2. Controllers (PLC, DCS) process inputs.
+3. Actuators perform required actions.
+4. Systems communicate via industrial networks.
+5. Monitoring and supervision through SCADA/MES.
+
+**Diagram (text-based)**
+
+```
+[Sensors] → [Controller (PLC/DCS)] → [Actuators]
+                     │
+                     ▼
+               [Supervisory System]
+```
+
+**Advantages**
+
+* High productivity
+* Improved quality
+* Reduced human errors
+* Lower operational cost
+* Supports continuous operation
+
+**Disadvantages**
+
+* High initial investment
+* Requires skilled workforce
+* Maintenance complexity
+* Risk of job displacement
+
+**Examples**
+
+* Car manufacturing robots
+* Packaging automation
+* Conveyor belt systems
+* Automated welding and painting
+
+**Applications**
+
+* Automotive manufacturing
+* Food processing
+* Pharmaceuticals
+* Electronics production
+* Chemical industries

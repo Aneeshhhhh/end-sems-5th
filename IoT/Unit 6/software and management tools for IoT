@@ -1,0 +1,63 @@
+**Definition**
+IoT cloud storage models define how IoT data is stored, managed, and accessed in cloud environments based on requirements like latency, volume, security, and processing needs.
+
+**Types**
+
+* **Public Cloud Storage**
+* **Private Cloud Storage**
+* **Hybrid Cloud Storage**
+* **Multi-cloud Storage**
+* **Fog/Edge-connected Cloud Storage**
+* **Time-series Database Storage** (specialized for IoT sensor data)
+
+**Working / Steps**
+
+1. IoT devices generate continuous data streams.
+2. Gateways or edge devices preprocess data.
+3. Data is transmitted securely to the cloud storage model selected.
+4. Cloud stores data in object storage, block storage, or time-series DBs.
+5. Analytics tools access stored data for visualization and decision-making.
+6. Applications interact with cloud APIs for retrieval and updates.
+
+**Diagram (text-based)**
+
+```
+[Sensors] → [Gateway/Edge] → [Cloud Storage]
+                                │
+                                ├── Object Storage
+                                ├── Block Storage
+                                └── Time-Series DB
+                                   │
+                                   ▼
+                              [Analytics / Apps]
+```
+
+**Advantages**
+
+* Scalable storage for large IoT datasets
+* High availability and reliability
+* Supports real-time and historical analytics
+* Lower infrastructure cost
+* Integrates with AI/ML tools
+
+**Disadvantages**
+
+* Latency issues for time-critical tasks
+* Vendor lock-in risks
+* High recurring cost
+* Data privacy and compliance challenges
+
+**Examples**
+
+* AWS S3, DynamoDB (IoT storage)
+* Azure Blob Storage, Time Series Insights
+* Google Cloud Storage + Bigtable
+* InfluxDB, TimescaleDB for IoT
+
+**Applications**
+
+* Smart cities storing sensor histories
+* Industrial IoT machine data logs
+* Healthcare monitoring data
+* Retail and supply chain analytics
+* Energy consumption data archiving

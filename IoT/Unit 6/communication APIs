@@ -1,0 +1,64 @@
+**Definition**
+Communication APIs are software interfaces that enable IoT devices, gateways, and cloud applications to communicate by sending, receiving, and managing data using standardized protocols.
+
+**Types**
+
+* **REST APIs** (HTTP-based)
+* **MQTT APIs** (publish–subscribe messaging)
+* **CoAP APIs** (lightweight constrained devices)
+* **WebSocket APIs** (full-duplex communication)
+* **BLE/GATT APIs** (Bluetooth communication)
+* **Vendor IoT APIs** (AWS IoT, Azure IoT, Google IoT APIs)
+
+**Working / Steps**
+
+1. IoT device collects data.
+2. Communication API formats the message (JSON, binary).
+3. API sends data through a supported protocol (HTTP/MQTT/CoAP).
+4. Cloud/server receives and processes the message.
+5. API enables commands or responses back to the device.
+
+**Diagram (text-based)**
+
+```
+[IoT Device]
+     │
+     ▼
+Communication API
+     │  (MQTT / REST / CoAP)
+     ▼
+[Cloud / App Server]
+     │
+     ▼
+   Response / Control Command
+```
+
+**Advantages**
+
+* Standardized communication
+* Interoperability across devices
+* Simplifies IoT application development
+* Supports real-time data transfer
+* Scalable for large deployments
+
+**Disadvantages**
+
+* Requires network availability
+* Overhead for constrained devices (REST)
+* Security risks if not encrypted
+* Protocol compatibility issues
+
+**Examples**
+
+* Sending sensor data through an MQTT API
+* REST API to fetch device status
+* WebSocket API for live monitoring
+* CoAP API in low-power devices
+
+**Applications**
+
+* Smart home device control
+* Industrial sensor data streaming
+* Remote monitoring dashboards
+* Healthcare IoT communication
+* Smart city infrastructure systems

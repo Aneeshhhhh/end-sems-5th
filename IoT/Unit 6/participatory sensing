@@ -1,0 +1,63 @@
+**Definition**
+Participatory sensing is a method where individuals use their smartphones or IoT devices to collect, share, and contribute data about their environment for large-scale sensing applications.
+
+**Types**
+
+* **Opportunistic sensing** (automatic data collection without user intervention)
+* **Participatory (explicit) sensing** (user actively captures data)
+* **Community-based sensing** (group of people contribute to a common goal)
+* **Personal sensing** (self-monitoring: health, fitness)
+
+**Working / Steps**
+
+1. Users carry smartphones with sensors (GPS, camera, accelerometer, mic).
+2. They capture or allow automatic collection of environmental data.
+3. Data is uploaded to a cloud platform.
+4. System aggregates, filters, and analyzes crowd data.
+5. Results are visualized for public, researchers, or authorities.
+
+**Diagram (text-based)**
+
+```
+[Users with Smartphones]
+          │
+          ▼
+   Data Collection
+          │
+          ▼
+       [Cloud]
+          │
+   Analysis & Aggregation
+          │
+          ▼
+     [Applications]
+```
+
+**Advantages**
+
+* Low cost (uses existing devices)
+* Large-scale, real-time data
+* Community involvement
+* High geographic coverage
+
+**Disadvantages**
+
+* Privacy concerns
+* Data quality varies
+* User participation inconsistency
+* Battery and network usage
+
+**Examples**
+
+* Pollution monitoring apps
+* Traffic congestion reporting
+* Noise mapping
+* Disaster reporting by citizens
+
+**Applications**
+
+* Smart cities
+* Environmental monitoring
+* Public health surveys
+* Transportation planning
+* Emergency management

@@ -1,0 +1,66 @@
+**Definition**
+AWS provides a wide range of cloud services for computing, storage, networking, databases, analytics, security, IoT, and application deployment to support scalable and reliable cloud-based systems.
+
+**Types (Major Categories of AWS Services)**
+
+* **Compute Services** (EC2, Lambda, ECS)
+* **Storage Services** (S3, EBS, Glacier)
+* **Database Services** (RDS, DynamoDB, Aurora)
+* **Networking Services** (VPC, Route 53, CloudFront)
+* **Analytics Services** (Athena, EMR, Kinesis)
+* **Machine Learning Services** (SageMaker)
+* **Security Services** (IAM, KMS, Shield)
+* **Management & Monitoring** (CloudWatch, CloudTrail)
+* **IoT Services** (AWS IoT Core, IoT Analytics, IoT Greengrass)
+* **Developer Tools** (CodeBuild, CodeDeploy, CodePipeline)
+
+**Working / Steps**
+
+1. Users select AWS services through the console or API.
+2. Resources are provisioned on demand (compute, storage, databases).
+3. AWS manages scaling, availability, and infrastructure.
+4. Integrated services communicate with each other (e.g., IoT Core → Lambda → DynamoDB).
+5. Users monitor and secure services using IAM, CloudWatch, and VPC.
+
+**Diagram (text-based)**
+
+```
+        [AWS Cloud]
+ ┌─────────┬──────────┬───────────┬───────────┐
+ ▼         ▼           ▼           ▼           ▼
+Compute   Storage   Database   Networking   IoT Services
+   │         │           │           │           │
+   └─────────┴───────────┴───────────┴───────────┘
+                 Applications
+```
+
+**Advantages**
+
+* Highly scalable
+* Pay-as-you-go pricing
+* Global availability
+* Large ecosystem of services
+* Strong security and compliance
+
+**Disadvantages**
+
+* Costs can rise with heavy use
+* Requires cloud expertise
+* Vendor lock-in
+* Complex service configurations
+
+**Examples**
+
+* EC2 for virtual servers
+* S3 for object storage
+* DynamoDB for NoSQL database
+* Lambda for serverless compute
+* IoT Core for IoT messaging
+
+**Applications**
+
+* Web and mobile app hosting
+* IoT data processing and analytics
+* Machine learning pipelines
+* Big data applications
+* Enterprise applications and microservices
