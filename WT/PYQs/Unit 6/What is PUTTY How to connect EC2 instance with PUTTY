@@ -1,0 +1,45 @@
+**Definition**
+PuTTY is a free SSH client used to remotely access Linux-based EC2 instances from Windows.
+
+**Working**
+PuTTY establishes an encrypted SSH session using a private key (.ppk) to authenticate with the EC2 instance.
+
+**Steps**
+
+1. Open **PuTTYgen** → Load your `.pem` key → Save as `.ppk`.
+2. Open **PuTTY**.
+3. Enter the **EC2 Public IPv4** in “Host Name”.
+4. Go to **Connection → SSH → Auth** → Browse → Select `.ppk`.
+5. Click **Open** → Login as `ec2-user` / `ubuntu`.
+
+**Advantages**
+
+* Lightweight and easy to use.
+* Supports SSH, telnet, serial.
+* Works well for EC2 remote access.
+
+**Disadvantages**
+
+* Requires conversion from `.pem` to `.ppk`.
+* Windows-only (native).
+
+**Examples**
+Connecting to Amazon Linux using:
+
+```
+Host: ec2-xx-xx-xx-xx.compute.amazonaws.com
+User: ec2-user
+```
+
+**Short code snippets**
+SSH equivalent command:
+
+```
+ssh -i key.pem ec2-user@ec2-public-ip
+```
+
+**Applications**
+
+* Logging into EC2 instances.
+* Managing remote Linux servers.
+* Running commands and deployments.

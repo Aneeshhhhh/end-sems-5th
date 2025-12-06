@@ -1,0 +1,61 @@
+**Definition**
+AWS Elastic Compute Cloud (EC2) provides scalable virtual machines (instances) for running applications in the cloud.
+
+**Types**
+
+* **General Purpose:** t2, t3, m5.
+* **Compute Optimized:** c5, c6g.
+* **Memory Optimized:** r5, x1e.
+* **Storage Optimized:** i3, d2.
+* **Accelerated Computing:** p3, g4.
+
+**Working**
+EC2 provisions virtual servers on demand. Users choose instance type, OS, storage, and network settings, launch the instance, and scale resources up or down as required.
+
+**Diagrams (text)**
+
+```
+User → Launch Request
+     → EC2 Instance (CPU, RAM, Storage)
+     → VPC + Security Groups
+     → Application Running
+```
+
+**Advantages**
+
+* Highly scalable compute.
+* Wide selection of instance types.
+* Pay-per-use billing.
+* Integrates with all AWS services.
+* Flexible configuration.
+
+**Disadvantages**
+
+* Costs rise if instances run continuously.
+* Requires configuration and monitoring.
+* Security depends on user setup.
+
+**Examples**
+
+* Hosting backend servers.
+* Running machine learning inference.
+* Deploying microservices.
+
+**Short code snippets**
+Launch EC2 instance:
+
+```
+aws ec2 run-instances --image-id ami-123456 --instance-type t2.micro
+```
+
+Stop instance:
+
+```
+aws ec2 stop-instances --instance-ids i-123456
+```
+
+Connect via SSH:
+
+```
+ssh -i key.pem ec2-user@ec2-public-ip
+```

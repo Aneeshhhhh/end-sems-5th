@@ -1,0 +1,74 @@
+**Definition**
+AWS storage services provide scalable, durable cloud-based storage for objects, files, and block data used by applications and workloads.
+
+**Types**
+
+* **Amazon S3** – Object storage
+* **Amazon EBS** – Block storage for EC2
+* **Amazon EFS** – Managed shared file system
+* **Amazon Glacier / Glacier Deep Archive** – Archival storage
+* **AWS Storage Gateway** – Hybrid on-prem + cloud storage
+* **Amazon FSx** – High-performance file systems (Windows, Lustre)
+* **AWS Backup** – Centralized backup solution
+
+**Working**
+Each service handles a different storage need: S3 stores objects in buckets, EBS attaches as block volumes to EC2, EFS provides scalable shared file storage, and Glacier archives data for long-term retention.
+
+**Diagrams (text)**
+
+```
+AWS Storage
+ ├── S3 (Object)
+ ├── EBS (Block → EC2)
+ ├── EFS (File → Multi-EC2)
+ ├── Glacier (Archive)
+ ├── FSx (Specialized FS)
+ └── Storage Gateway (Hybrid)
+```
+
+**Advantages**
+
+* Highly durable and scalable
+* Multiple storage classes
+* Integrated with AWS compute and databases
+* Pay-as-you-use
+* Automated lifecycle policies
+
+**Disadvantages**
+
+* Costs increase with heavy usage
+* Misusing storage type reduces performance
+* Data transfer charges may apply
+
+**Examples**
+
+* Store images/videos in S3
+* Use EBS for EC2 OS disks
+* Use EFS for shared backend storage
+* Use Glacier for long-term logs and backups
+
+**Short code snippets**
+Create S3 bucket:
+
+```
+aws s3 mb s3://mybucket
+```
+
+Upload file:
+
+```
+aws s3 cp file.txt s3://mybucket/
+```
+
+Create EBS volume:
+
+```
+aws ec2 create-volume --size 20 --availability-zone us-east-1a
+```
+
+**Applications**
+
+* Web app content storage
+* EC2 persistent volumes
+* Shared storage for microservices
+* Archival backups and compliance data

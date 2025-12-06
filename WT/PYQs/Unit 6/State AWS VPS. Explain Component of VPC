@@ -1,0 +1,142 @@
+**(Using full structured format as per your rule)**
+
+---
+
+**Definition**
+AWS VPC (Virtual Private Cloud) is a logically isolated virtual network in the AWS cloud where you control IP ranges, subnets, routing, and security to host AWS resources.
+
+---
+
+**Types**
+
+* Default VPC
+* Custom VPC
+* Public Subnet
+* Private Subnet
+* Hybrid VPC (VPN / Direct Connect)
+* Peered VPC
+
+---
+
+**Working**
+A VPC is created by defining an IP range (CIDR). You divide it into public/private subnets, attach gateways for internet or NAT access, assign route tables to manage traffic flow, and secure resources using Security Groups and Network ACLs.
+
+---
+
+**Diagrams (text)**
+
+```
+VPC (10.0.0.0/16)
+ ├── Public Subnet → IGW
+ ├── Private Subnet → NAT
+ ├── Route Table
+ ├── Security Groups
+ ├── NACLs
+ └── ENIs, Elastic IP
+```
+
+---
+
+**Advantages**
+
+* Full control over network configuration
+* High security with SG and NACLs
+* Supports hybrid architectures
+* Isolation between environments
+* Scalable for any workload
+
+---
+
+**Disadvantages**
+
+* Complex for beginners
+* NAT Gateways / Transit Gateway add cost
+* Misconfiguration can break connectivity
+
+---
+
+**Examples**
+
+* A 2-tier architecture: public EC2 + private RDS
+* Microservices separated into multiple subnets
+* Secure backend systems without internet access
+
+---
+
+**Short code snippets**
+Create VPC:
+
+```
+aws ec2 create-vpc --cidr-block 10.0.0.0/16
+```
+
+List VPC components:
+
+```
+aws ec2 describe-vpcs
+aws ec2 describe-subnets
+aws ec2 describe-route-tables
+```
+
+---
+
+**Applications**
+
+* Hosting secure applications
+* Deploying multi-tier architectures
+* Running isolated environments (dev/prod)
+* Hybrid on-prem + cloud networking
+
+---
+
+# **Components of VPC (Explanation)**
+
+### **1. Subnets**
+
+Logical subdivisions of a VPC.
+
+* **Public subnets** connect to the internet via IGW.
+* **Private subnets** run internal resources like databases.
+
+### **2. Route Tables**
+
+Control how traffic flows inside the VPC.
+Each subnet is associated with one route table.
+
+### **3. Internet Gateway (IGW)**
+
+Enables internet access for resources in public subnets.
+
+### **4. NAT Gateway**
+
+Allows private subnets to access the internet **outbound** without exposing them publicly.
+
+### **5. Security Groups (SGs)**
+
+Instance-level firewalls controlling inbound and outbound traffic.
+Stateful—return traffic is automatically allowed.
+
+### **6. Network ACLs (NACLs)**
+
+Subnet-level firewalls controlling traffic in and out.
+Stateless—rules must be explicitly defined for both directions.
+
+### **7. Elastic IP**
+
+Static public IP used for EC2 instances or NAT Gateways.
+
+### **8. Elastic Network Interface (ENI)**
+
+Virtual network interface attached to EC2 instances.
+
+### **9. DHCP Options Set**
+
+Provides DNS and DHCP settings to instances inside the VPC.
+
+### **10. VPC Peering / Transit Gateway**
+
+Used for connecting VPCs to each other or to on-prem networks.
+
+---
+
+If you want, I can also give **a full exam-style diagram-based explanation** or **a condensed 8-mark answer version**.

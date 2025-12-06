@@ -1,0 +1,90 @@
+**Definition**
+AWS Elastic Beanstalk is a Platform-as-a-Service (PaaS) that automatically handles deployment, scaling, and monitoring of applications without requiring manual server setup.
+
+**Types**
+
+* Web Server Environments (Node.js, Java, Python, PHP, .NET, Go, Ruby).
+* Worker Environments (background tasks).
+
+**Working**
+Elastic Beanstalk provisions EC2, Load Balancer, Auto Scaling, Security Groups, and environment variables automatically. You upload your application code, and Beanstalk manages deployment and scaling.
+
+**Steps**
+
+1. Prepare your application folder (e.g., Node.js, Python, Java WAR).
+2. Open **Elastic Beanstalk Console** → Create Application.
+3. Choose **Platform** (e.g., Node.js, Python).
+4. Upload your application code as a ZIP file.
+5. Elastic Beanstalk launches environment:
+
+   * EC2 instance
+   * Security Groups
+   * Auto Scaling
+   * Load Balancer
+   * CloudWatch monitoring
+6. Wait for health status = “**OK**”.
+7. Access the app using the provided **Beanstalk URL**:
+
+   ```
+   http://<app-name>.elasticbeanstalk.com
+   ```
+
+**Diagrams (text)**
+
+```
+User → Elastic Beanstalk → EB Environment
+                          ├── EC2
+                          ├── Load Balancer
+                          ├── Auto Scaling
+                          └── CloudWatch
+```
+
+**Advantages**
+
+* No server setup required.
+* Automatic scaling and load balancing.
+* Supports many programming languages.
+* Fast deployment.
+* Integrated monitoring.
+
+**Disadvantages**
+
+* Less control over infrastructure.
+* Debugging environment issues can be harder.
+* Environment updates may cause downtime.
+
+**Examples**
+Deploying a Node.js app:
+
+```
+zip app.zip package.json index.js
+eb init
+eb create my-env
+eb deploy
+```
+
+**Short code snippets**
+Install EB CLI:
+
+```
+pip install awsebcli
+```
+
+Create environment:
+
+```
+eb create my-env
+```
+
+Deploy:
+
+```
+eb deploy
+```
+
+**Applications**
+
+* Hosting full-stack web apps
+* Deploying REST APIs
+* Auto-scaled production workloads
+* Quick test environments for developers

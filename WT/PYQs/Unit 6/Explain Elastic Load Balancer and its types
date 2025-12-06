@@ -1,0 +1,15 @@
+Elastic Load Balancer (ELB) is an AWS service that automatically distributes incoming application traffic across multiple targets such as EC2 instances, containers, and IP addresses. It improves fault tolerance, increases availability, and ensures efficient utilization of backend resources. ELB continuously performs health checks and routes traffic only to healthy instances, providing seamless failover.
+
+**Application Load Balancer (ALB):**
+ALB operates at Layer 7 and routes traffic based on application-level content such as URL paths, hostnames, headers, and query strings. It is ideal for microservices, APIs, and containerized workloads because it can route different request paths to different target groups. ALB supports WebSockets, HTTP/2, SSL termination, and advanced routing functions like weighted routing.
+
+**Network Load Balancer (NLB):**
+NLB operates at Layer 4 and handles high-performance, low-latency TCP, UDP, and TLS traffic. It is designed for extremely high throughput and can handle millions of connections per second. NLB preserves the client’s source IP and is ideal for real-time systems, gaming servers, financial applications, and workloads requiring ultra-fast packet-level routing.
+
+**Gateway Load Balancer (GLB):**
+GLB is used mainly for deploying, scaling, and managing virtual appliances such as firewalls, intrusion detection systems, and deep packet inspection tools. It operates at Layer 3 and integrates routing with load balancing so that traffic can flow through these appliances transparently.
+
+**Classic Load Balancer (CLB):**
+CLB is the older generation load balancer supporting basic Layer 4 and Layer 7 operations. It offers simple load balancing for EC2 instances but lacks advanced routing and modern features. It is now used mainly for legacy workloads.
+
+If you want, I can also give short comparative notes or diagrams for each type.

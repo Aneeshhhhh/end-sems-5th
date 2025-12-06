@@ -1,0 +1,74 @@
+**Definition**
+Deploying a web application on Amazon EC2 involves provisioning a virtual server, configuring networking, installing dependencies, and hosting the application.
+
+**Types**
+
+* Static web deployment
+* Dynamic app deployment (Node.js, Python, Java, PHP)
+* N-tier deployment (Web + DB)
+
+**Working**
+An EC2 instance acts as the server. After launching it with proper networking and security, the application code is uploaded, dependencies installed, and the server is exposed via security groups for public access.
+
+**Steps**
+
+1. Launch an **EC2 instance** (choose AMI, instance type, key pair).
+2. Configure **VPC, subnet, security group** (allow HTTP/HTTPS, SSH).
+3. Connect using **SSH/PuTTY**.
+4. Install web server (example: Apache, Nginx, Node.js).
+
+   ```
+   sudo apt install apache2
+   ```
+5. Upload or clone your app to the EC2 instance.
+6. Start the web server / application.
+7. Attach **Elastic IP** for stable public access.
+8. Test by visiting:
+
+   ```
+   http://<public-ip>
+   ```
+
+**Diagrams (text)**
+
+```
+Client → Internet → EC2 (Web Server)
+                ↑
+           Security Group
+```
+
+**Advantages**
+
+* Full server control
+* Scalable compute
+* Supports any runtime
+* Integrates with ELB & Auto Scaling
+
+**Disadvantages**
+
+* Requires manual configuration
+* Must handle updates and server management
+* Cost increases when instance runs 24/7
+
+**Examples**
+Deploying Node.js app:
+
+```
+sudo apt update
+sudo apt install nodejs npm
+node app.js
+```
+
+**Short code snippets**
+Apache default page update:
+
+```
+echo "Hello from EC2" | sudo tee /var/www/html/index.html
+```
+
+**Applications**
+
+* Hosting websites
+* Deploying backend APIs
+* Running test servers
+* Hosting full-stack applications

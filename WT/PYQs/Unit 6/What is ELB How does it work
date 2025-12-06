@@ -1,0 +1,59 @@
+**Definition**
+Elastic Load Balancer (ELB) is an AWS service that automatically distributes incoming traffic across multiple EC2 instances to ensure high availability and fault tolerance.
+
+**Types**
+
+* **Application Load Balancer (ALB)** – Layer 7, HTTP/HTTPS routing.
+* **Network Load Balancer (NLB)** – Layer 4, high-performance TCP/UDP routing.
+* **Gateway Load Balancer (GLB)** – Deploys and scales virtual appliances.
+* **Classic Load Balancer (CLB)** – Older Layer 4/7 load balancer.
+
+**Working**
+ELB receives incoming client requests and evenly routes them to healthy backend instances. It performs health checks, removes unhealthy instances automatically, and scales traffic handling dynamically.
+
+**Diagrams (text)**
+
+```
+Clients → ELB → Healthy EC2 Instances
+            ↓
+      Health Checks
+```
+
+**Advantages**
+
+* High availability
+* Automatic failover
+* Scalable traffic handling
+* Integrated health checks
+* Supports HTTPS termination
+
+**Disadvantages**
+
+* Adds cost
+* Misconfiguration can block traffic
+* CLB has limited features
+
+**Examples**
+
+* ALB routing `/api` and `/app` to different EC2 groups
+* NLB handling millions of TCP connections
+
+**Short code snippets**
+Create target group:
+
+```
+aws elbv2 create-target-group --name mytg --protocol HTTP --port 80
+```
+
+Register instance:
+
+```
+aws elbv2 register-targets --target-group-arn arn... --targets Id=i-123456
+```
+
+**Applications**
+
+* Web application load distribution
+* Microservices routing
+* Auto Scaling architectures
+* High-traffic APIs

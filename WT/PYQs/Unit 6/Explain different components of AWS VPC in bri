@@ -1,0 +1,35 @@
+Understood.
+
+---
+
+Amazon VPC consists of several core components that together form a customizable virtual network environment.
+
+**Subnets:**
+Logical divisions of the VPC IP range. Public subnets connect to the internet via an Internet Gateway, while private subnets keep resources internal.
+
+**Route Tables:**
+Contain routing rules that determine where traffic from each subnet is directed. Public route tables send traffic to the IGW; private ones may route to a NAT Gateway.
+
+**Internet Gateway (IGW):**
+Allows public subnets and their resources to access the internet. It must be attached to the VPC and referenced in route tables.
+
+**NAT Gateway:**
+Enables private instances to access the internet for updates or API calls without exposing them publicly.
+
+**Security Groups:**
+Stateful firewalls attached to EC2 instances. They control inbound and outbound traffic and allow only explicitly permitted connections.
+
+**Network ACLs (NACLs):**
+Subnet-level stateless firewalls that filter traffic entering or leaving a subnet. Provide an additional security layer beyond Security Groups.
+
+**Elastic IP:**
+Static public IPv4 addresses used when a consistent public IP is required for a server.
+
+**Elastic Network Interface (ENI):**
+Virtual network cards attached to EC2 instances. Support multiple IPs, security groups, and allow failover configurations.
+
+**DHCP Options Set:**
+Defines DNS servers, domain names, and NTP servers for instances launched within the VPC.
+
+**VPC Peering / Transit Gateway:**
+VPC Peering connects two VPCs for private communication. Transit Gateway connects multiple VPCs and on-prem networks through a centralized hub.

@@ -1,0 +1,101 @@
+**Definition**
+Amazon VPC (Virtual Private Cloud) is a logically isolated virtual network in AWS where you define IP ranges, subnets, routing, and security to run cloud resources securely.
+
+**Types**
+
+* Default VPC
+* Custom VPC
+* Public Subnet
+* Private Subnet
+* Hybrid VPC (VPN/Direct Connect)
+
+**Working**
+A VPC acts as your private data center inside AWS. You define a CIDR block, create subnets, attach gateways, configure route tables, and secure traffic using security groups and NACLs. Resources like EC2, RDS, and Load Balancers run inside this network.
+
+**Diagrams (text)**
+
+```
+VPC (10.0.0.0/16)
+ ├── Public Subnet  → Internet Gateway
+ ├── Private Subnet → NAT Gateway
+ ├── Route Tables
+ ├── Security Groups
+ └── NACLs, ENI, Elastic IP
+```
+
+**Advantages**
+
+* Full control over network configuration
+* High security and isolation
+* Supports hybrid cloud setups
+* Scalable and flexible architecture
+
+**Disadvantages**
+
+* Complex for beginners
+* NAT/Transit Gateways add cost
+* Misconfigurations can block access
+
+**Examples**
+
+* Hosting a 2-tier application (web in public subnet, DB in private)
+* Isolated VPC for testing and staging
+* Secure backend microservices
+
+**Short code snippets**
+Create a VPC:
+
+```
+aws ec2 create-vpc --cidr-block 10.0.0.0/16
+```
+
+Create a subnet:
+
+```
+aws ec2 create-subnet --vpc-id vpc-123 --cidr-block 10.0.1.0/24
+```
+
+**Applications**
+
+* Deploying EC2 and RDS securely
+* Running microservices architectures
+* Building hybrid networks
+
+---
+
+# **Components of VPC (Explained)**
+
+**1. Subnets**
+Subsections of a VPC divided by IP ranges.
+
+* Public subnets allow internet access (via IGW).
+* Private subnets isolate internal resources like databases.
+
+**2. Route Tables**
+Define how traffic moves inside/outside the VPC through routing rules (e.g., to IGW, NAT, TGW).
+
+**3. Internet Gateway (IGW)**
+Enables outbound and inbound internet access for resources in public subnets.
+
+**4. NAT Gateway**
+Allows **private subnet** instances to access the internet (updates, downloads) without exposing them publicly.
+
+**5. Security Groups (SGs)**
+Instance-level firewalls that control inbound and outbound traffic; stateful.
+
+**6. Network ACLs (NACLs)**
+Subnet-level firewalls controlling traffic; stateless; optional extra layer of security.
+
+**7. DHCP Options Set**
+Manages DNS servers, NTP servers, and domain names for VPC-based instances.
+
+**8. Elastic IP (EIP)**
+Static public IP for EC2 instances for stable internet access.
+
+**9. Elastic Network Interface (ENI)**
+Virtual network interface card attached to EC2 instances.
+
+**10. VPC Peering / Transit Gateway**
+Connects multiple VPCs together for inter-VPC communication.
+
+If you want, I can also explain **VPC routing**, **public vs private subnets**, or **security groups vs NACLs**.

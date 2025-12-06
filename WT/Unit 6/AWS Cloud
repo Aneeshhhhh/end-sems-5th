@@ -1,0 +1,75 @@
+**Definition**
+AWS Cloud is Amazon’s on-demand cloud computing platform offering scalable infrastructure services such as compute, storage, databases, networking, and deployment tools.
+
+**Types**
+
+* **IaaS:** EC2, S3, VPC.
+* **PaaS:** Elastic Beanstalk, RDS, Lambda.
+* **SaaS:** AWS-managed applications like Amazon Chime, WorkMail.
+
+**Working**
+AWS provides virtualized resources from distributed data centers. Users allocate compute, storage, and networking on demand and pay only for consumption.
+
+**Algorithm / Steps**
+
+1. Create AWS account.
+2. Configure IAM users and permissions.
+3. Choose service (EC2, S3, RDS, etc.).
+4. Provision resources (instance type, storage, region).
+5. Deploy application.
+6. Monitor via CloudWatch.
+7. Scale using Auto Scaling / Load Balancer.
+8. Secure using IAM, VPC, Security Groups.
+
+**Diagrams (text)**
+
+```
+User → IAM Auth → AWS Service Request
+     → Compute (EC2)
+     → Storage (S3/EBS)
+     → Database (RDS/DynamoDB)
+     → Networking (VPC)
+```
+
+**Advantages**
+
+* Scalable and elastic.
+* Pay-as-you-use pricing.
+* Global availability zones.
+* Managed security and compliance.
+* Fast deployment.
+
+**Disadvantages**
+
+* Cost increases with scale if unmanaged.
+* Vendor lock-in.
+* Requires cloud knowledge to optimize.
+* Latency depends on region.
+
+**Examples**
+
+* Hosting a website using EC2 + S3 + Route 53.
+* Deploying a serverless backend using Lambda + API Gateway.
+* Storing large files in S3 buckets.
+
+**Short code snippets**
+EC2 instance (AWS CLI):
+
+```
+aws ec2 run-instances --image-id ami-123456 \
+--instance-type t2.micro --key-name myKey
+```
+
+Upload to S3:
+
+```
+aws s3 cp file.txt s3://mybucket/
+```
+
+Lambda function (Node.js):
+
+```js
+exports.handler = async () => {
+  return "Hello from Lambda";
+};
+```

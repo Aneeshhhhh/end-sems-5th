@@ -1,0 +1,74 @@
+**Definition**
+AWS Virtual Private Cloud (VPC) is a logically isolated virtual network in AWS where users define IP ranges, subnets, routing, and security for deploying cloud resources.
+
+**Types**
+
+* **Public Subnet:** Accessible from the internet via Internet Gateway.
+* **Private Subnet:** No direct internet access.
+* **VPN / Hybrid VPC:** Extends on-prem network into AWS.
+* **VPC Peering:** Connects two VPCs.
+* **Transit Gateway:** Connects multiple VPCs and on-prem networks.
+
+**Working**
+A VPC provides a customizable network environment. Users allocate CIDR blocks, create subnets, attach gateways, configure routing tables, and apply security groups and NACLs to control traffic.
+
+**Diagrams (text)**
+
+```
+          VPC (10.0.0.0/16)
+        -----------------------
+        |      Subnet 1       | → Public (IGW)
+        |  EC2 + SG           |
+        -----------------------
+        |      Subnet 2       | → Private
+        |  DB + SG            |
+        -----------------------
+IGW ← Internet Gateway
+RT  ← Route Table
+```
+
+**Advantages**
+
+* Full control over network design.
+* High security via SGs & NACLs.
+* Supports hybrid connectivity.
+* Scalable and customizable.
+* Isolation from other VPCs.
+
+**Disadvantages**
+
+* Misconfigurations cause downtime.
+* Complex for beginners.
+* Costs for NAT Gateways, VPNs, TGW.
+
+**Examples**
+
+* Hosting a 2-tier web app (public EC2 + private DB).
+* Creating isolated dev/stage/prod environments.
+* Hybrid architectures using VPN or Direct Connect.
+
+**Short code snippets**
+Create VPC:
+
+```
+aws ec2 create-vpc --cidr-block 10.0.0.0/16
+```
+
+Create Subnet:
+
+```
+aws ec2 create-subnet --vpc-id vpc-123 --cidr-block 10.0.1.0/24
+```
+
+Attach Internet Gateway:
+
+```
+aws ec2 attach-internet-gateway --vpc-id vpc-123 --internet-gateway-id igw-123
+```
+
+**Applications**
+
+* Hosting secure multi-tier applications.
+* Running isolated microservices.
+* Connecting cloud and on-prem networks.
+* Deploying scalable infrastructures (EC2, RDS, ELB).

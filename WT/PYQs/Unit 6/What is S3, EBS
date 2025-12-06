@@ -1,0 +1,102 @@
+**S3 (Simple Storage Service)**
+
+**Definition**
+Amazon S3 is an object storage service used to store and retrieve any amount of data as objects inside buckets.
+
+**Types**
+
+* S3 Standard
+* S3 Standard-IA
+* S3 One Zone-IA
+* S3 Glacier
+* S3 Glacier Deep Archive
+
+**Working**
+Data is stored as objects containing metadata and is assigned a URL. Users upload, retrieve, and manage objects via API, CLI, or console.
+
+**Diagrams (text)**
+
+```
+User → S3 Bucket → Objects
+```
+
+**Advantages**
+
+* Highly scalable
+* 99.999999999% durability
+* Easy access via URL
+* Lifecycle policies
+
+**Disadvantages**
+
+* Not suitable for block or file storage
+* Extra charges for retrieval in archival tiers
+
+**Examples**
+
+* Image hosting
+* Backups
+* Static website hosting
+
+**Short code snippets**
+
+```
+aws s3 cp file.txt s3://mybucket/
+```
+
+**Applications**
+
+* Static websites
+* Log storage
+* Data lakes
+
+**EBS (Elastic Block Store)**
+
+**Definition**
+Amazon EBS is block storage used as persistent volumes attached to EC2 instances.
+
+**Types**
+
+* gp3 (general purpose SSD)
+* io1/io2 (provisioned IOPS SSD)
+* st1 (throughput HDD)
+* sc1 (cold HDD)
+
+**Working**
+EBS volumes act like virtual hard disks. They attach to EC2 instances and store OS, application data, or databases.
+
+**Diagrams (text)**
+
+```
+EC2 Instance → EBS Volume (Block Storage)
+```
+
+**Advantages**
+
+* Persistent even after stopping EC2
+* High performance
+* Snapshots to S3
+* Configurable IOPS
+
+**Disadvantages**
+
+* Limited to one AZ
+* More costly than S3
+
+**Examples**
+
+* Storing OS files
+* Hosting databases
+* Application data storage
+
+**Short code snippets**
+
+```
+aws ec2 create-volume --size 20 --availability-zone us-east-1a
+```
+
+**Applications**
+
+* Boot volumes
+* Database storage
+* Low-latency workloads

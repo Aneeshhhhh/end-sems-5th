@@ -1,0 +1,92 @@
+**Definition**
+Amazon VPC (Virtual Private Cloud) is an isolated virtual network in AWS where you control IP ranges, subnets, routing, and security for cloud resources.
+
+**Types (Components List)**
+
+* VPC CIDR Block
+* Subnets
+* Route Tables
+* Internet Gateway (IGW)
+* NAT Gateway
+* Security Groups (SG)
+* Network ACLs (NACLs)
+* DHCP Options Set
+* VPC Peering
+* Transit Gateway
+* Elastic IP
+* Elastic Network Interface (ENI)
+
+**Working**
+A VPC provides a customizable network. You define CIDR, create subnets, attach gateways, configure routing, and secure traffic using SGs and NACLs.
+
+**Diagrams (text)**
+
+```
+VPC (10.0.0.0/16)
+ ├── Public Subnet → IGW
+ ├── Private Subnet → NAT
+ ├── Route Tables
+ ├── SGs & NACLs
+ └── ENIs, Elastic IPs
+```
+
+**Advantages**
+
+* Full network control
+* High security
+* Supports hybrid connectivity
+* Scalable architecture
+
+**Disadvantages**
+
+* Can be complex
+* NAT Gateway/Transit costs
+* Misconfigurations break connectivity
+
+**Examples**
+
+* Hosting a 2-tier web application
+* Creating isolated dev/prod networks
+* Secure backend databases in private subnets
+
+**Short code snippets**
+Create VPC:
+
+```
+aws ec2 create-vpc --cidr-block 10.0.0.0/16
+```
+
+Create subnet:
+
+```
+aws ec2 create-subnet --vpc-id vpc-123 --cidr-block 10.0.1.0/24
+```
+
+**Applications**
+
+* Deploying EC2 and RDS in secure networks
+* Hosting microservices
+* Hybrid cloud networking
+
+---
+
+### **Explanation of any four components**
+
+**1. Subnets**
+Logical subdivisions of a VPC.
+
+* **Public subnet:** Internet access via IGW
+* **Private subnet:** Internal-only resources (DBs)
+
+**2. Internet Gateway (IGW)**
+Allows communication between VPC and the internet. Required for public subnets.
+
+**3. Route Tables**
+Define how traffic moves within the VPC.
+Entries decide whether packets go to IGW, NAT, or remain internal.
+
+**4. Security Groups (SGs)**
+Virtual firewalls attached to instances controlling **inbound/outbound** traffic.
+Stateful → return traffic is automatically allowed.
+
+You can replace any with NAT Gateway, NACLs, ENI, or Peering if needed.

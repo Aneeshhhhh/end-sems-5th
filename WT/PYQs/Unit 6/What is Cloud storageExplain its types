@@ -1,0 +1,25 @@
+Cloud storage is a model in which digital data is stored on remote servers accessed through the internet rather than on local physical devices. These servers are maintained, managed, and secured by cloud providers. Users can upload, retrieve, and manage data on demand, benefiting from scalability, redundancy, and pay-as-you-use pricing. Cloud storage eliminates the need for local hardware and provides global accessibility and high durability.
+
+**Types of Cloud Storage**
+
+**1. Object Storage**
+Object storage organizes data as objects that include the file, metadata, and a unique identifier. It is designed for massive scalability and is ideal for unstructured data like images, videos, and backups.
+Examples: Amazon S3, Google Cloud Storage.
+Use cases: static website hosting, backups, media storage.
+
+**2. Block Storage**
+Block storage divides data into fixed-size blocks and stores them across distributed systems. It offers low latency and high performance, similar to a virtual hard disk. It is typically used with virtual machines.
+Examples: Amazon EBS, Azure Disk Storage.
+Use cases: operating systems, databases, transactional applications.
+
+**3. File Storage**
+File storage uses standard file systems (NFS, SMB) to store data in a hierarchical structure accessible by multiple clients. It is ideal for shared access environments.
+Examples: Amazon EFS, Azure Files.
+Use cases: shared directories, content management systems.
+
+**4. Cold/Archive Storage**
+Cold storage is designed for data that is rarely accessed but must be retained long term. It offers very low cost but high retrieval time.
+Examples: Amazon Glacier, Google Archive Storage.
+Use cases: compliance archives, long-term backups, log retention.
+
+If you want, I can also write a comparison table or a diagram-based version for quicker revision.

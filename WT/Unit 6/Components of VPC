@@ -1,0 +1,62 @@
+**Definition**
+Components of a VPC are the essential networking elements used to design and control a virtual network in AWS.
+
+**Types**
+
+* Subnets
+* Route Tables
+* Internet Gateway (IGW)
+* NAT Gateway
+* Security Groups (SG)
+* Network ACLs (NACLs)
+* DHCP Options Set
+* VPC Peering / Transit Gateway
+* Elastic IP
+* ENI (Elastic Network Interface)
+
+**Working**
+Each component manages part of the network: subnets divide IP ranges, gateways control external access, route tables define traffic flow, and SG/NACLs secure traffic.
+
+**Diagrams (text)**
+
+```
+VPC
+ ├── Subnets (Public / Private)
+ ├── Route Tables
+ ├── IGW / NAT
+ ├── Security Groups
+ ├── NACLs
+ └── ENIs, Elastic IPs
+```
+
+**Advantages**
+
+* Modular and flexible network design.
+* Fine-grained traffic control.
+* Scalable for any architecture.
+
+**Disadvantages**
+
+* Misconfigurations can break connectivity.
+* NAT/Transit Gateway add cost.
+* Complex for beginners.
+
+**Examples**
+
+* A public subnet for web servers + private subnet for database.
+* A VPC using IGW for internet-facing apps and NAT for private workloads.
+
+**Short code snippets**
+List components:
+
+```
+aws ec2 describe-vpcs
+aws ec2 describe-subnets
+aws ec2 describe-route-tables
+```
+
+**Applications**
+
+* Building secure multi-tier architectures.
+* Designing isolated networks for dev/stage/prod.
+* Hosting scalable EC2 + RDS workloads.

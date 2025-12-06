@@ -1,0 +1,76 @@
+**Definition**
+AWS Elastic Load Balancer (ELB) automatically distributes incoming traffic across multiple targets (EC2, containers, IPs) to ensure high availability and fault tolerance.
+
+**Types**
+
+1. **Application Load Balancer (ALB):** Layer 7, HTTP/HTTPS, path-based and host-based routing.
+2. **Network Load Balancer (NLB):** Layer 4, ultra-low latency, handles millions of requests/sec.
+3. **Gateway Load Balancer (GLB):** Deploys and scales virtual appliances like firewalls.
+4. **Classic Load Balancer (CLB):** Older Layer 4/7 load balancer (legacy).
+
+**Working**
+ELB receives incoming client requests → evaluates routing rules → forwards traffic to registered targets → performs health checks → redistributes load away from unhealthy instances.
+
+**Algorithm / Steps**
+
+1. Create load balancer (choose ALB/NLB/GLB).
+2. Configure listeners (ports, protocol).
+3. Set target groups and health checks.
+4. Register EC2/container/IP targets.
+5. ELB distributes traffic based on routing rules.
+6. Monitor via CloudWatch.
+
+**Diagrams (text)**
+
+```
+Client → ELB → Healthy Targets (EC2 / Containers / IPs)
+               ↳ Unhealthy Targets (removed from routing)
+```
+
+**Advantages**
+
+* Automatic traffic distribution.
+* Fault tolerance and high availability.
+* Health checks for targets.
+* Supports auto scaling.
+* Secure (SSL termination on ALB).
+
+**Disadvantages**
+
+* Additional cost per hour + data processed.
+* Misconfigured health checks can mark healthy nodes as unhealthy.
+* Legacy CLB has fewer features.
+
+**Examples**
+
+* ALB: Routing requests to microservices based on URL paths.
+* NLB: Handling high-throughput gaming or fintech traffic.
+* GLB: Deploying intrusion detection or firewall appliances.
+
+**Short code snippets**
+Create a target group:
+
+```
+aws elbv2 create-target-group --name appTG --protocol HTTP --port 80 --vpc-id vpc-123
+```
+
+Register EC2 instances:
+
+```
+aws elbv2 register-targets --target-group-arn arn:tg --targets Id=i-123 Id=i-456
+```
+
+Create ALB listener:
+
+```
+aws elbv2 create-listener --load-balancer-arn arn:alb \
+--protocol HTTP --port 80 --default-actions Type=forward,TargetGroupArn=arn:tg
+```
+
+**Applications**
+
+* Web application load balancing.
+* Microservices routing.
+* High-traffic APIs.
+* Autoscaling web servers.
+* Load distribution for containerized apps (ECS/EKS).

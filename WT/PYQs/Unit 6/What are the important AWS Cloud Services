@@ -1,0 +1,59 @@
+**Definition**
+Important AWS Cloud Services are the core services used to build applications on AWS, covering compute, storage, networking, databases, and deployment.
+
+**Types**
+
+* **Compute:** EC2, Lambda, Elastic Beanstalk.
+* **Storage:** S3, EBS, EFS, Glacier.
+* **Database:** RDS, DynamoDB, Aurora.
+* **Networking:** VPC, Route 53, ELB, CloudFront.
+* **Security & IAM:** IAM, KMS, Cognito.
+* **Monitoring:** CloudWatch, CloudTrail.
+* **Deployment & DevOps:** CodeDeploy, CodePipeline, CloudFormation.
+* **Serverless:** Lambda, API Gateway, Step Functions.
+
+**Working**
+AWS services interact by providing modular building blocks—compute runs code, storage holds data, networking routes traffic, and security controls access—allowing you to assemble cloud architectures on demand.
+
+**Diagrams (text)**
+
+```
+Users → Route 53 → CloudFront → ELB → EC2/Lambda
+            ↓
+          S3 / RDS / DynamoDB
+            ↓
+        CloudWatch Monitoring
+```
+
+**Advantages**
+
+* Scalable and elastic.
+* Wide service ecosystem.
+* Global availability zones.
+* Pay-as-you-use.
+
+**Disadvantages**
+
+* Cost complexity.
+* Steep learning curve.
+* Vendor lock-in.
+
+**Examples**
+
+* Web app: EC2 + S3 + RDS + ELB + VPC.
+* Serverless app: Lambda + API Gateway + DynamoDB.
+
+**Short code snippets**
+List all AWS services:
+
+```
+aws ssm get-parameters-by-path --path /aws/service/global-infrastructure/regions
+```
+
+**Applications**
+
+* Web hosting
+* Big data processing
+* AI/ML workloads
+* Serverless microservices
+* Enterprise cloud migration

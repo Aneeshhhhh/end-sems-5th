@@ -1,0 +1,64 @@
+**Definition**
+Advantages of Amazon AWS refer to the key benefits that AWS provides as a cloud computing platform compared to traditional on-premise infrastructure.
+
+**Types (Categories of Advantages)**
+
+* Scalability
+* Cost efficiency
+* Reliability
+* Security
+* Global reach
+* Flexibility
+
+**Working**
+AWS provides on-demand computing resources that scale automatically, charge only for usage, and run across globally distributed data centers, ensuring high availability and performance.
+
+**Diagrams (text)**
+
+```
+Users → AWS Cloud
+        ├── Compute (EC2)
+        ├── Storage (S3)
+        ├── Database (RDS)
+        ├── Networking (VPC)
+        └── Security (IAM)
+```
+
+**Advantages**
+
+* **Scalability:** Auto Scaling & ELB handle variable loads.
+* **Cost-effective:** Pay-as-you-go, no upfront investment.
+* **Global availability:** Data centers in multiple regions.
+* **High reliability:** Built-in redundancy & fault tolerance.
+* **Strong security:** IAM, encryption, compliance certifications.
+* **Flexibility:** Supports all programming languages & OS platforms.
+* **Fast deployment:** Spin up servers in minutes.
+* **Managed services:** RDS, Lambda, Elastic Beanstalk reduce ops load.
+* **Integration:** Works seamlessly with DevOps tools & CI/CD.
+
+**Disadvantages**
+
+* Can become costly if not monitored.
+* Learning curve for beginners.
+* Vendor lock-in risk.
+
+**Examples**
+
+* A startup hosting its web application on EC2 instead of buying servers.
+* A company using S3 + CloudFront to deliver global content.
+* A serverless backend built using Lambda + API Gateway.
+
+**Short code snippets**
+List AWS services:
+
+```
+aws ssm get-parameters-by-path --path /aws/service/global-infrastructure/regions
+```
+
+**Applications**
+
+* Web hosting
+* Big data & analytics
+* Mobile backend
+* Machine learning workloads
+* Enterprise cloud migration
