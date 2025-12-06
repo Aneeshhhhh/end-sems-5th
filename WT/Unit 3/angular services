@@ -1,0 +1,67 @@
+**Definition**
+Angular services are reusable classes that contain business logic, data handling, and shared functionality. They are used to separate logic from components and are injected where needed using Angular’s Dependency Injection (DI) system.
+
+**Types**
+
+* **Singleton services**
+* **Injectable services**
+* **HTTP services**
+* **Utility/helper services**
+
+**Working**
+A service is created as a class decorated with `@Injectable()`. It is registered in a module or provided in root. Components that need the service request it through their constructor. Angular DI then supplies a single shared instance of that service.
+
+**Diagrams (text)**
+
+```
+Component → requests → Service → returns data/logic
+```
+
+**Advantages**
+
+* Reusable and centralized logic
+* Cleaner components (UI-only)
+* Easy data sharing between components
+* Supports dependency injection
+
+**Disadvantages**
+
+* Overuse can create tightly coupled code
+* Requires DI understanding for beginners
+
+**Examples**
+Create a service:
+
+```ts
+@Injectable({
+  providedIn: 'root'
+})
+export class UserService {
+  getUsers() {
+    return ["Aneesh", "Rahul", "Sara"];
+  }
+}
+```
+
+Use in component:
+
+```ts
+constructor(private userService: UserService) {}
+
+ngOnInit() {
+  this.users = this.userService.getUsers();
+}
+```
+
+**Short code snippets**
+
+```bash
+ng g service user
+```
+
+**Applications**
+
+* API calls with HttpClient
+* Shared state management
+* Authentication
+* Utility or helper functions

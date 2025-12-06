@@ -1,0 +1,67 @@
+**Definition**
+Redux is a state-management library based on a unidirectional data flow. It stores the entire application state in a single centralized store.
+
+**Types**
+
+* Store
+* Actions
+* Reducers
+* Dispatch
+* Subscribers
+
+**Working**
+A component dispatches an **action** → the **reducer** processes it → the **store** updates state → UI re-renders.
+
+**Diagrams (text)**
+
+```
+Component → dispatch(Action)
+              ↓
+         Reducer → New State → Store → UI updates
+```
+
+![Image](https://redux.js.org/assets/images/ReduxDataFlowDiagram-49fa8c3968371d9ef6f2a1486bd40a26.gif?utm_source=chatgpt.com)
+
+![Image](https://strapi.dhiwise.com/uploads/Image_1_The_React_Redux_Flow_Chart_b6b9c0ef58.webp?utm_source=chatgpt.com)
+
+**Advantages**
+
+* Predictable global state
+* Debuggable (time-travel debugging)
+* Easy testing
+* Centralized logic
+
+**Disadvantages**
+
+* Boilerplate code
+* Overkill for small apps
+
+**Examples**
+Action:
+
+```js
+{ type: "INCREMENT" }
+```
+
+Reducer:
+
+```js
+function counter(state = 0, action) {
+  switch(action.type){
+    case "INCREMENT": return state + 1;
+    default: return state;
+  }
+}
+```
+
+Dispatch:
+
+```js
+store.dispatch({ type: "INCREMENT" });
+```
+
+**Applications**
+
+* Large React apps
+* Multi-page dashboards
+* Apps requiring shared global state

@@ -1,0 +1,81 @@
+**Definition**
+Component styling in React refers to applying CSS to individual components so each UI block has its own look and behavior.
+
+**Types**
+
+* **Inline Styling**
+* **CSS Stylesheets**
+* **CSS Modules**
+* **Styled Components** (CSS-in-JS)
+* **Tailwind / utility classes**
+
+**Working**
+React allows each component to include its own styling file or style object. Styles can be scoped (CSS Modules), global (normal CSS), or component-bound (styled-components). This keeps UI consistent and modular.
+
+**Diagrams (text)**
+
+```
+Component
+ ├── JSX
+ ├── Logic
+ └── Styles (CSS/Module/Inline)
+```
+
+**Advantages**
+
+* Clean, modular UI
+* Scoped styles prevent conflicts
+* Multiple styling options
+* Easier maintenance in large apps
+
+**Disadvantages**
+
+* Too many styling methods can confuse structure
+* CSS-in-JS may increase overhead
+* Inline styles lack full CSS features
+
+**Examples**
+
+**1. Inline Styling:**
+
+```jsx
+const box = { color: "blue", padding: "10px" };
+return <div style={box}>Hello</div>;
+```
+
+**2. CSS File:**
+
+```css
+/* App.css */
+.title { color: red; }
+```
+
+```jsx
+<h1 className="title">React App</h1>
+```
+
+**3. CSS Modules:**
+
+```css
+/* Button.module.css */
+.btn { background: green; }
+```
+
+```jsx
+import styles from './Button.module.css';
+<button className={styles.btn}>Click</button>
+```
+
+**4. Styled Components:**
+
+```jsx
+import styled from "styled-components";
+const Btn = styled.button`background: purple;`;
+```
+
+**Applications**
+
+* Theming
+* UI components
+* Dashboards
+* Reusable styled widgets

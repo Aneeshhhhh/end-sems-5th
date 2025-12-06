@@ -1,0 +1,72 @@
+**Definition**
+Modules in TypeScript are files or code blocks that export and import values (functions, classes, variables) to enable code organization, reuse, and separation into logical units.
+
+**Types**
+
+* **ES Modules** (`export` / `import`)
+* **CommonJS Modules** (`module.exports` / `require`)
+* **Internal (Namespace) Modules** – older TS style
+
+**Working**
+Each `.ts` file becomes a module when it contains an `export`. Other files can import this module using `import`. TypeScript compiles these into JavaScript module formats depending on the `tsconfig.json` settings (e.g., ES2015, CommonJS).
+
+**Diagrams (text)**
+
+```
+module1.ts --export--> module2.ts --import-->
+```
+
+**Advantages**
+
+* Cleaner, modular code
+* Reusable components
+* Better maintainability
+* Avoids global namespace pollution
+
+**Disadvantages**
+
+* Requires module resolution settings
+* Browser support depends on JS module output
+* Must compile before running
+
+**Examples**
+Exporting:
+
+```ts
+export function add(a: number, b: number) {
+  return a + b;
+}
+```
+
+Importing:
+
+```ts
+import { add } from "./math";
+console.log(add(2, 3));
+```
+
+Default export:
+
+```ts
+export default class User {}
+```
+
+Import default:
+
+```ts
+import User from "./User";
+```
+
+**Short code snippets**
+
+```ts
+export const pi = 3.14;
+import { pi } from "./constants";
+```
+
+**Applications**
+
+* Large TypeScript projects
+* Angular/React/Node backends
+* Libraries & reusable components
+* Clean separation of features and logic

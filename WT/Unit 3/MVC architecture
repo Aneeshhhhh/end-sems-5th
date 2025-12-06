@@ -1,0 +1,64 @@
+**Definition**
+MVC (Model–View–Controller) architecture is a design pattern that separates an application into three connected components—Model, View, and Controller—to organize code, improve maintainability, and support scalable development.
+
+**Types**
+
+* **Model** – Manages data, business logic, and database operations.
+* **View** – User interface that displays data from the Model.
+* **Controller** – Handles user requests, updates the Model, and selects the appropriate View.
+
+**Working**
+
+1. The **user interacts** with the View.
+2. The **Controller processes** the request and updates the Model.
+3. The **Model updates** its data.
+4. The **View renders** the updated data to the user.
+
+This creates a clean separation of concerns, allowing UI, logic, and data layers to evolve independently.
+
+![Image](https://media.geeksforgeeks.org/wp-content/uploads/20220224160807/Model1.png?utm_source=chatgpt.com)
+
+![Image](https://media.geeksforgeeks.org/wp-content/uploads/20240704102850/MVC-Architecture.webp?utm_source=chatgpt.com)
+
+**Diagrams (text)**
+
+```
+User
+ ↓
+Controller → Updates → Model → Sends Data → View → Displays to User
+```
+
+**Advantages**
+
+* Better organization and modularity
+* Easy maintenance and testing
+* Reusable components
+* Clear separation of concerns
+
+**Disadvantages**
+
+* More files/structure required
+* Can be complex for small projects
+
+**Examples**
+A login request:
+
+* Controller receives username/password
+* Controller asks Model to validate
+* Model responds with validation result
+* Controller returns appropriate View
+
+**Short code snippets**
+
+```js
+// Example Controller
+exports.showHome = (req, res) => {
+  res.render("home");
+};
+```
+
+**Applications**
+
+* Web frameworks (Express MVC, Django, Ruby on Rails)
+* Enterprise applications
+* Scalable front-end architectures (Angular-inspired MVC)

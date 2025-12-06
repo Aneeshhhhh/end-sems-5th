@@ -1,0 +1,109 @@
+Here are the expanded explanations for **2 types of Directives** and **2 types of Pipes**.
+
+---
+
+## **DIRECTIVES**
+
+### **1. Structural Directives**
+
+Structural directives **modify the DOM structure** by adding or removing elements.
+They always start with `*` because they change how Angular renders HTML.
+
+**Examples:**
+
+* `*ngIf` → shows or hides elements based on a condition
+* `*ngFor` → repeats an element for each item in a list
+* `*ngSwitch` → toggles between multiple views
+
+**Example:**
+
+```html
+<p *ngIf="loggedIn">Welcome User</p>
+
+<div *ngFor="let item of items">{{ item }}</div>
+```
+
+**Purpose:**
+Used when you need to dynamically build or alter the page layout.
+
+---
+
+### **2. Attribute Directives**
+
+Attribute directives **change the appearance or behavior** of an existing DOM element.
+
+**Examples:**
+
+* `ngClass` → dynamically adds/removes CSS classes
+* `ngStyle` → dynamically applies inline styles
+* `ngModel` → two-way data binding
+
+**Example:**
+
+```html
+<p [ngClass]="{'highlight': isActive}">Hello</p>
+
+<p [ngStyle]="{color: 'blue'}">This is blue text</p>
+```
+
+**Purpose:**
+Used when you need to modify styling, visibility, or behavior without changing DOM structure.
+
+---
+
+## **PIPES**
+
+### **1. Built-in Pipes**
+
+These are provided by Angular to **format data in templates**.
+
+**Common examples:**
+
+* `date` → formats dates
+* `uppercase` → converts text to uppercase
+* `lowercase` → converts text to lowercase
+* `currency` → formats numbers as currency
+* `json` → pretty-prints JSON data
+
+**Example:**
+
+```html
+<p>{{ today | date:'fullDate' }}</p>
+<p>{{ name | uppercase }}</p>
+```
+
+**Purpose:**
+Used to display clean, readable values in the UI without modifying data logic.
+
+---
+
+### **2. Custom Pipes**
+
+Custom pipes are **user-defined** to transform data when built-in pipes are insufficient.
+
+**Example:**
+Creating a pipe to truncate long text:
+
+```ts
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({ name: 'shorten' })
+export class ShortenPipe implements PipeTransform {
+  transform(value: string, limit: number = 20): string {
+    return value.length > limit ? value.substring(0, limit) + '...' : value;
+  }
+}
+```
+
+Using it:
+
+```html
+<p>{{ message | shorten:10 }}</p>
+```
+
+**Purpose:**
+Used when application-specific formatting is needed.
+
+---
+
+If you want, I can also prepare this in perfect 6-mark exam format.

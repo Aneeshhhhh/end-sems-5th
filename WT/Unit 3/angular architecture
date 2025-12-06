@@ -1,0 +1,69 @@
+Angular architecture is based on a **component-driven, modular, event-based** structure where every feature of the application is organized into components, services, modules, and templates. Data flows through bindings, and Angular manages rendering using its change-detection system.
+
+![Image](https://v2.angular.io/resources/images/devguide/architecture/overview2.png?utm_source=chatgpt.com)
+
+![Image](https://media.geeksforgeeks.org/wp-content/uploads/20230910120905/archi.png?utm_source=chatgpt.com)
+
+**Core Parts of Angular Architecture**
+
+**1. Modules (NgModule)**
+Modules group related components, directives, and services.
+`app.module.ts` is the root module of every Angular app.
+
+**2. Components**
+The basic building blocks of Angular.
+Each component has:
+
+* `.ts` (logic)
+* `.html` (template)
+* `.css` (styles)
+* `.spec.ts` (tests)
+
+**3. Templates**
+Define the view using HTML + Angular directives like `*ngIf`, `*ngFor`.
+
+**4. Metadata**
+Decorators (`@Component`, `@NgModule`) tell Angular how to process classes.
+
+**5. Data Binding**
+Communication between component and UI:
+
+* Interpolation `{{ }}`
+* Property binding `[ ]`
+* Event binding `( )`
+* Two-way binding `[(ngModel)]`
+
+**6. Directives**
+Custom instructions to modify DOM behavior.
+Types:
+
+* Structural (`*ngIf`, `*ngFor`)
+* Attribute (`ngClass`, `ngStyle`)
+
+**7. Services**
+Contain business logic, HTTP calls, shared data.
+Injected using Angular’s **Dependency Injection** system.
+
+**8. Dependency Injection (DI)**
+Automatically provides instances of services to components.
+
+**9. Routing**
+Maps URLs to components to enable single-page application navigation.
+
+**Text Diagram**
+
+```
+               Angular App
+                     │
+          ┌──────────┴──────────┐
+          │                     │
+       Module                Component
+          │                     │
+   Declarations           Template + Class
+          │                     │
+       Services  ← DI →     Business Logic
+          │                     │
+       Routing  ←──────→  Navigation
+```
+
+If you want, I can also write a **short 6-mark answer version** or **labelled diagram** for your notes.

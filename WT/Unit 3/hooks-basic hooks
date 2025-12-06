@@ -1,0 +1,66 @@
+**Definition**
+Basic Hooks in React are built-in functions that let functional components use state, lifecycle features, and other React capabilities without writing class components.
+
+**Types (Basic Hooks)**
+
+1. **useState** – manages component state
+2. **useEffect** – handles side effects (API calls, timers)
+3. **useContext** – accesses global data from Context API
+
+**Working**
+Hooks run inside functional components. React keeps track of their values between renders.
+
+* `useState` stores and updates values
+* `useEffect` runs after render or when dependencies change
+* `useContext` reads context value directly
+
+**Diagrams (text)**
+
+```
+Component
+ ├── useState → State value + setState
+ ├── useEffect → Side effects after render
+ └── useContext → Global shared data
+```
+
+**Advantages**
+
+* No need for class components
+* Cleaner, simpler code
+* Easy state management
+* Better reusability with custom hooks
+
+**Disadvantages**
+
+* Must follow Rules of Hooks
+* Incorrect dependency handling causes bugs
+* Overuse of effects may affect performance
+
+**Examples**
+
+**useState:**
+
+```jsx
+const [count, setCount] = useState(0);
+```
+
+**useEffect:**
+
+```jsx
+useEffect(() => {
+  console.log("Rendered");
+}, []);
+```
+
+**useContext:**
+
+```jsx
+const user = useContext(UserContext);
+```
+
+**Applications**
+
+* Managing UI state
+* Fetching data
+* Reading global values
+* Component lifecycle handling

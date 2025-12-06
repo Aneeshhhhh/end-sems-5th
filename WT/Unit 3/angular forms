@@ -1,0 +1,78 @@
+**Definition**
+Angular forms are used to handle user input, validation, and data collection. Angular provides two approaches: **Template-driven forms** and **Reactive forms**.
+
+**Types**
+
+* **Template-driven forms** – Simple, uses HTML + directives (`ngModel`).
+* **Reactive forms** – More powerful, uses TypeScript classes (`FormGroup`, `FormControl`).
+
+**Working**
+Template-driven forms rely on Angular’s directives in the template and Angular automatically tracks form state.
+Reactive forms are created in the component class and give full control over validation, form structure, and data flow.
+
+**Diagrams (text)**
+
+```
+User Input → FormControl/FormGroup → Validation → Component → Submit
+```
+
+**Advantages**
+
+* Built-in validation support
+* Two-way data binding in template-driven forms
+* Reactive forms offer stronger control and testability
+* Real-time form state tracking (valid, dirty, touched)
+
+**Disadvantages**
+
+* Template-driven forms become complex for large apps
+* Reactive forms require more setup and boilerplate
+
+**Examples**
+
+**Template-Driven Form:**
+
+```html
+<form #f="ngForm" (ngSubmit)="submit(f.value)">
+  <input name="username" ngModel required>
+  <button type="submit">Submit</button>
+</form>
+```
+
+**Component:**
+
+```ts
+submit(data: any) {
+  console.log(data);
+}
+```
+
+**Reactive Form:**
+
+```ts
+form = new FormGroup({
+  username: new FormControl('', Validators.required)
+});
+```
+
+**HTML:**
+
+```html
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <input formControlName="username">
+  <button>Submit</button>
+</form>
+```
+
+**Short code snippets**
+
+```ts
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+```
+
+**Applications**
+
+* Login and registration forms
+* Dashboards and data-entry modules
+* Validating user inputs
+* Dynamic and complex form structures

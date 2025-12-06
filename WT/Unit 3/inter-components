@@ -1,0 +1,32 @@
+Inter-component communication in React refers to how components **send data to each other**. React has a **unidirectional data flow**, so data always moves **top → down** unless special mechanisms are used.
+
+**Ways components communicate:**
+
+1. **Parent → Child (Props)**
+   The parent passes data to a child using props.
+
+   ```jsx
+   <Child message="Hello" />
+   ```
+
+2. **Child → Parent (Callback Functions)**
+   Parent sends a function to the child; child calls it to send data back.
+
+   ```jsx
+   props.onSelect(value);
+   ```
+
+3. **Sibling → Sibling (Via Parent State)**
+   Both siblings talk through the parent component’s state.
+
+4. **Global Communication (Context API)**
+   When many components need the same data (theme, user info).
+   Avoids "prop drilling".
+
+5. **State Management Libraries (Redux / Zustand / MobX)**
+   Used for large apps where many components need shared state.
+
+6. **Refs (rare cases)**
+   Used to directly access a child component's DOM or methods.
+
+If you want, I can expand each with examples.

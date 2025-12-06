@@ -1,0 +1,69 @@
+**Definition**
+ReactJS is a JavaScript library used for building fast, component-based user interfaces. It focuses on the View layer and uses a virtual DOM for efficient rendering.
+
+**Types**
+
+* **Functional Components**
+* **Class Components**
+* **Controlled & Uncontrolled Components**
+* **Pure Components**
+
+**Working**
+React breaks the UI into reusable components. Each component manages its own state. When state changes, React updates a **virtual DOM**, compares it with the real DOM (diffing), and updates only the changed parts (reconciliation), improving performance.
+
+**Diagrams (text)**
+
+```
+State/Props → Component → Virtual DOM → Diff → Real DOM Update
+```
+
+**Advantages**
+
+* Fast rendering using Virtual DOM
+* Component-based architecture
+* Reusable UI components
+* Strong ecosystem (hooks, router, redux)
+* Easy integration with other libraries
+
+**Disadvantages**
+
+* Learning curve (JSX, hooks)
+* Requires tooling (webpack, babel)
+* Fast updates may cause breaking changes
+
+**Examples**
+Functional component:
+
+```jsx
+function Hello() {
+  return <h1>Hello React</h1>;
+}
+```
+
+Component with state:
+
+```jsx
+function Counter() {
+  const [count, setCount] = useState(0);
+  return (
+    <button onClick={() => setCount(count + 1)}>
+      {count}
+    </button>
+  );
+}
+```
+
+**Short code snippets**
+Create app:
+
+```bash
+npx create-react-app myapp
+```
+
+**Applications**
+
+* SPA (Single Page Applications)
+* Dashboards & admin panels
+* Social media apps
+* Real-time UI updates
+* E-commerce frontends

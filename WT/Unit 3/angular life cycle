@@ -1,0 +1,14 @@
+Angular lifecycle refers to the sequence of events that occur from the creation of a component to its destruction. Angular provides lifecycle hooks—special methods you can implement to run code at specific stages.
+
+**Main Lifecycle Hooks (in order):**
+
+1. **ngOnChanges()** – Runs when input properties change.
+2. **ngOnInit()** – Runs once after the first ngOnChanges; good for initialization.
+3. **ngDoCheck()** – Custom change detection logic.
+4. **ngAfterContentInit()** – After content projection.
+5. **ngAfterContentChecked()** – After every content check.
+6. **ngAfterViewInit()** – After component view loads.
+7. **ngAfterViewChecked()** – After every view check.
+8. **ngOnDestroy()** – Cleanup before component removal.
+
+If you want, I can give a diagram or 6-mark expanded version.

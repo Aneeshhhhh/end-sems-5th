@@ -1,0 +1,54 @@
+**Definition**
+TypeScript (TS) is a superset of JavaScript that adds static typing, interfaces, and modern language features, which are compiled into standard JavaScript for execution.
+
+**Types**
+
+* Primitive types (string, number, boolean)
+* Custom types (interfaces, type aliases)
+* Classes and generics
+* Enums
+
+**Working**
+TypeScript code (`.ts`) is checked by the compiler for type errors and then transpiled into JavaScript (`.js`). This ensures fewer runtime bugs, better tooling, and clearer code structure while still running anywhere JavaScript runs.
+
+**Diagrams (text)**
+
+```
+TypeScript (.ts) → Compiler → JavaScript (.js) → Browser/Node.js
+```
+
+**Advantages**
+
+* Early error detection through static typing
+* Better IntelliSense and IDE support
+* Scalable for large projects
+* Supports modern JS features
+
+**Disadvantages**
+
+* Requires compilation step
+* Learning curve for beginners
+* Stricter syntax may slow initial development
+
+**Examples**
+
+```ts
+let name: string = "Aneesh";
+function add(a: number, b: number): number {
+  return a + b;
+}
+```
+
+**Short code snippets**
+Compile TS to JS:
+
+```bash
+tsc file.ts
+```
+
+**Applications**
+
+* Large-scale web apps
+* Angular projects
+* Node.js backends
+* Enterprise applications

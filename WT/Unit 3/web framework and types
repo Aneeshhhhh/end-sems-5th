@@ -1,0 +1,49 @@
+**Definition**
+A web framework is a software framework that provides tools, libraries, and structure for building web applications, handling tasks like routing, templates, request processing, and backend logic.
+
+**Types**
+
+* **Front-end Web Frameworks** – Used for building user interfaces (e.g., Angular, React, Vue).
+* **Back-end Web Frameworks** – Used for server-side logic, routing, databases (e.g., Express.js, Django, Spring).
+* **Full-stack Frameworks** – Provide both front-end and back-end features (e.g., Meteor, Next.js).
+
+**Working**
+A web framework receives HTTP requests, routes them to handlers, processes data, renders pages or JSON responses, and returns them to the client. It abstracts low-level operations to simplify development.
+
+**Diagrams (text)**
+
+```
+Client → Request → Framework (Routing + Logic + Rendering) → Response → Client
+```
+
+**Advantages**
+
+* Faster development
+* Built-in security features
+* Reusable components
+* Organized code structure
+
+**Disadvantages**
+
+* Learning curve
+* Framework limitations
+* Upgrades may break compatibility
+
+**Examples**
+
+* Express.js server
+* Angular SPA
+* Django backend
+
+**Short code snippets**
+
+```js
+app.get("/", (req, res) => res.send("Hello"));
+```
+
+**Applications**
+
+* Web apps
+* REST APIs
+* Dashboards
+* E-commerce sites

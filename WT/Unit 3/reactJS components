@@ -1,0 +1,65 @@
+**Definition**
+ReactJS components are independent, reusable UI blocks that return JSX. They control how a part of the user interface looks and behaves.
+
+**Types**
+
+* **Functional Components** – Simple functions using hooks for state & lifecycle.
+* **Class Components** – ES6 classes with lifecycle methods and state.
+* **Presentational Components** – UI-only components.
+* **Container Components** – Handle logic and data fetching.
+
+**Working**
+Components receive **props** (inputs) and manage **state** (internal data). When props or state change, React re-renders the component using the virtual DOM and updates only changed UI parts.
+
+**Diagrams (text)**
+
+```
+Props + State → Component → Virtual DOM → Real DOM
+```
+
+**Advantages**
+
+* Reusable building blocks
+* Easy to maintain
+* Clear separation of UI and logic
+* Supports hooks for cleaner code
+
+**Disadvantages**
+
+* Too many small components can complicate structure
+* Requires understanding JSX & hooks
+* Re-renders must be optimized for performance
+
+**Examples**
+Functional component:
+
+```jsx
+function Welcome(props) {
+  return <h1>Hello {props.name}</h1>;
+}
+```
+
+Component with state:
+
+```jsx
+function Counter() {
+  const [count, setCount] = React.useState(0);
+  return <button onClick={() => setCount(count + 1)}>{count}</button>;
+}
+```
+
+**Short code snippets**
+
+```jsx
+export default function App() {
+  return <Welcome name="Aneesh" />;
+}
+```
+
+**Applications**
+
+* UI widgets
+* Form inputs & buttons
+* Navigation bars
+* Dashboards
+* Entire pages in React apps

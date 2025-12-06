@@ -1,0 +1,64 @@
+**Definition**
+Dependency Injection (DI) in Angular is a design pattern where objects (services) are created and supplied to components automatically instead of components creating them manually.
+
+**Types**
+
+* **Constructor injection** (most common)
+* **Module-level providers**
+* **Component-level providers**
+* **Root-level providers (`providedIn: 'root'`)**
+
+**Working**
+Components request a dependency (service) through their constructor. Angular’s DI container looks for the provider and injects a single shared instance automatically.
+
+**Diagrams (text)**
+
+```
+Component → asks for Service
+DI Container → provides Service instance
+```
+
+**Advantages**
+
+* Reduces code duplication
+* Promotes modular, testable design
+* Decouples components from service creation
+* Automatic instance management
+
+**Disadvantages**
+
+* Requires understanding providers hierarchy
+* Misplaced providers may create multiple instances
+
+**Examples**
+Service:
+
+```ts
+@Injectable({ providedIn: 'root' })
+export class AuthService {
+  login() { return true; }
+}
+```
+
+Injection into component:
+
+```ts
+constructor(private auth: AuthService) {}
+
+ngOnInit() {
+  this.auth.login();
+}
+```
+
+**Short code snippets**
+
+```ts
+ng g service auth
+```
+
+**Applications**
+
+* Injecting services like HttpClient
+* Sharing data across components
+* Authentication and API handling
+* Any logic not belonging in components

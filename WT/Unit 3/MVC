@@ -1,0 +1,56 @@
+**Definition**
+MVC (Model–View–Controller) is a software architectural pattern that separates an application into three components: Model (data), View (UI), and Controller (logic). It promotes cleaner code, modularity, and easier maintenance.
+
+**Types**
+
+* Traditional MVC
+* MVVM (variation)
+* MVP (variation)
+
+**Working**
+The **Model** manages data and business logic.
+The **View** displays data to the user.
+The **Controller** handles input, updates the Model, and selects the View.
+This separation ensures changes in one part don’t break the others.
+
+**Diagrams (text)**
+
+```
+User → Controller → Model → View → User
+```
+
+**Advantages**
+
+* Clear separation of concerns
+* Easier testing and maintenance
+* Reusable components
+* Better organization for large apps
+
+**Disadvantages**
+
+* More files and structure required
+* Overkill for small applications
+
+**Examples**
+Folder structure:
+
+```
+models/
+views/
+controllers/
+```
+
+**Short code snippets**
+
+```js
+// controller example
+exports.getHome = (req, res) => {
+  res.render("home", { title: "Home" });
+};
+```
+
+**Applications**
+
+* Web apps (Express, Django, Rails)
+* UI-heavy applications
+* Large-scale maintainable systems

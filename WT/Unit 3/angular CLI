@@ -1,0 +1,21 @@
+Here are **6 Angular CLI commands** with short explanations:
+
+**1. `ng new <app-name>`**
+Creates a new Angular project with all required files, folders, and configuration.
+
+**2. `ng serve`**
+Starts the development server and runs the app locally at `http://localhost:4200/`. Automatically reloads on changes.
+
+**3. `ng generate component <name>` or `ng g c <name>`**
+Creates a new component with `.ts`, `.html`, `.css`, and test files. Updates module declarations automatically.
+
+**4. `ng generate service <name>` or `ng g s <name>`**
+Creates a new service file and prepares it for dependency injection.
+
+**5. `ng build`**
+Compiles the Angular project into static files inside the `dist/` folder for production or deployment.
+
+**6. `ng test`**
+Runs unit tests for the project using Karma and Jasmine.
+
+If you want, I can also add routing-related or module-generation commands.

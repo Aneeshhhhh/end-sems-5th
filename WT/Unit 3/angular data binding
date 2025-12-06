@@ -1,0 +1,66 @@
+**Definition**
+Angular data binding is the mechanism that synchronizes data between the component (TypeScript class) and the view (HTML template), ensuring UI and logic stay in sync.
+
+**Types**
+
+* **Interpolation** (`{{ }}`) → Displaying component data in HTML
+* **Property Binding** (`[property]`) → Setting HTML element properties
+* **Event Binding** (`(event)`) → Handling user actions
+* **Two-way Binding** (`[(ngModel)]`) → Syncing both ways between UI and component
+
+**Working**
+Angular automatically updates the DOM when component data changes and updates the component when the user interacts with the UI. The Angular change detection system ensures smooth synchronization.
+
+**Diagrams (text)**
+
+```
+Component ↔ View
+ ↑        ↑
+ |        |
+Property   Event
+Binding    Binding
+```
+
+**Advantages**
+
+* Reduces manual DOM manipulation
+* Keeps UI and logic consistent
+* Simplifies handling of user input
+* Cleaner and more readable templates
+
+**Disadvantages**
+
+* Two-way binding may cause complexity in large apps
+* Overuse can reduce performance
+
+**Examples**
+Interpolation:
+
+```html
+<p>{{ title }}</p>
+```
+
+Property binding:
+
+```html
+<img [src]="imageUrl">
+```
+
+Event binding:
+
+```html
+<button (click)="sayHello()">Click</button>
+```
+
+Two-way binding:
+
+```html
+<input [(ngModel)]="username">
+```
+
+**Applications**
+
+* Forms
+* Dynamic UI updates
+* Interactive components
+* Real-time dashboards

@@ -1,0 +1,62 @@
+**Definition**
+Angular components are the basic building blocks of an Angular application. Each component controls a part of the UI and contains its own logic, template, and styles.
+
+**Types**
+
+* Root component (`AppComponent`)
+* Feature components
+* Shared/reusable components
+* Presentational vs container components
+
+**Working**
+A component is defined using the `@Component` decorator. It includes:
+
+* **Template (HTML)** → what the user sees
+* **Class (TS)** → logic and data
+* **Styles (CSS)** → appearance
+  Angular renders components in a tree structure and updates them through change detection.
+
+**Diagrams (text)**
+
+```
+Component
+ ├── HTML (View)
+ ├── TS (Logic)
+ └── CSS (Styles)
+```
+
+**Advantages**
+
+* Reusable UI blocks
+* Easy to test and maintain
+* Clear separation of logic and view
+* Supports modular application design
+
+**Disadvantages**
+
+* Too many small components can complicate structure
+* Requires learning Angular decorators and bindings
+
+**Examples**
+
+```ts
+@Component({
+  selector: 'app-hello',
+  template: '<h1>Hello {{name}}</h1>'
+})
+export class HelloComponent {
+  name = 'Aneesh';
+}
+```
+
+**Short code snippets**
+
+```ts
+ng generate component home
+```
+
+**Applications**
+
+* Building UI layouts
+* Creating reusable widgets
+* Structuring large Angular applications

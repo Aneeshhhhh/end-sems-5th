@@ -1,0 +1,68 @@
+**Definition**
+Variables and constants in TypeScript are used to store data values. Variables can change during execution, while constants cannot be reassigned once defined.
+
+**Types**
+
+* `let` → block-scoped variable
+* `var` → function-scoped variable (not recommended)
+* `const` → block-scoped constant
+
+**Working**
+TypeScript enforces type checking on variables and constants. You can specify a type explicitly or allow TypeScript to infer it. Constants must be initialized at declaration and cannot be reassigned.
+
+**Diagrams (text)**
+
+```
+Memory
+ ├── let → value can change
+ ├── var → function-scoped
+ └── const → fixed value
+```
+
+**Advantages**
+
+* Type safety prevents invalid assignments
+* Clear distinction between mutable and immutable data
+* Reduces runtime errors
+* Better code readability
+
+**Disadvantages**
+
+* Extra type definitions may feel verbose
+* Must follow strict typing rules
+
+**Examples**
+Variables:
+
+```ts
+let age: number = 20;
+age = 21;
+```
+
+Constant:
+
+```ts
+const pi: number = 3.14;
+// pi = 3.15;  // Error
+```
+
+Type inference:
+
+```ts
+let city = "Mumbai";  // inferred as string
+```
+
+**Short code snippets**
+
+```ts
+const isLoggedIn: boolean = true;
+let score: number;
+score = 95;
+```
+
+**Applications**
+
+* Storing configuration values
+* Defining state in applications
+* Managing immutable values (API keys, settings)
+* General-purpose variable handling in TS programs

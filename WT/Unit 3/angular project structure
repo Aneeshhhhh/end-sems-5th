@@ -1,0 +1,71 @@
+**Definition**
+Angular project structure is the organized layout of files and folders created using Angular CLI, ensuring separation of components, modules, services, assets, and configuration files.
+
+**Types**
+
+* Application source folders
+* Configuration files
+* Environment files
+
+**Working**
+When Angular CLI generates a project, it creates a root folder with subfolders for components, styles, assets, and environment configuration. Angular uses this structure to compile, bundle, and serve the application efficiently.
+
+**Diagrams (text)**
+
+```
+my-app/
+ ├── src/
+ │    ├── app/
+ │    │    ├── app.component.ts
+ │    │    ├── app.component.html
+ │    │    ├── app.component.css
+ │    │    └── app.module.ts
+ │    ├── assets/
+ │    ├── environments/
+ │    │     ├── environment.ts
+ │    │     └── environment.prod.ts
+ │    ├── index.html
+ │    ├── main.ts
+ │    └── styles.css
+ ├── angular.json
+ ├── package.json
+ ├── tsconfig.json
+ └── node_modules/
+```
+
+**Advantages**
+
+* Organized and scalable structure
+* Clear separation of concerns
+* Easy navigation and maintenance
+* Supports large application development
+
+**Disadvantages**
+
+* Steep learning curve for beginners
+* Many configuration files
+
+**Examples**
+Main files:
+
+* `app.module.ts` → root module
+* `app.component.ts` → component logic
+* `main.ts` → app entry point
+* `angular.json` → Angular workspace configuration
+
+**Short code snippets**
+Component example:
+
+```ts
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html'
+})
+export class AppComponent {}
+```
+
+**Applications**
+
+* Enterprise Angular apps
+* SPA development
+* Modular UI architectures

@@ -1,0 +1,39 @@
+MVC in web frameworks refers to the way many web frameworks structure an application using **Model–View–Controller** to separate data, UI, and logic. This separation keeps code organized, scalable, and maintainable.
+
+**Model**
+Represents the data layer and business logic. It interacts with the database and manages rules, validations, and data structures.
+Example: User model storing user information.
+
+**View**
+Represents the presentation layer. It displays data from the Model to the user using templates (HTML, CSS).
+Example: A webpage showing a list of users.
+
+**Controller**
+Handles user input and requests. It communicates with the Model, processes data, and selects which View to render.
+Example: A controller method reading form data and saving it to the database.
+
+**How MVC Works in Web Frameworks**
+
+1. User sends a request (e.g., clicking a button).
+2. Controller receives the request and calls the required Model function.
+3. Model processes data (fetch, update, validate).
+4. Controller sends processed data to the View.
+5. View generates the final webpage and sends it to the user.
+
+**Diagrams (text)**
+
+```
+User → Controller → Model → View → User
+```
+
+**Examples in Web Frameworks**
+
+* Express.js: `routes → controllers → models → views`
+* Django: `urls → views → models → templates`
+* Ruby on Rails: `controllers → models → views`
+
+**Applications**
+
+* Web apps needing clean structure
+* REST APIs
+* E-commerce, dashboards, admin panels
