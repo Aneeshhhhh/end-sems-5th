@@ -1,0 +1,9 @@
+Express.js acts as a middleware-based framework, meaning every incoming request passes through a sequence of functions before producing a response. Middleware functions can read or modify the request, perform validation, log activity, handle authentication, or terminate the response. This layered approach makes Express flexible, modular, and easy to extend.
+
+**Types of Middleware**
+
+* **Application-level middleware:** Added using `app.use()`, used for logging, parsing, authentication.
+* **Router-level middleware:** Attached to `express.Router()` for grouping routes.
+* **Built-in middleware:** Provided by Express (e.g., `express.json()`, `express.urlencoded()`).
+* **Third-party middleware:** Installed via npm (e.g., `cors`, `morgan`, `body-parser`).
+* **Error-handling middleware:** Special functions with four parameters `(err, req, res, next)` used to catch and manage errors.

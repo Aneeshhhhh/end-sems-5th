@@ -1,0 +1,31 @@
+Mongoose provides a built-in middleware system that lets you run functions **before or after** certain database operations. It is mainly used for validation, logging, encryption, and automation of tasks like hashing passwords.
+
+**Types of Mongoose Middleware**
+
+* **Document middleware** – runs on document actions (`save`, `validate`, `remove`)
+* **Query middleware** – runs on queries (`find`, `findOne`, `updateOne`, `deleteOne`)
+* **Model middleware** – runs on model operations like `insertMany`
+* **Aggregate middleware** – runs on aggregation pipelines (`aggregate`)
+
+**How It Works**
+You attach middleware to a schema. When the matching operation occurs, Mongoose automatically executes the middleware function before or after the operation.
+
+Example – Pre-save middleware (for hashing passwords):
+
+```js
+UserSchema.pre("save", function(next) {
+  this.password = hash(this.password);
+  next();
+});
+```
+
+Example – Query middleware (logging a query):
+
+```js
+UserSchema.pre("find", function(next) {
+  console.log("A find query is running");
+  next();
+});
+```
+
+Mongoose middleware helps enforce rules, perform transformations, and centralize logic during database operations.

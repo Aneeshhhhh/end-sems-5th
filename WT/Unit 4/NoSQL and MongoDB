@@ -1,0 +1,64 @@
+**Definition**
+NoSQL refers to non-relational databases designed for flexible schemas, horizontal scaling, and handling large volumes of unstructured or semi-structured data. MongoDB is a popular NoSQL document database that stores data in JSON-like BSON documents.
+
+**Types**
+
+* Key–value stores
+* Document stores (MongoDB)
+* Column-family stores
+* Graph databases
+
+**Working**
+NoSQL databases avoid fixed tables. MongoDB stores data as collections of documents. Each document contains key–value pairs and can have different fields. CRUD operations are performed using queries like `find()`, `insertOne()`, or `updateOne()`. Data is replicated and sharded for high scalability.
+
+**Diagrams (text)**
+
+```
+Database
+ └── Collection
+       └── Document
+             ├── key: value
+             └── key: value
+```
+
+**Advantages**
+
+* Flexible schema
+* High scalability and performance
+* Handles large, unstructured datasets
+* Easy to integrate with modern apps
+
+**Disadvantages**
+
+* No strict ACID transactions (limited)
+* Not ideal for complex joins
+* Schema flexibility can lead to inconsistency
+
+**Examples**
+Insert document:
+
+```js
+db.users.insertOne({ name: "Aneesh", age: 20 });
+```
+
+Find document:
+
+```js
+db.users.find({ age: 20 });
+```
+
+**Short code snippets**
+Connect using Node.js:
+
+```js
+const { MongoClient } = require("mongodb");
+MongoClient.connect(url);
+```
+
+**Applications**
+
+* Real-time apps
+* Content management
+* IoT data storage
+* Big data analytics
+* User profiles & session storage

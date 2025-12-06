@@ -1,0 +1,58 @@
+**Definition**
+Node.js events are asynchronous signals emitted by objects to indicate that something has happened. These events trigger listener functions registered using the EventEmitter module.
+
+**Types**
+
+* Custom events
+* Built-in events (e.g., stream events, server events)
+* Error events
+* Timer events
+
+**Working**
+Node.js uses an **EventEmitter** class. When an event is emitted using `.emit()`, all functions registered with `.on()` for that event are executed. This drives Node’s event-driven, non-blocking architecture.
+
+**Diagrams (text)**
+
+```
+EventEmitter
+   ├── on("event", listener)
+   └── emit("event") → listener executes
+```
+
+**Advantages**
+
+* Enables asynchronous programming
+* Reduces thread usage
+* Efficient for I/O-heavy tasks
+* Supports modular application design
+
+**Disadvantages**
+
+* Harder debugging for complex event chains
+* Mismanaged listeners can cause memory leaks
+
+**Examples**
+
+```js
+const EventEmitter = require("events");
+const emitter = new EventEmitter();
+
+emitter.on("greet", () => {
+  console.log("Hello!");
+});
+
+emitter.emit("greet");
+```
+
+**Short code snippets**
+
+```js
+emitter.on("data", (msg) => console.log(msg));
+```
+
+**Applications**
+
+* Handling HTTP requests
+* Streams and file operations
+* Real-time apps (chat, notifications)
+* Custom event-driven modules

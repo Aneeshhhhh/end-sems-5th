@@ -1,0 +1,82 @@
+**Definition**
+Advanced MongoDB refers to higher-level features used for performance, scalability, analytics, and complex querying beyond basic CRUD. These include aggregation pipelines, indexing, replication, sharding, transactions, and advanced operators.
+
+**Types**
+
+* Aggregation Framework
+* Indexing
+* Replication (Replica Sets)
+* Sharding (Horizontal Scaling)
+* Transactions
+* Advanced Query Operators
+
+**Working**
+MongoDB enhances data processing through aggregation pipelines, improves read/write speed using indexes, ensures high availability via replica sets, and distributes data across multiple servers using sharding. Transactions allow multi-document ACID operations, while advanced operators enrich querying capabilities.
+
+**Diagrams (text)**
+
+```
+            ┌── Indexes
+MongoDB ────┤
+            ├── Aggregation Pipeline → Results
+            ├── Replica Set → High Availability
+            └── Sharding → Horizontal Scaling
+```
+
+**Advantages**
+
+* Handles big data efficiently
+* High availability via replication
+* Scales horizontally with sharding
+* Complex analytics using aggregation
+* Faster queries through indexing
+* Supports ACID transactions
+
+**Disadvantages**
+
+* Sharding adds operational complexity
+* Poorly designed indexes may slow writes
+* Aggregations can be heavy on memory
+
+**Examples**
+Aggregation:
+
+```js
+db.sales.aggregate([
+  { $match: { amount: { $gt: 1000 } } },
+  { $group: { _id: "$category", total: { $sum: "$amount" } } }
+]);
+```
+
+Create index:
+
+```js
+db.users.createIndex({ email: 1 });
+```
+
+Replica set initiation:
+
+```js
+rs.initiate();
+```
+
+**Short code snippets**
+Sharding enable:
+
+```js
+sh.enableSharding("mydb");
+```
+
+Transaction example:
+
+```js
+session.startTransaction();
+```
+
+**Applications**
+
+* Big data analytics
+* High-traffic applications
+* Real-time dashboards
+* Distributed systems
+* Financial apps requiring transactions

@@ -1,0 +1,25 @@
+Node.js provides three main types of API functions:
+
+**1. Asynchronous (Non-blocking) Functions**
+These functions take a callback or return a Promise. They do not block the event loop.
+Example:
+
+```js
+fs.readFile("file.txt", callback);
+```
+
+**2. Synchronous (Blocking) Functions**
+These functions block the thread until the operation completes.
+Example:
+
+```js
+fs.readFileSync("file.txt");
+```
+
+**3. Promise / Async–Await Based Functions**
+Modern version of async functions that return Promises and work with `async`/`await`.
+Example:
+
+```js
+let data = await fs.promises.readFile("file.txt");
+```

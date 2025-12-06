@@ -1,0 +1,21 @@
+Node.js has several key features that make it ideal for building scalable, high-performance server-side applications:
+
+**1. Asynchronous & Non-Blocking I/O**
+All operations in Node.js run asynchronously, meaning the server does not wait for tasks like file reads or database calls to finish. This non-blocking behavior allows Node.js to handle thousands of requests efficiently.
+
+**2. Single-Threaded Event Loop**
+Node.js uses a single thread to process requests through an event loop. This design reduces overhead and provides high concurrency without the need for multi-threaded management.
+
+**3. Fast Execution (V8 Engine)**
+Node.js is built on Google’s V8 JavaScript engine, which compiles JavaScript directly to machine code. This makes execution extremely fast and suitable for real-time applications.
+
+**4. NPM Ecosystem**
+Node.js includes npm, the largest package ecosystem in the world. Developers can install libraries, frameworks, and tools easily, making development faster.
+
+**5. Cross-Platform Compatibility**
+Node.js runs on Windows, macOS, and Linux. Applications written in Node can also be packaged for different operating systems using tools like Electron or pkg.
+
+**6. Built-In Modules**
+Node.js provides core modules (such as `http`, `fs`, `path`, and `events`) out of the box. These modules allow developers to create servers, interact with files, and manage events without installing extra packages.
+
+If you want, I can also give a diagram or convert this into a crisp 6-mark answer format.

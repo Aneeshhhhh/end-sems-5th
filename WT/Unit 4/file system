@@ -1,0 +1,70 @@
+**Definition**
+The File System (**fs**) module in Node.js provides APIs to work with files and directories, allowing reading, writing, updating, deleting, and streaming file data.
+
+**Types**
+
+* **Synchronous methods** (blocking)
+* **Asynchronous methods** (non-blocking)
+* **File stream operations**
+* **Directory operations**
+
+**Working**
+The `fs` module interacts with the operating system’s file system. Asynchronous methods use callbacks, Promises, or async–await to avoid blocking the event loop. Data can also be handled as streams for efficient processing of large files.
+
+**Diagrams (text)**
+
+```
+Node.js App
+   ↓
+ fs Module → Read/Write/Update/Delete Files
+```
+
+**Advantages**
+
+* Supports both sync and async operations
+* Handles large files efficiently using streams
+* Easy to manage directories and metadata
+* Integrates with Node’s event-driven architecture
+
+**Disadvantages**
+
+* Synchronous functions block the event loop
+* Requires careful error handling
+* Large file ops may need streams for best performance
+
+**Examples**
+Read file (async):
+
+```js
+const fs = require("fs");
+
+fs.readFile("data.txt", "utf8", (err, data) => {
+  console.log(data);
+});
+```
+
+Write file:
+
+```js
+fs.writeFile("new.txt", "Hello Node!", () => {});
+```
+
+**Short code snippets**
+Check if file exists:
+
+```js
+fs.existsSync("file.txt");
+```
+
+Create directory:
+
+```js
+fs.mkdirSync("docs");
+```
+
+**Applications**
+
+* Reading and writing logs
+* Storing and retrieving configuration files
+* File upload/download systems
+* Streaming large media files

@@ -1,0 +1,66 @@
+**Definition**
+npm (Node Package Manager) is the default package manager for Node.js used to install, update, publish, and manage external libraries and dependencies for Node applications.
+
+**Types**
+
+* **Local packages** (installed inside a project)
+* **Global packages** (installed system-wide)
+* **Dev dependencies**
+* **Production dependencies**
+
+**Working**
+npm downloads packages from the npm registry and stores them in the `node_modules` folder. It tracks all dependencies in `package.json`, allowing easy version control and management. Developers use commands like `npm install` to fetch libraries and integrate them into their project.
+
+**Diagrams (text)**
+
+```
+npm Registry
+      ↓
+ npm install → node_modules → Used in App
+```
+
+**Advantages**
+
+* Huge ecosystem of packages
+* Easy dependency management
+* Automates version control for libraries
+* Supports package scripts for running tasks
+
+**Disadvantages**
+
+* Too many dependencies can bloat projects
+* Version conflicts may occur
+* Requires internet for package installation
+
+**Examples**
+Install a package:
+
+```bash
+npm install express
+```
+
+Initialize a project:
+
+```bash
+npm init -y
+```
+
+**Short code snippets**
+Run a script:
+
+```bash
+npm run start
+```
+
+Install globally:
+
+```bash
+npm install -g nodemon
+```
+
+**Applications**
+
+* Managing Node.js libraries
+* Running build tools
+* Installing frameworks (Express, React)
+* Automating scripts and workflows

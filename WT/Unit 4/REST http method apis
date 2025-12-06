@@ -1,0 +1,20 @@
+REST HTTP method APIs define how clients interact with server resources using standard HTTP verbs. Each method represents a specific action on a resource, making RESTful APIs predictable and easy to use. REST focuses on stateless communication, meaning every request contains all the information needed without relying on server memory.
+
+**Common REST HTTP Methods**
+
+* **GET** – Retrieves data from the server. Used for reading resources.
+* **POST** – Sends new data to the server. Used for creating resources.
+* **PUT** – Updates or replaces an existing resource entirely.
+* **PATCH** – Partially updates an existing resource.
+* **DELETE** – Removes a resource from the server.
+
+Example routes in Express:
+
+```js
+app.get("/users", getUsers);
+app.post("/users", addUser);
+app.put("/users/:id", updateUser);
+app.delete("/users/:id", deleteUser);
+```
+
+REST APIs provide a structured and clean way to perform CRUD operations and are widely used for backend services, mobile applications, and microservices.

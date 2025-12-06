@@ -1,0 +1,84 @@
+**Definition**
+Built-in modules in Node.js are core modules provided by the Node runtime that can be used without installation. They offer essential functionalities like file handling, networking, streams, buffers, and utilities.
+
+**Types**
+
+* File system modules
+* Networking modules
+* Utility modules
+* OS and process modules
+
+**Working**
+They are loaded using `require("<module>")` and provide synchronous or asynchronous APIs. Node binds these modules to its event-driven architecture for efficient I/O operations.
+
+**Diagrams (text)**
+
+```
+Node.js Core
+ ├── fs
+ ├── http
+ ├── path
+ ├── os
+ ├── events
+ ├── util
+ └── others
+```
+
+**Advantages**
+
+* No installation needed
+* Optimized for performance
+* Reliable and maintained by Node.js
+* Deep OS and network integration
+
+**Disadvantages**
+
+* Lower-level APIs require experience
+* Some modules are verbose without wrappers
+
+**Examples**
+
+```js
+const fs = require("fs");
+const http = require("http");
+```
+
+**Short code snippets**
+
+```js
+const os = require("os");
+console.log(os.platform());
+```
+
+**Applications**
+
+* Servers (http, https)
+* File handling (fs)
+* Path operations (path)
+* Event-driven logic (events)
+* System info tools (os)
+
+**List of Built-in Node.js Modules**
+
+* fs
+* http
+* https
+* url
+* path
+* os
+* events
+* querystring
+* crypto
+* buffer
+* stream
+* util
+* timers
+* dns
+* net
+* readline
+* zlib
+* assert
+* tty
+* punycode
+
+If you want, I can also give their use cases in one line each.

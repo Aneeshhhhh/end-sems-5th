@@ -1,0 +1,24 @@
+Configuring routes in Express.js means defining how the server should respond to different HTTP requests (GET, POST, PUT, DELETE) on specific URLs. Routes act as the entry points for client requests and map each request to a corresponding handler function. Express provides methods like `app.get()`, `app.post()`, and `app.put()` to set up these paths. Routes can also be grouped using the `express.Router()` module for cleaner organization, especially in larger applications. Proper routing helps separate logic, improve readability, and structure APIs effectively.
+
+Example:
+
+```js
+const express = require("express");
+const app = express();
+
+// Simple route
+app.get("/", (req, res) => {
+  res.send("Home Page");
+});
+
+// Route with Router
+const router = express.Router();
+router.get("/users", (req, res) => {
+  res.send("Users List");
+});
+app.use("/api", router);
+
+app.listen(3000);
+```
+
+Routes allow the application to respond differently based on URL and method, forming the backbone of API and web server functionality.

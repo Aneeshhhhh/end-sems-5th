@@ -1,0 +1,53 @@
+**Definition**
+Applying basic HTTP architecture means structuring a web application so that clients (browsers/mobile apps) communicate with a server using standard HTTP methods like GET, POST, PUT, and DELETE.
+
+**Types**
+
+* Client–Server architecture
+* Request–Response model
+* Stateless communication
+* Resource-based routing (REST)
+
+**Working**
+A client sends an HTTP request to the server specifying a URL and method. The server processes the request, retrieves or updates data, and sends back an HTTP response containing status codes and content. Each request is independent (stateless), and routing determines which server function handles each method.
+
+**Diagrams (text)**
+
+```
+Client → HTTP Request → Server
+Client ← HTTP Response ← Server
+```
+
+**Advantages**
+
+* Simple and widely supported
+* Scalable and stateless
+* Clear separation of client & server
+* Easy debugging with standard tools
+
+**Disadvantages**
+
+* Statelessness can require extra data in requests
+* Not suitable for real-time updates without extensions
+
+**Examples**
+
+```
+GET /users        → fetch users  
+POST /users       → create new user  
+PUT /users/1      → update user  
+DELETE /users/1   → remove user
+```
+
+**Short code snippets**
+
+```js
+app.get("/home", (req, res) => res.send("Home Page"));
+```
+
+**Applications**
+
+* REST APIs
+* Web servers
+* Mobile-backend communication
+* Microservices architecture

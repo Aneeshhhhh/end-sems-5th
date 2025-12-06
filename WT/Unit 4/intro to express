@@ -1,0 +1,66 @@
+**Definition**
+Express.js is a lightweight, flexible web application framework for Node.js that simplifies building server-side applications, REST APIs, and web services using minimal code.
+
+**Types**
+
+* Middleware-based applications
+* RESTful APIs
+* MVC-structured apps
+* Single-page app backends
+
+**Working**
+Express.js uses a middleware pipeline where each request flows through functions (middleware) that can modify the request, send responses, or pass control to the next handler. Routing is used to define how the server responds to different HTTP methods and URLs.
+
+**Diagrams (text)**
+
+```
+Client Request
+      ↓
+Middleware → Router → Handler → Response
+```
+
+**Advantages**
+
+* Minimal and fast
+* Easy routing system
+* Large ecosystem of middleware
+* Integrates well with databases
+* Ideal for APIs and microservices
+
+**Disadvantages**
+
+* No strict structure (can lead to messy code)
+* Requires manual setup of many components
+* Not opinionated like full frameworks
+
+**Examples**
+Basic server:
+
+```js
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) => {
+  res.send("Hello from Express!");
+});
+
+app.listen(3000);
+```
+
+**Short code snippets**
+Middleware example:
+
+```js
+app.use((req, res, next) => {
+  console.log("Request received");
+  next();
+});
+```
+
+**Applications**
+
+* RESTful APIs
+* Web servers
+* Microservices
+* Authentication services
+* Real-time apps with Socket.io

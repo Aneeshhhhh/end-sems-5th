@@ -1,0 +1,19 @@
+Template engines in Node.js are tools that allow developers to generate dynamic HTML pages by combining templates with data. Instead of manually building HTML strings, template engines let you write HTML with placeholders, loops, and conditions. During runtime, these placeholders are replaced with actual data, producing a final HTML page sent to the client.
+
+Common template engines include **EJS**, **Pug**, and **Handlebars**. They simplify rendering dynamic content such as user profiles, product lists, or dashboard views. Express.js integrates easily with these engines using `app.set("view engine", "<engine>")`.
+
+Example using EJS:
+
+```js
+app.get("/home", (req, res) => {
+  res.render("home", { name: "Aneesh" });
+});
+```
+
+Example template (`home.ejs`):
+
+```html
+<h1>Welcome <%= name %></h1>
+```
+
+Template engines improve readability, separate logic from presentation, and make server-side rendering efficient.

@@ -1,0 +1,80 @@
+**Definition**
+Node.js functions are reusable blocks of JavaScript code executed on the server side. They can be synchronous or asynchronous and are essential for structuring logic, handling requests, performing operations, and managing callbacks or promises.
+
+**Types**
+
+* **Normal (synchronous) functions**
+* **Asynchronous callback functions**
+* **Arrow functions**
+* **Async–await functions**
+* **Module-exported functions**
+
+**Working**
+Functions are defined and invoked like standard JavaScript, but in Node.js they often interact with non-blocking APIs. Async functions do not pause program execution; instead, they register callbacks or return promises that execute when operations complete.
+
+**Diagrams (text)**
+
+```
+Function Call → Non-blocking Operation → Callback/Promise → Result Returned
+```
+
+**Advantages**
+
+* Reusability and clean modular code
+* Support for asynchronous processing
+* Easy integration with Node’s event-driven model
+* Promotes separation of concerns
+
+**Disadvantages**
+
+* Callback nesting can get complex
+* Async code requires proper error handling
+* Misuse of async patterns can affect readability
+
+**Examples**
+Normal function:
+
+```js
+function add(a, b) {
+  return a + b;
+}
+```
+
+Async callback function:
+
+```js
+fs.readFile("file.txt", (err, data) => {
+  console.log(data.toString());
+});
+```
+
+Async–await function:
+
+```js
+async function fetchData() {
+  let data = await getInfo();
+  console.log(data);
+}
+```
+
+Exported function (module):
+
+```js
+module.exports.sayHello = () => {
+  return "Hello";
+};
+```
+
+**Short code snippets**
+
+```js
+const greet = () => console.log("Hi!");
+greet();
+```
+
+**Applications**
+
+* API request handling
+* File and database operations
+* Modular route controllers
+* Background tasks and utilities

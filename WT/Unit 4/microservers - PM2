@@ -1,0 +1,68 @@
+**Definition**
+PM2 is a production-grade process manager for Node.js used to run, monitor, and manage microservices efficiently. It keeps services alive, restarts them on failure, and supports load balancing across multiple instances.
+
+**Types**
+
+* **Process management** (start, stop, restart services)
+* **Cluster mode** (multiple instances for scaling)
+* **Monitoring & logging**
+* **Startup scripts** (auto-start on reboot)
+
+**Working**
+PM2 runs microservices as background processes. In cluster mode, it spawns multiple instances of the same service to utilize all CPU cores. PM2 monitors each process, restarts it automatically on crash, and provides logs, metrics, and dashboards.
+
+**Diagrams (text)**
+
+```
+PM2
+ ├── Service 1 (Instance 1,2,3…)
+ ├── Service 2
+ └── Monitoring + Auto-Restart
+```
+
+**Advantages**
+
+* Keeps microservices always running
+* Automatic restarts on crash
+* Easy horizontal scaling via cluster mode
+* Centralized logs and monitoring
+* Simple commands for deployment
+
+**Disadvantages**
+
+* Not a full orchestration tool like Kubernetes
+* Limited service discovery and networking features
+
+**Examples**
+Start a service:
+
+```bash
+pm2 start app.js
+```
+
+Cluster mode:
+
+```bash
+pm2 start app.js -i max
+```
+
+Monitor processes:
+
+```bash
+pm2 monit
+```
+
+**Short code snippets**
+
+```bash
+pm2 logs
+pm2 restart app
+pm2 stop app
+```
+
+**Applications**
+
+* Running Node.js microservices in production
+* Scaling APIs across CPU cores
+* Monitoring service uptime and performance
+* Managing multiple services in one server

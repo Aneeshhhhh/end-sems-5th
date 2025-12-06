@@ -1,0 +1,15 @@
+MongoDB–Node.js communication happens using the **MongoDB Node.js driver** or an ORM like **Mongoose**. Node.js connects to MongoDB through a connection string, sends queries (insert, find, update, delete), and receives JSON-like results asynchronously. Communication is non-blocking, meaning Node continues running while MongoDB processes queries.
+
+Example (MongoDB driver):
+
+```js
+const { MongoClient } = require("mongodb");
+const url = "mongodb://localhost:27017";
+
+MongoClient.connect(url).then(client => {
+  const db = client.db("testdb");
+  db.collection("users").find().toArray().then(data => console.log(data));
+});
+```
+
+Node.js acts as the server logic layer, MongoDB stores data, and both communicate using JSON-based BSON documents.

@@ -1,0 +1,22 @@
+Creating an HTTPS server in Node.js involves using the built-in **https** module along with SSL/TLS certificates to enable secure communication. HTTPS encrypts data between the client and server to provide confidentiality and integrity. To set up an HTTPS server, Node.js requires two key files: a **private key** and an **SSL certificate**, usually generated using OpenSSL or obtained from a certificate authority. These credentials are passed into the server configuration, after which the server listens on a secure port such as 443.
+
+The process begins by importing the https and fs modules. The fs module loads the key and certificate from the file system. The https module then creates a secure server using `https.createServer(options, callback)`, where the options object contains the SSL credentials. Inside the callback, the server defines how incoming requests will be handled. Once started, the server can accept encrypted requests from browsers or clients.
+
+Example:
+
+```js
+const https = require("https");
+const fs = require("fs");
+
+const options = {
+  key: fs.readFileSync("key.pem"),
+  cert: fs.readFileSync("cert.pem")
+};
+
+https.createServer(options, (req, res) => {
+  res.writeHead(200);
+  res.end("Secure Server Running");
+}).listen(443);
+```
+
+This HTTPS setup ensures all communication occurs securely, making it essential for applications involving login systems, payments, or sensitive data.

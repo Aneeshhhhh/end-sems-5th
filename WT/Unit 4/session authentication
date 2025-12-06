@@ -1,0 +1,64 @@
+**Definition**
+Session authentication is a method where the server creates and stores a session for a logged-in user, then sends a session ID to the client. The client includes this session ID in every request to stay authenticated.
+
+**Types**
+
+* In-memory sessions
+* File-based sessions
+* Database-backed sessions (Redis, MongoDB)
+
+**Working**
+When a user logs in, the server verifies credentials and generates a unique session ID. This ID is stored on the server and sent to the client as a cookie. For every subsequent request, the browser automatically sends the cookie. The server checks the session store; if the session is valid, the user is considered authenticated.
+
+**Diagrams (text)**
+
+```
+Login → Server creates session → Sends sessionID cookie
+Client → Sends cookie → Server validates session → Access granted
+```
+
+**Advantages**
+
+* Simple and widely used
+* Secure when paired with HTTPS
+* Server can easily invalidate sessions
+* Works well for traditional web apps
+
+**Disadvantages**
+
+* Server must store session data
+* Not ideal for distributed systems without shared storage
+* Cookies can be stolen if not secured properly
+
+**Examples**
+Express session setup:
+
+```js
+const session = require("express-session");
+
+app.use(session({
+  secret: "key",
+  resave: false,
+  saveUninitialized: true
+}));
+```
+
+**Short code snippets**
+Set session:
+
+```js
+req.session.user = { id: 1, name: "Aneesh" };
+```
+
+Check session:
+
+```js
+if (req.session.user) { /* authenticated */ }
+```
+
+**Applications**
+
+* Login systems
+* E-commerce carts
+* Admin dashboards
+* Any stateful web application

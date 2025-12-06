@@ -1,0 +1,95 @@
+**Definition**
+CRUD in Node.js refers to performing Create, Read, Update, and Delete operations on a database (like MongoDB) using a Node.js server, typically through Express routes.
+
+**Types**
+
+* Create (POST)
+* Read (GET)
+* Update (PUT/PATCH)
+* Delete (DELETE)
+
+**Working**
+Node.js receives HTTP requests from the client, processes them through Express routes, and communicates with the database (MongoDB) using a driver or Mongoose. Each route corresponds to one CRUD action.
+
+**Diagrams (text)**
+
+```
+Client → Express Route → MongoDB → Response
+        POST  /create
+        GET   /users
+        PUT   /update/:id
+        DELETE /delete/:id
+```
+
+**Advantages**
+
+* Easy to build REST APIs
+* JSON → BSON compatibility with MongoDB
+* Fast non-blocking operations
+* Clean separation of logic
+
+**Disadvantages**
+
+* Requires proper error handling
+* Asynchronous operations need Promises/async–await
+* Schema-less nature may cause inconsistent data
+
+**Examples (Using Express + MongoDB)**
+
+**1. Create (POST)**
+
+```js
+app.post("/users", async (req, res) => {
+  const user = await db.collection("users").insertOne(req.body);
+  res.send(user);
+});
+```
+
+**2. Read (GET)**
+
+```js
+app.get("/users", async (req, res) => {
+  const users = await db.collection("users").find().toArray();
+  res.send(users);
+});
+```
+
+**3. Update (PUT)**
+
+```js
+app.put("/users/:id", async (req, res) => {
+  const id = req.params.id;
+  const result = await db.collection("users").updateOne(
+    { _id: ObjectId(id) },
+    { $set: req.body }
+  );
+  res.send(result);
+});
+```
+
+**4. Delete (DELETE)**
+
+```js
+app.delete("/users/:id", async (req, res) => {
+  const id = req.params.id;
+  const result = await db.collection("users").deleteOne({ _id: ObjectId(id) });
+  res.send(result);
+});
+```
+
+**Short code snippets**
+Connection setup:
+
+```js
+const { MongoClient, ObjectId } = require("mongodb");
+const client = await MongoClient.connect(url);
+const db = client.db("testdb");
+```
+
+**Applications**
+
+* User management systems
+* Inventory apps
+* Login modules
+* Admin dashboards
+* Any CRUD-based REST API

@@ -1,0 +1,21 @@
+Handling data I/O in Node.js is based on its **non-blocking, asynchronous architecture**, which allows the program to continue executing while I/O operations (file reads, writes, network requests, database calls) happen in the background. Node achieves this using the event loop, callbacks, Promises, and streams. Because of this design, Node.js can efficiently manage thousands of I/O requests without creating multiple threads.
+
+Node.js provides two main ways to handle data I/O: **asynchronous I/O** and **stream-based I/O**. Asynchronous I/O uses callback functions or async–await to execute code only when an operation completes (e.g., reading a file or querying a database). This keeps the application responsive, especially in server environments. Stream-based I/O is used for large files or continuous data transfer, processing data in chunks rather than loading entire content into memory.
+
+Example of asynchronous file read:
+
+```js
+const fs = require("fs");
+fs.readFile("data.txt", "utf8", (err, data) => {
+  console.log(data);
+});
+```
+
+Example of streaming:
+
+```js
+const stream = fs.createReadStream("bigfile.txt");
+stream.on("data", chunk => console.log("Chunk:", chunk));
+```
+
+Node.js handles I/O operations through events, such as `"data"`, `"end"`, or error events. This makes it ideal for building servers, real-time applications, file processors, and APIs where I/O-heavy tasks dominate the workload.

@@ -1,0 +1,60 @@
+**Definition**
+Node.js is a server-side JavaScript runtime built on Google’s V8 engine that enables executing JavaScript outside the browser to build scalable, high-performance network applications.
+
+**Types**
+
+* Server-side applications
+* Real-time applications (chat, games)
+* API services (REST, GraphQL)
+
+**Working**
+Node.js uses an event-driven, non-blocking I/O model. Instead of creating multiple threads, it handles many simultaneous requests using a single-threaded event loop, making it highly efficient for I/O-heavy tasks.
+
+**Diagrams (text)**
+
+```
+Client Requests
+      ↓
+Event Loop → Non-blocking I/O → Callback/Promise
+      ↓
+ Response
+```
+
+**Advantages**
+
+* Fast execution using V8 engine
+* Handles many connections efficiently
+* Large npm ecosystem
+* Lightweight and scalable
+* Ideal for APIs and real-time apps
+
+**Disadvantages**
+
+* Not ideal for CPU-heavy tasks
+* Callback nesting (mitigated by Promises/async-await)
+* Single-threaded limitations
+
+**Examples**
+Simple Node.js server:
+
+```js
+const http = require("http");
+
+http.createServer((req, res) => {
+  res.end("Hello from Node.js");
+}).listen(3000);
+```
+
+**Short code snippets**
+
+```bash
+node app.js
+```
+
+**Applications**
+
+* REST APIs
+* Chat applications
+* Streaming services
+* Microservices
+* Real-time collaborative tools
