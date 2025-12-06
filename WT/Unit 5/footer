@@ -1,0 +1,66 @@
+**Definition**
+A footer in jQuery Mobile is a bottom-of-page layout widget used to display navigation controls, copyright text, or persistent action buttons.
+
+**Types**
+
+* Standard footer
+* Fixed footer
+* Themed footer
+* Footer with navbar
+
+**Working**
+The footer is created using a `<div>` with `data-role="footer"`. jQuery Mobile styles it and positions it at the bottom of the page. When fixed, it stays visible while scrolling.
+
+**Diagrams (text)**
+
+```
+-------------------
+[ Page Content ]
+[     Footer     ]
+```
+
+**Advantages**
+
+* Provides consistent bottom navigation
+* Supports navbars inside the footer
+* Can remain fixed for quick access
+
+**Disadvantages**
+
+* Fixed footer reduces visible content
+* Too many footer buttons can clutter UI
+
+**Examples**
+
+```html
+<div data-role="footer">
+  <h4>© 2024 My App</h4>
+</div>
+```
+
+Footer with navbar:
+
+```html
+<div data-role="footer">
+  <div data-role="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </div>
+</div>
+```
+
+**Short code snippets**
+Fixed footer:
+
+```html
+<div data-role="footer" data-position="fixed">
+```
+
+**Applications**
+
+* Navigation menus
+* Copyright information
+* Persistent action buttons
+* Bottom toolbars in mobile apps

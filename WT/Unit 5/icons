@@ -1,0 +1,46 @@
+**Definition**
+Icons in jQuery Mobile are built-in symbolic graphics used to enhance buttons, toolbars, lists, and UI elements.
+
+**Types**
+
+* Default icon set (e.g., home, search, gear, back, delete)
+* Custom icons using CSS or external icon libraries
+
+**Working**
+Icons are applied using the `data-icon` attribute on buttons or list items. jQuery Mobile replaces the attribute with a styled SVG/PNG icon.
+
+**Diagrams (text)**
+
+```
+Button → data-icon="home" → Home Icon Rendered
+```
+
+**Advantages**
+
+* Easy to use
+* Consistent look across devices
+* Improves UI clarity
+
+**Disadvantages**
+
+* Limited default icons
+* Custom icons require extra CSS
+
+**Examples**
+
+```html
+<a href="#" data-role="button" data-icon="star">Favorites</a>
+```
+
+**Short code snippets**
+
+```html
+<li data-icon="gear"><a href="#">Settings</a></li>
+```
+
+**Applications**
+
+* Buttons
+* Navigation bars
+* Toolbars
+* Lists with actionable items

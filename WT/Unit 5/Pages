@@ -1,0 +1,49 @@
+**Definition**
+Pages in jQuery Mobile are individual screen containers inside a single HTML file, each represented using a `<div>` with `data-role="page"`.
+
+**Types**
+
+* Single-page structure
+* Multi-page structure (multiple pages in one HTML file)
+
+**Working**
+Each page is identified by an `id`. jQuery Mobile loads and displays them using Ajax navigation, applying transitions and maintaining browser history.
+
+**Diagrams (text)**
+
+```
+<div data-role="page" id="home"> … </div>
+<div data-role="page" id="about"> … </div>
+```
+
+**Advantages**
+
+* Easy multi-screen navigation
+* Reduced page load time
+* Smooth transitions and history support
+
+**Disadvantages**
+
+* Large HTML files if many pages
+* Harder to manage in big apps
+
+**Examples**
+
+```html
+<div data-role="page" id="home">
+  <div data-role="header"><h1>Home</h1></div>
+  <div data-role="content"><p>Welcome!</p></div>
+</div>
+```
+
+**Short code snippets**
+
+```html
+<a href="#home" data-transition="slide">Go to Home</a>
+```
+
+**Applications**
+
+* Multi-page mobile websites
+* Navigation-based interfaces
+* Simple mobile apps using HTML/CSS/JS

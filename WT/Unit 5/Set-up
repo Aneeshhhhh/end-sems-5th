@@ -1,0 +1,70 @@
+**Definition**
+Setting up jQuery Mobile involves including the required CSS and JavaScript files so that mobile-optimized UI components and touch features work in a web application.
+
+**Types**
+
+* CDN setup
+* Local setup (downloading files)
+
+**Working**
+You link jQuery → jQuery Mobile CSS → jQuery Mobile JS in the HTML file. jQuery Mobile processes HTML elements with `data-role` attributes and transforms them into mobile UI widgets automatically.
+
+**Diagrams (text)**
+
+```
+HTML File
+ ├── jQuery
+ ├── jQuery Mobile CSS
+ └── jQuery Mobile JS
+        ↓
+  Mobile UI Components
+```
+
+**Advantages**
+
+* Quick to set up
+* No build tools required
+* Works on all browsers and devices
+
+**Disadvantages**
+
+* Deprecated and not ideal for modern apps
+* Heavy compared to modern frameworks
+
+**Examples**
+Basic jQuery Mobile page setup:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+  <div data-role="page" id="home">
+    <div data-role="header"><h1>Home</h1></div>
+    <div data-role="content">
+      <p>jQuery Mobile Setup Complete</p>
+    </div>
+  </div>
+</body>
+</html>
+```
+
+**Short code snippets**
+CDN setup head section:
+
+```html
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+```
+
+**Applications**
+
+* Mobile-form UI
+* Multi-page mobile websites
+* Simple dashboards and prototypes

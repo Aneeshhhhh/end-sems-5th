@@ -1,0 +1,52 @@
+**Definition**
+Transitions in jQuery Mobile are animated effects used when navigating between pages, providing smooth visual movement.
+
+**Types**
+
+* slide
+* fade
+* pop
+* flip
+* turn
+* flow
+* slideup / slidedown
+
+**Working**
+When a link is clicked, jQuery Mobile applies a CSS-based animation between the current page and the target page using `data-transition`.
+
+**Diagrams (text)**
+
+```
+Page A --(slide)--> Page B
+Page A --(fade)-->  Page B
+```
+
+**Advantages**
+
+* Enhances user experience
+* Makes navigation feel natural
+* Wide variety of built-in effects
+
+**Disadvantages**
+
+* Can feel slow on older devices
+* Too many transitions can distract users
+
+**Examples**
+
+```html
+<a href="#about" data-transition="slide">Slide</a>
+<a href="#info" data-transition="fade">Fade</a>
+```
+
+**Short code snippets**
+
+```html
+<a href="#home" data-transition="pop">Pop Transition</a>
+```
+
+**Applications**
+
+* Navigation between pages
+* Dialog opening animations
+* Smooth mobile UI interactions

@@ -1,0 +1,57 @@
+**Definition**
+Themes in jQuery Mobile control the visual appearance of UI components using predefined color schemes, fonts, and styles applied through the theme framework.
+
+**Types**
+
+* **Swatches (A, B, C, etc.)** – predefined color/style sets
+* **Global theme** – applied to the entire app
+* **Component-specific themes** – applied to buttons, headers, lists, etc.
+* **Custom themes** – created using ThemeRoller
+
+**Working**
+Each widget can be assigned a theme swatch using `data-theme` or related attributes. jQuery Mobile loads CSS for these swatches and applies consistent styling across pages and elements.
+
+**Diagrams (text)**
+
+```
+Component → data-theme="b" → Swatch B Styles Applied
+```
+
+**Advantages**
+
+* Easy to style entire app
+* Consistent look across devices
+* Multiple swatches for variety
+* Customizable through ThemeRoller
+
+**Disadvantages**
+
+* Limited compared to modern CSS frameworks
+* Can become heavy with many swatches
+
+**Examples**
+
+```html
+<div data-role="header" data-theme="b">
+  <h1>My App</h1>
+</div>
+```
+
+Button with theme:
+
+```html
+<a href="#" data-role="button" data-theme="c">Click</a>
+```
+
+**Short code snippets**
+Switch theme globally:
+
+```html
+<div data-role="page" data-theme="a">
+```
+
+**Applications**
+
+* Branding mobile web apps
+* Theming headers, footers, buttons
+* Creating custom UI look using ThemeRoller

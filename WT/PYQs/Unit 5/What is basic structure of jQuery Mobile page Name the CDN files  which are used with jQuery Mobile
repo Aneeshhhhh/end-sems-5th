@@ -1,0 +1,49 @@
+The basic structure of a jQuery Mobile page follows a clear layout pattern composed of a page container and optional header, content, and footer sections. Each section is defined using `data-role` attributes. jQuery Mobile enhances these elements automatically to create a mobile-optimized interface. The essential requirement is to include the correct meta viewport tag and the jQuery + jQuery Mobile CDN files in the `<head>` of the HTML document. After that, each page is wrapped in a `<div data-role="page">` container that includes the page header, main content, and footer. This structure forms the foundation for building single-page or multi-page mobile applications within one HTML file.
+
+**Basic Structure of jQuery Mobile Page**
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- jQuery Mobile CDN Files -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+  <div data-role="page" id="home">
+
+    <div data-role="header">
+      <h1>Header</h1>
+    </div>
+
+    <div data-role="content">
+      <p>Welcome to jQuery Mobile Page!</p>
+    </div>
+
+    <div data-role="footer">
+      <h4>Footer</h4>
+    </div>
+
+  </div>
+</body>
+</html>
+```
+
+This structure represents the minimal and complete format for a jQuery Mobile page.
+
+**CDN Files Used with jQuery Mobile**
+
+1. **jQuery Mobile CSS File**
+   `https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css`
+
+2. **jQuery Library File**
+   `https://code.jquery.com/jquery-1.11.1.min.js`
+
+3. **jQuery Mobile JavaScript File**
+   `https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js`
+
+These three CDN files are mandatory for enabling jQuery Mobile’s UI components, themes, widgets, touch interactions, and navigation system.

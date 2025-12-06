@@ -1,0 +1,52 @@
+**Definition**
+Data attributes in jQuery Mobile are custom HTML attributes (starting with `data-`) used to define UI behavior, widget roles, themes, and configurations directly within markup.
+
+**Types**
+
+* `data-role` (identifies widgets like page, header, listview)
+* `data-theme` (applies color themes)
+* `data-transition` (page transitions)
+* `data-icon` (icons for buttons)
+* `data-inset`, `data-mini`, etc. (layout controls)
+
+**Working**
+jQuery Mobile scans HTML elements on page load and converts elements with data attributes into enhanced mobile UI widgets.
+
+**Diagrams (text)**
+
+```
+HTML Element → data-role="button" → Mobile Button Rendered
+```
+
+**Advantages**
+
+* No JavaScript required for UI setup
+* Clean, declarative markup
+* Quick prototyping
+* Consistent behavior across devices
+
+**Disadvantages**
+
+* Limited customization
+* Too many attributes can clutter HTML
+
+**Examples**
+
+```html
+<a href="#" data-role="button" data-icon="home" data-theme="b">
+  Home
+</a>
+```
+
+**Short code snippets**
+
+```html
+<div data-role="page" data-theme="a">
+```
+
+**Applications**
+
+* UI components creation
+* Page navigation
+* Theming
+* Layout control in mobile web apps

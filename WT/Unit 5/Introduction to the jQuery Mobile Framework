@@ -1,0 +1,59 @@
+**Definition**
+jQuery Mobile is a touch-optimized web framework built on top of jQuery that enables the creation of responsive, mobile-friendly websites and applications using HTML5, CSS, and JavaScript.
+
+**Types**
+
+* Single-page applications (SPA) using jQuery Mobile
+* Multi-page mobile web interfaces
+* Theme-based UI components
+
+**Working**
+jQuery Mobile enhances HTML elements using data-role attributes to automatically create mobile UI widgets such as buttons, dialogs, lists, and navigation. It loads pages dynamically using Ajax and applies consistent theming across devices.
+
+**Diagrams (text)**
+
+```
+HTML + jQuery → jQuery Mobile Processing
+             → UI Widgets + Transitions
+             → Mobile Web Interface
+```
+
+**Advantages**
+
+* Easy to build mobile UI using HTML attributes
+* Cross-platform compatibility
+* Built-in touch events and transitions
+* Theming framework for customization
+
+**Disadvantages**
+
+* Slower than modern JS frameworks
+* Heavy for large applications
+* Limited compared to React/Vue-based mobile apps
+
+**Examples**
+
+```html
+<div data-role="page">
+  <div data-role="header"><h1>Home</h1></div>
+  <div data-role="content">
+    <p>Welcome to jQuery Mobile!</p>
+  </div>
+</div>
+```
+
+**Short code snippets**
+Include jQuery Mobile:
+
+```html
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+```
+
+**Applications**
+
+* Mobile websites
+* Prototypes for UI/UX
+* Lightweight mobile dashboards
+* Simple cross-device web apps

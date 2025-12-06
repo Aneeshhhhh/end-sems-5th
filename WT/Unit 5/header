@@ -1,0 +1,64 @@
+**Definition**
+A header in jQuery Mobile is a top-of-page layout widget that provides a consistent title bar and optional navigation buttons for mobile pages.
+
+**Types**
+
+* Standard header
+* Header with buttons
+* Fixed header
+* Themed header
+
+**Working**
+The header is created using a `<div>` with `data-role="header"`. jQuery Mobile styles it automatically and places it at the top of the page. You can add titles, back buttons, or navigation controls inside it.
+
+**Diagrams (text)**
+
+```
+[ Header ]
+[ Title / Buttons ]
+-------------------
+[ Page Content ]
+```
+
+**Advantages**
+
+* Provides consistent top navigation
+* Automatically styled for mobile
+* Supports buttons and themes
+* Can be fixed for persistent navigation
+
+**Disadvantages**
+
+* Too many buttons can clutter small screens
+* Fixed headers reduce visible content area
+
+**Examples**
+
+```html
+<div data-role="header">
+  <h1>My App</h1>
+</div>
+```
+
+Header with a button:
+
+```html
+<div data-role="header">
+  <a href="#" data-icon="back">Back</a>
+  <h1>Page Title</h1>
+</div>
+```
+
+**Short code snippets**
+Fixed header:
+
+```html
+<div data-role="header" data-position="fixed">
+```
+
+**Applications**
+
+* Page titles
+* Navigation bars
+* Back buttons and menus
+* Branding sections in mobile apps

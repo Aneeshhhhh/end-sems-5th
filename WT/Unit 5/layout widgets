@@ -1,0 +1,74 @@
+**Definition**
+Layout widgets in jQuery Mobile are UI components used to structure pages, organize content, and create mobile-friendly layouts.
+
+**Types**
+
+* **Header (`data-role="header")`**
+* **Footer (`data-role="footer")`**
+* **Content (`data-role="content")`**
+* **Navbar (`data-role="navbar")`**
+* **Collapsible (`data-role="collapsible")`**
+* **Collapsible Set (`data-role="collapsible-set")`**
+* **Listview (`data-role="listview")`**
+
+**Working**
+These widgets automatically apply styles, padding, themes, and behavior to create structured mobile layouts. jQuery Mobile scans for `data-role` attributes and converts them into mobile UI widgets.
+
+**Diagrams (text)**
+
+```
+Page
+ ├── Header
+ ├── Content
+ └── Footer
+```
+
+**Advantages**
+
+* Fast layout creation
+* Consistent look and feel
+* Touch-friendly UI components
+
+**Disadvantages**
+
+* Less flexible than modern frameworks
+* Styling can become heavy
+
+**Examples**
+Header + content + footer:
+
+```html
+<div data-role="page">
+  <div data-role="header"><h1>Title</h1></div>
+  <div data-role="content"><p>Hello</p></div>
+  <div data-role="footer"><h4>Footer</h4></div>
+</div>
+```
+
+Navbar example:
+
+```html
+<div data-role="navbar">
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#help">Help</a></li>
+  </ul>
+</div>
+```
+
+**Short code snippets**
+Collapsible:
+
+```html
+<div data-role="collapsible">
+  <h3>More Info</h3>
+  <p>Details here...</p>
+</div>
+```
+
+**Applications**
+
+* Structuring mobile pages
+* Navigation bars
+* Collapsible menus
+* Responsive mobile layouts

@@ -1,0 +1,41 @@
+Roles in jQuery Mobile define how HTML elements should behave and render as mobile-optimized widgets. jQuery Mobile scans the page for `data-role` attributes and automatically converts those elements into enhanced UI components with styling, behavior, and structure suitable for mobile devices. These roles help create pages, headers, footers, listviews, buttons, dialogs, navbars, and layout elements without writing complex JavaScript.
+
+**Common Roles in jQuery Mobile**
+
+**1. `data-role="page"`**
+Defines a mobile page container. Each page is treated as a separate screen within the same HTML document.
+Useful for multi-page navigation using Ajax.
+
+**2. `data-role="header"`**
+Creates a consistent mobile header bar containing titles, buttons, or navigation elements.
+Often used for branding and page titles.
+
+**3. `data-role="footer"`**
+Defines the bottom toolbar or navigation bar.
+Can include navbars, copyright text, or persistent controls.
+
+**4. `data-role="content"`**
+Represents the main content area of a page.
+Holds text, forms, images, lists, and other UI widgets.
+
+**5. `data-role="listview"`**
+Transforms a standard `<ul>` or `<ol>` into a mobile-styled list with icons, dividers, and touch responses.
+Essential for menus and item lists.
+
+**6. `data-role="button"`**
+Converts a link or input element into a mobile-styled button with touch-friendly size and styling.
+Supports icons and themes.
+
+**7. `data-role="navbar"`**
+Creates a horizontal navigation bar inside a header or footer.
+Used for tab-like navigation across pages.
+
+**8. `data-role="collapsible"`**
+Creates an expandable/collapsible content block.
+Useful for FAQs, descriptions, and grouped content.
+
+**9. `data-role="dialog"`**
+Transforms a page into a pop-up dialog with modal-like behavior.
+Used for confirmations or alerts.
+
+These roles allow developers to build mobile interfaces rapidly using declarative HTML markup, reducing the need for custom scripts or CSS.

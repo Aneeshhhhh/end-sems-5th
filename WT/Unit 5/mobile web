@@ -1,0 +1,53 @@
+**Definition**
+Mobile web refers to websites and web applications specifically designed and optimized for mobile devices such as smartphones and tablets.
+
+**Types**
+
+* Responsive mobile web
+* Adaptive mobile web
+* Separate mobile sites (m.example.com)
+
+**Working**
+Mobile web adapts layout, content, and interaction patterns to smaller screens using responsive design techniques such as fluid grids, flexible images, and media queries.
+
+**Diagrams (text)**
+
+```
+Desktop Layout → CSS Media Queries → Mobile Layout
+```
+
+**Advantages**
+
+* Accessible without app installation
+* Works across all devices
+* Easier updates compared to mobile apps
+
+**Disadvantages**
+
+* Limited access to device features
+* Dependent on browser performance
+* Can be slower than native apps
+
+**Examples**
+
+* Mobile-responsive e-commerce sites
+* Mobile news portals
+* Progressive web applications
+
+**Short code snippets**
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+
+```css
+@media (max-width: 600px) {
+  .container { flex-direction: column; }
+}
+```
+
+**Applications**
+
+* Mobile browsing
+* Lightweight business applications
+* Web-based services accessible across devices

@@ -1,0 +1,27 @@
+Here are **six jQuery methods used to create animations**, each explained clearly as expected in theory answers.
+
+**1. `.hide()`**
+Hides the selected elements with an optional animation duration.
+Example: `$("#box").hide(1000);` hides the element in 1 second.
+
+**2. `.show()`**
+Displays hidden elements using a smooth animation effect over a given duration.
+Example: `$("#box").show(800);`
+
+**3. `.toggle()`**
+Alternates between showing and hiding an element with animation.
+Example: `$("#box").toggle(500);`
+
+**4. `.fadeIn()`**
+Gradually changes the opacity of an element from hidden to visible.
+Example: `$("#img").fadeIn(1000);`
+
+**5. `.fadeOut()`**
+Fades an element out by reducing its opacity to zero.
+Example: `$("#img").fadeOut(1200);`
+
+**6. `.slideDown()`**
+Reveals elements by sliding them downward in a smooth motion.
+Example: `$("#panel").slideDown(900);`
+
+If you want two more methods (e.g., `slideUp()`, `animate()`) just say so.

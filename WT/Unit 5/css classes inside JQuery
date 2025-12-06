@@ -1,0 +1,70 @@
+**Definition**
+CSS classes inside jQuery are class names used to apply styles or to select and manipulate HTML elements using jQuery methods.
+
+**Types**
+
+* jQuery UI classes
+* jQuery Mobile classes
+* Custom CSS classes used with jQuery selectors
+
+**Working**
+jQuery selects elements using class selectors (`$(".className")`) and allows adding, removing, or toggling classes dynamically to change styling or behavior.
+
+**Diagrams (text)**
+
+```
+HTML Element → jQuery Selector → Add/Remove/T oggle Class → Style Applied
+```
+
+**Advantages**
+
+* Easy element targeting
+* Dynamic styling and UI updates
+* Works with existing CSS frameworks
+
+**Disadvantages**
+
+* Can get messy without naming conventions
+* Overuse leads to style conflicts
+
+**Examples**
+Select by class:
+
+```js
+$(".btn").hide();
+```
+
+Add a class:
+
+```js
+$("#box").addClass("highlight");
+```
+
+Remove a class:
+
+```js
+$("#box").removeClass("highlight");
+```
+
+Toggle a class:
+
+```js
+$("#box").toggleClass("active");
+```
+
+**Short code snippets**
+
+```css
+.highlight { background-color: yellow; }
+```
+
+```js
+$(".item").addClass("highlight");
+```
+
+**Applications**
+
+* Styling UI components
+* Creating interactive effects
+* Handling active/inactive states
+* Animations and dynamic layouts

@@ -1,0 +1,56 @@
+**Definition**
+Mobile-first is a design approach where the layout and functionality of a website or application are created starting from the smallest screen (mobile devices) and then scaled up for tablets and desktops.
+
+**Types**
+
+* Responsive mobile-first design
+* Adaptive mobile-first design
+
+**Working**
+Designers first create the mobile version with essential features, minimal layout, and optimized performance. CSS media queries are then used to progressively enhance the design for larger screens.
+
+**Diagrams (text)**
+
+```
+Mobile → Tablet → Desktop
+(Simple) → (Enhanced) → (Full Layout)
+```
+
+**Advantages**
+
+* Better performance on mobile devices
+* Prioritizes essential content
+* Improves user experience
+* Easier to scale layouts up than down
+
+**Disadvantages**
+
+* Desktop designs may feel constrained
+* Requires careful planning
+* Can be time-consuming initially
+
+**Examples**
+
+* A website built with the smallest layout first, adding grid systems and navigation for larger screens later.
+
+**Short code snippets**
+
+```css
+/* Mobile-first default */
+body { font-size: 16px; }
+
+/* Larger screens */
+@media (min-width: 768px) {
+  body { font-size: 18px; }
+}
+
+@media (min-width: 1024px) {
+  body { font-size: 20px; }
+}
+```
+
+**Applications**
+
+* Modern web design frameworks
+* Responsive websites
+* Progressive web apps (PWAs)
