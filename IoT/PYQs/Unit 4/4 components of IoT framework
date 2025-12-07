@@ -1,0 +1,67 @@
+**Definition**
+The core components of an IoT framework are the essential building blocks that enable device connectivity, data handling, processing, and application-level functionality in an IoT system.
+
+**Types / Four Components**
+
+1. **Device Layer (Sensors & Actuators)**
+2. **Network/Communication Layer**
+3. **Data Processing Layer (Edge/Cloud)**
+4. **Application Layer**
+
+**Working / Steps**
+
+1. **Device Layer:** Sensors collect data; actuators perform actions.
+2. **Network Layer:** Transfers data using MQTT, CoAP, WiFi, LoRa, etc.
+3. **Data Processing Layer:** Edge/cloud performs filtering, analytics, storage.
+4. **Application Layer:** Dashboards, automation, alerts, and user interfaces use processed data.
+
+**Diagram (text-based)**
+
+```
+[Devices]
+   │
+   ▼
+[Network/Communication]
+   │
+   ▼
+[Data Processing: Edge/Cloud]
+   │
+   ▼
+[Applications / Services]
+```
+
+**Advantages**
+
+* Clear separation of IoT functions
+* Enhances scalability and modularity
+* Enables standardized communication
+* Supports analytics and automation
+
+**Disadvantages**
+
+* Integration across layers can be complex
+* Security must be managed at each layer
+* Performance issues if one layer is weak
+
+**Examples**
+
+* Device → Temperature sensor
+* Network → MQTT over WiFi
+* Processing → AWS IoT Analytics
+* Application → Smart home mobile app
+
+**Applications**
+
+* Smart cities
+* Smart homes
+* Industrial IoT
+* Healthcare IoT
+* Agriculture automation
+
+---
+
+### **Short Note (Points)**
+
+* Four components: **Device layer, Network layer, Data processing layer, Application layer**.
+* Devices collect data → Network transmits → Processing analyzes → Apps visualize/control.
+* Forms the basic architecture for any IoT system.

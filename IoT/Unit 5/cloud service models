@@ -1,0 +1,53 @@
+**Definition**
+Cloud service models describe the different ways cloud computing resources are delivered to users, based on how much control, management, and responsibility the user has.
+
+**Types**
+
+1. **IaaS (Infrastructure as a Service)**
+2. **PaaS (Platform as a Service)**
+3. **SaaS (Software as a Service)**
+
+**Working / Steps**
+
+1. Cloud provider hosts infrastructure, platforms, or complete software.
+2. Users access these services via web interfaces or APIs.
+3. Responsibility division:
+
+   * IaaS → user manages OS, apps.
+   * PaaS → user manages apps only.
+   * SaaS → user only uses the app.
+4. Billing is based on usage.
+
+**Diagram (text-based)**
+
+```
+          Cloud Service Models
+ ┌──────────────┬───────────────┬───────────────┐
+ │     IaaS      │      PaaS      │      SaaS      │
+ └──────────────┴───────────────┴───────────────┘
+User Control: High        Medium             Low
+```
+
+**Advantages**
+
+* **IaaS:** Flexible, scalable, customizable
+* **PaaS:** Faster development, no server management
+* **SaaS:** No installation, easy access, automatic updates
+
+**Disadvantages**
+
+* **IaaS:** Requires technical skills
+* **PaaS:** Limited customization
+* **SaaS:** Less control, data privacy concerns
+
+**Examples**
+
+* **IaaS:** AWS EC2, Google Compute Engine
+* **PaaS:** Azure App Service, AWS Elastic Beanstalk
+* **SaaS:** Gmail, Salesforce, Office 365
+
+**Applications**
+
+* IaaS → hosting servers, storage, virtual networks
+* PaaS → application development and deployment
+* SaaS → end-user applications delivered through cloud

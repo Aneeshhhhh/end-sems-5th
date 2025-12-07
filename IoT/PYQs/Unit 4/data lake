@@ -1,0 +1,70 @@
+**Definition**
+A data lake is a large, centralized storage repository that holds massive amounts of raw, unprocessed data (structured, semi-structured, and unstructured) in its native format for future analytics and processing.
+
+**Types**
+
+* **Raw Data Lake** – stores data exactly as received.
+* **Curated Data Lake** – organized, cleaned, partially processed.
+* **Cloud Data Lake** – AWS S3, Azure Data Lake, Google Cloud Storage.
+* **Streaming Data Lake** – handles continuous real-time data flows.
+
+**Working / Steps**
+
+1. Data from sensors, devices, logs, apps is ingested into the lake.
+2. Stored in raw format (JSON, CSV, video, audio, logs).
+3. Metadata/cataloging added for easy discovery.
+4. Processing done later using ETL, ML, or analytics tools.
+5. Users query or analyze data when needed.
+
+**Diagram (text-based)**
+
+```
+ [IoT Devices / Apps / Logs]
+              │
+              ▼
+         [Data Lake]
+   ┌────────────┬────────────┬─────────────┐
+   ▼            ▼             ▼
+Structured   Semi-Structured  Unstructured
+  Data           Data            Data
+              (All Stored Raw)
+```
+
+**Advantages**
+
+* Stores any type of data in raw format
+* Highly scalable and cost-effective
+* Ideal for big data and IoT workloads
+* Supports advanced analytics and machine learning
+* No need for predefined schema (schema-on-read)
+
+**Disadvantages**
+
+* Can become a “data swamp” if unmanaged
+* Requires proper metadata and governance
+* Slower queries compared to structured DBs
+* Security and access control complexity
+
+**Examples**
+
+* AWS S3 as a cloud data lake
+* Azure Data Lake Storage
+* Google Cloud Storage for IoT data
+* Storing raw CCTV video, sensor logs, mobile app data
+
+**Applications**
+
+* IoT analytics and predictive maintenance
+* Big data processing
+* AI/ML model training datasets
+* Smart city data aggregation
+* Healthcare and financial analytics
+
+---
+
+### **Short Note (Points)**
+
+* Central repository storing raw structured + unstructured data.
+* Scalable, low-cost, ideal for IoT and big data.
+* Uses schema-on-read and supports ML/analytics.
+* Needs strong governance to avoid data swamp issues.

@@ -1,0 +1,65 @@
+**Definition**
+Computing using a cloud platform refers to delivering computing resources—such as servers, storage, databases, networking, analytics, and software—over the internet on a pay-as-you-go basis instead of relying on local infrastructure.
+
+**Types**
+
+* **IaaS (Infrastructure as a Service)** – Virtual machines, storage, networks (e.g., AWS EC2).
+* **PaaS (Platform as a Service)** – Runtime environments for app development (e.g., AWS Elastic Beanstalk).
+* **SaaS (Software as a Service)** – Ready-to-use applications over the cloud (e.g., Google Workspace).
+* **FaaS (Function as a Service)** – Serverless computing (e.g., AWS Lambda).
+* **Storage Services** – S3, Blob Storage, etc.
+* **Database Services** – RDS, DynamoDB, Bigtable.
+
+**Working / Steps**
+
+1. User requests computing resources via cloud console/API.
+2. Cloud provider provisions virtualized resources dynamically.
+3. Workloads run on shared, scalable infrastructure.
+4. Data stored in cloud storage/databases.
+5. Analytics, ML, networking, security services integrate as needed.
+6. Users monitor usage and pay only for resources consumed.
+
+**Diagram (text-based)**
+
+```
+      [User / IoT Devices]
+              │
+              ▼
+       [Cloud Platform]
+   ┌─────────┬─────────┬─────────┐
+   ▼         ▼         ▼         ▼
+ Compute   Storage   Database   Analytics
+              │
+              ▼
+       [Apps / IoT Systems]
+```
+
+**Advantages**
+
+* Scalability on demand
+* Lower upfront cost
+* High availability and global access
+* Integration with analytics, ML, IoT services
+* Reduced maintenance (provider-managed)
+
+**Disadvantages**
+
+* Dependency on internet connectivity
+* Vendor lock-in
+* Data security and privacy concerns
+* Costs may rise with heavy usage
+
+**Examples**
+
+* Running IoT analytics on AWS EC2
+* Hosting dashboards using Azure App Services
+* Google Cloud Functions for IoT events
+* Storing sensor data on AWS S3
+
+**Applications**
+
+* IoT device data processing
+* Web and mobile app deployment
+* Big data analytics
+* AI/ML model training
+* Enterprise IT infrastructure replacement

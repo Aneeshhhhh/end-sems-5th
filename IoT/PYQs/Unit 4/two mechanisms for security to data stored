@@ -1,0 +1,68 @@
+**Definition**
+Security mechanisms for stored data are techniques used to protect data at rest from unauthorized access, modification, or theft.
+
+**Types (Two Main Mechanisms)**
+
+1. **Encryption**
+2. **Access Control**
+
+**Working / Steps**
+
+### **1. Encryption**
+
+1. Data is encrypted before being stored.
+2. Encryption keys stored separately (KMS/HSM).
+3. Only authorized users/devices can decrypt.
+
+### **2. Access Control**
+
+1. User/device authentication occurs first.
+2. Authorization policies (RBAC/ACLs) determine who can access data.
+3. System enforces least privilege.
+
+**Diagram (text-based)**
+
+```
+          [Data]
+            │
+   ┌────────┴────────┐
+   ▼                 ▼
+[Encryption]     [Access Control]
+   │                 │
+   ▼                 ▼
+Secure Storage   Allowed Users Only
+```
+
+**Advantages**
+
+* Strong protection against data theft
+* Prevents unauthorized access
+* Ensures compliance and data integrity
+
+**Disadvantages**
+
+* Encryption adds computational overhead
+* Key management complexity
+* Access control misconfigurations can cause breaches
+
+**Examples**
+
+* AES-256 encryption of IoT logs
+* RBAC policies in cloud storage
+* Device-specific access permissions
+
+**Applications**
+
+* IoT cloud databases
+* Healthcare records
+* Smart grid data
+* Industrial sensor archives
+
+---
+
+### **Short Note (Points)**
+
+* Two mechanisms: **Encryption** and **Access Control**.
+* Encryption protects data even if storage is compromised.
+* Access control ensures only authorized users/devices can view or modify data.
+* Both together provide strong data-at-rest security.

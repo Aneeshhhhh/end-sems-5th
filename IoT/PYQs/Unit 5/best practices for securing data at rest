@@ -1,0 +1,69 @@
+**Definition**
+Best practices for securing data at rest are methods used to protect stored data from unauthorized access, theft, or tampering through encryption, access control, and secure storage mechanisms.
+
+**Types**
+
+* **Encryption methods** (AES-256, RSA)
+* **Access control methods** (RBAC, IAM)
+* **Hardware-based protection** (HSM, TPM)
+* **Data integrity methods** (hashing, checksums)
+
+**Working / Steps**
+
+1. Identify sensitive data requiring protection.
+2. Encrypt data using strong algorithms before storage.
+3. Store encryption keys separately using KMS or HSM.
+4. Apply strict access policies (least privilege).
+5. Enable audit logging and monitoring.
+6. Rotate keys and credentials periodically.
+7. Backup encrypted data securely.
+
+**Diagram (text-based)**
+
+```
+        [Data]
+          │
+          ▼
+ [Encryption Process] → [Encrypted Storage]
+          │                 │
+          ▼                 ▼
+   [Key Mgmt (KMS/HSM)]   [Access Control + Logging]
+```
+
+**Advantages**
+
+* Prevents unauthorized access
+* Meets compliance requirements
+* Protects data even if storage is stolen
+* Enhances overall security posture
+
+**Disadvantages**
+
+* Encryption adds processing overhead
+* Key management is complex
+* Misconfiguration can expose data
+* Requires skilled administration
+
+**Examples**
+
+* Encrypting IoT logs in AWS S3 using SSE-KMS
+* Using AES-256 for device-generated sensor files
+* Storing medical data in encrypted databases
+* HSM-based key storage for industrial IoT systems
+
+**Applications**
+
+* IoT cloud storage security
+* Enterprise databases
+* Healthcare and finance data systems
+* Smart grids and critical infrastructure
+
+---
+
+### **Short Note (Points)**
+
+* Encrypt data at rest using strong algorithms.
+* Use separate key management (KMS/HSM).
+* Apply least-privilege access control.
+* Enable logging and integrity checks.
+* Rotate keys regularly and secure backups.

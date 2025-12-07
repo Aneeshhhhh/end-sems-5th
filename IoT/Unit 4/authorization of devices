@@ -1,0 +1,69 @@
+**Definition**
+Authorization of devices is the process of determining what an authenticated IoT device is allowed to access or perform within a system, based on predefined permissions and policies.
+
+**Types**
+
+* **Role-Based Authorization (RBAC)** – permissions based on device role.
+* **Policy-Based Authorization** – rules controlling access (e.g., AWS IoT policies).
+* **Attribute-Based Authorization (ABAC)** – uses device attributes (location, type).
+* **Access Control Lists (ACLs)** – allow/deny lists for resources.
+
+**Working / Steps**
+
+1. Device first completes authentication.
+2. System checks authorization policies linked to that device.
+3. Authorization engine evaluates allowed actions (publish, subscribe, read, write, control).
+4. Device is granted or denied access to specific topics, APIs, or resources.
+5. Continuous monitoring ensures devices only operate within set permissions.
+
+**Diagram (text-based)**
+
+```
+[Device] → (Authenticated)
+      │
+      ▼
+[Authorization Engine]
+      │  Check Policies/Permissions
+      ▼
+[Allow / Deny Specific Actions]
+```
+
+**Advantages**
+
+* Prevents unauthorized device operations
+* Ensures controlled access to sensitive resources
+* Limits damage in case of device compromise
+* Supports granular permissions
+* Improves IoT system security and compliance
+
+**Disadvantages**
+
+* Complex to manage large-scale device permissions
+* Misconfigured policies can block critical operations
+* Requires periodic updates as devices evolve
+* High admin overhead in dynamic environments
+
+**Examples**
+
+* AWS IoT policies restricting which MQTT topics a device can publish to
+* Smart home device allowed only to control lights, not security systems
+* Industrial sensors allowed only to send data, not actuate machines
+* Medical IoT devices restricted to specific patient databases
+
+**Applications**
+
+* Smart homes and buildings
+* Industrial automation (restricted control access)
+* Healthcare IoT
+* Smart grids and utilities
+* Enterprise IoT networks
+
+---
+
+### **Short Note (Points)**
+
+* Determines what actions an authenticated device is allowed to perform.
+* Uses RBAC, ABAC, ACLs, or policy-based rules.
+* Controls access to topics, APIs, and resources.
+* Prevents unauthorized operations and limits device privileges.
+* Critical for secure IoT deployments.

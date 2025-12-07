@@ -1,0 +1,71 @@
+**Definition**
+A data warehouse is a centralized, structured storage system designed for querying, reporting, and analyzing historical data collected from multiple sources.
+
+**Types**
+
+* **Enterprise Data Warehouse (EDW)**
+* **Operational Data Store (ODS)**
+* **Data Marts**
+* **Cloud Data Warehouses** (BigQuery, Redshift, Snowflake)
+
+**Working / Steps**
+
+1. Data is extracted from IoT systems, apps, and databases.
+2. ETL/ELT processes transform and clean the data.
+3. Structured data is loaded into warehouse tables.
+4. Users run queries, dashboards, and reports.
+5. Warehouse supports analytics, trends, and decision-making.
+
+**Diagram (text-based)**
+
+```
+[Sources: IoT, DBs, Apps]
+          │
+          ▼
+      [ETL / ELT]
+          │
+          ▼
+   [Data Warehouse]
+          │
+          ▼
+  Reporting / BI / Analytics
+```
+
+**Advantages**
+
+* High-performance querying
+* Integrated, clean, structured data
+* Ideal for BI, dashboards, and decision-making
+* Supports historical trend analysis
+* Strong consistency and governance
+
+**Disadvantages**
+
+* Not suitable for unstructured data
+* Expensive for very large datasets
+* Slower ingestion compared to data lakes
+* Requires predefined schema (schema-on-write)
+
+**Examples**
+
+* Amazon Redshift
+* Google BigQuery
+* Snowflake
+* Microsoft Azure Synapse
+
+**Applications**
+
+* Business intelligence
+* Sales forecasting
+* IoT trend analysis
+* Enterprise reporting
+* KPI monitoring
+
+---
+
+### **Short Note (Points)**
+
+* Central structured repository for analytics and reporting.
+* Uses ETL/ELT to load cleaned data.
+* Ideal for BI, dashboards, historical analysis.
+* Tools: Redshift, BigQuery, Snowflake.

@@ -1,0 +1,54 @@
+**Definition**
+Data analytics in IoT is the process of transforming raw sensor data into meaningful insights through cleaning, processing, analyzing, and visualizing large-scale IoT information for decision-making.
+
+**Types**
+
+* **Descriptive Analytics** – summarizes past IoT data.
+* **Diagnostic Analytics** – identifies causes behind events.
+* **Predictive Analytics** – forecasts future outcomes using ML.
+* **Prescriptive Analytics** – recommends optimal actions.
+* **Real-time/Stream Analytics** – processes live sensor data.
+
+**Working / Steps**
+
+1. Collect data from sensors and IoT devices.
+2. Preprocess (cleaning, filtering, normalization).
+3. Store data in cloud or time-series databases.
+4. Apply analytics engines (statistical, ML, rule-based).
+5. Generate dashboards, alerts, predictions, or automated actions.
+
+**Diagram (text-based)**
+
+```
+[Sensors] → [Gateway] → [Storage] → [Analytics Engine] → [Insights / Actions]
+```
+
+**Advantages**
+
+* Enables predictive maintenance
+* Improves operational efficiency
+* Detects anomalies and faults
+* Supports real-time decision-making
+* Enhances automation and optimization
+
+**Disadvantages**
+
+* High data storage and processing cost
+* Requires skilled data engineers/analysts
+* Privacy and security risks
+* Complex handling of large-scale heterogeneous data
+
+**Examples**
+
+* Detecting machine failure in industries
+* Smart city traffic pattern analysis
+* Health trend analysis in wearables
+* Energy consumption forecasting
+
+**Applications**
+
+* Industrial automation
+* Smart homes and cities
+* Healthcare monitoring
+* Transportation and logistics
+* Agriculture (soil, weather analytics)

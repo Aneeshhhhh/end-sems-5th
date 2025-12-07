@@ -1,0 +1,73 @@
+**Definition**
+Data categorization for storage in IoT is the process of grouping sensor data based on its characteristics—such as speed, volume, importance, and usage—to decide where and how it should be stored (edge, fog, or cloud).
+
+**Types**
+
+* **Hot Data** (real-time, high priority)
+* **Warm Data** (frequently accessed, medium priority)
+* **Cold Data** (rarely accessed, archival)
+* **Structured Data** (tables, time-series)
+* **Unstructured Data** (images, logs, audio)
+* **Semi-structured Data** (JSON, XML from devices)
+
+**Working / Steps**
+
+1. Collect raw data from IoT devices.
+2. Analyze data characteristics (speed, size, access frequency).
+3. Classify into hot/warm/cold or structured/unstructured categories.
+4. Assign appropriate storage: edge cache, cloud DB, object storage.
+5. Apply retention policies and access rules.
+6. Use categorized data for analytics, alerts, or backups.
+
+**Diagram (text-based)**
+
+```
+        [IoT Data]
+            │
+            ▼
+   ┌───────────────┬─────────────────┬──────────────────┐
+   ▼               ▼                 ▼
+[Hot Data]     [Warm Data]       [Cold Data]
+   │               │                 │
+Edge/Cache     Cloud DB         Archival Storage
+```
+
+**Advantages**
+
+* Efficient storage utilization
+* Faster data processing
+* Reduced cost by pushing cold data to cheap storage
+* Optimized analytics performance
+* Supports scalable data management
+
+**Disadvantages**
+
+* Requires careful planning and policy design
+* Misclassification can slow performance
+* Complexity increases with large-scale IoT
+* Additional tools needed for automation
+
+**Examples**
+
+* Hot: live temperature spikes in industries
+* Warm: daily machine usage logs
+* Cold: yearly sensor history stored in S3/Glacier
+* Structured: time-series sensor values
+* Unstructured: CCTV footage in smart cities
+
+**Applications**
+
+* Smart manufacturing
+* Smart grids and energy monitoring
+* Healthcare IoT record management
+* Smart city data platforms
+* Predictive maintenance systems
+
+---
+
+### **Short Note (Points)**
+
+* Categorizes IoT data into hot, warm, cold, structured, or unstructured.
+* Helps allocate correct storage (edge, DB, cloud, archive).
+* Improves speed, reduces cost, and enhances analytics.
+* Essential for scalable IoT data management.

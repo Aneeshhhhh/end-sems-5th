@@ -1,0 +1,76 @@
+**Definition**
+Types of authentication and authorization refer to the different mechanisms used to verify the identity of users/devices (authentication) and determine their allowed actions (authorization) in an IoT system.
+
+**Types**
+
+### **Authentication Types**
+
+* **Password/PIN-based authentication**
+* **Token-based authentication (OAuth, JWT)**
+* **Certificate-based authentication (X.509)**
+* **Biometric authentication**
+* **Multi-factor authentication (MFA)**
+* **Device-level authentication (unique keys, IDs)**
+
+### **Authorization Types**
+
+* **Role-Based Access Control (RBAC)** – permissions based on roles.
+* **Attribute-Based Access Control (ABAC)** – based on attributes like device type/location.
+* **Policy-Based Authorization** – rules specify allowed actions.
+* **Access Control Lists (ACLs)** – allow/deny lists for resources.
+
+**Working / Steps**
+
+1. **Authentication:** Device/user sends credentials → system verifies identity.
+2. **Authorization:** After identity is confirmed → system checks permissions/policies.
+3. **Access Granted/Denied:** Only permitted actions (publish, read, write, control) are allowed.
+
+**Diagram (text-based)**
+
+```
+[Device/User] 
+      │
+ Authentication (Verify Identity)
+      ▼
+ Authorization (Check Permissions)
+      ▼
+     Allow / Deny Actions
+```
+
+**Advantages**
+
+* Protects IoT systems from unauthorized access
+* Granular control over device/user operations
+* Enhances overall system security
+* Supports scalable and flexible permission management
+
+**Disadvantages**
+
+* Requires careful key and policy management
+* Misconfiguration may cause security gaps
+* Added overhead for resource-constrained IoT devices
+
+**Examples**
+
+* X.509 certificate authentication for IoT devices
+* JWT tokens for API access
+* RBAC for industrial IoT machines
+* ACL-based topic permissions in MQTT
+* MFA for cloud dashboard login
+
+**Applications**
+
+* IoT cloud services (AWS, Azure, Google IoT)
+* Smart homes and building automation
+* Industrial IoT device control
+* Healthcare and wearables
+* Smart grids and utilities
+
+---
+
+### **Short Note (Points)**
+
+* Authentication verifies identity; authorization defines allowed actions.
+* Authentication types: passwords, tokens, certificates, MFA, device keys.
+* Authorization types: RBAC, ABAC, ACLs, Policy-based control.
+* Both are essential for secure IoT deployments.

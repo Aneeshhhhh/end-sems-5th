@@ -1,0 +1,69 @@
+**Definition**
+Unstructured data storage challenges refer to the difficulties faced when storing, managing, indexing, and retrieving non-tabular IoT data such as images, audio, video, logs, and documents.
+
+**Types (Challenges Categories)**
+
+* **Storage challenges**
+* **Management challenges**
+* **Processing challenges**
+* **Security challenges**
+* **Retrieval challenges**
+
+**Working / Steps (How challenges arise)**
+
+1. IoT devices generate large, irregular data (videos, logs).
+2. Data formats lack a fixed schema, making indexing hard.
+3. Storage grows rapidly, exceeding device/cloud limits.
+4. Metadata creation becomes necessary for retrieval.
+5. Processing and analytics require specialized tools.
+6. Security must handle large binary objects separately.
+
+**Diagram (text-based)**
+
+```
+Unstructured Data → Large Size → Hard Indexing → High Cost → Slow Retrieval
+```
+
+**Advantages**
+(N/A — this topic is about challenges, so advantages do not apply.)
+
+**Disadvantages / Challenges**
+
+* Huge storage requirements (video/audio grow rapidly)
+* Difficult to index and search without metadata
+* Higher cost for cloud object storage
+* Hard to maintain data consistency
+* Complex backup and disaster recovery
+* Requires specialized analytics tools
+* Security and privacy issues with large binary objects
+* Slow retrieval time compared to structured data
+* Data quality issues due to noise, corruption
+* Interoperability issues across devices
+
+**Examples**
+
+* CCTV video storage filling cloud buckets quickly
+* Smart city audio logs requiring heavy metadata tagging
+* Industrial machine images needing large storage arrays
+* Wearable device logs causing indexing complexity
+
+**Applications**
+(Applies broadly, but examples of challenge-heavy domains:)
+
+* Smart surveillance
+* Smart cities
+* Industrial inspection systems
+* Healthcare imaging
+* Autonomous vehicles
+
+---
+
+### **Short Note (Points)**
+
+* Large file sizes → high storage and cost.
+* Hard to index/search unstructured formats.
+* Requires metadata for retrieval.
+* Complex security and access control.
+* Needs specialized tools for analytics.
+* Slow retrieval and processing.
+* Rapid storage growth → scalability issues.

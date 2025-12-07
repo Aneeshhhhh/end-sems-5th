@@ -1,0 +1,72 @@
+**Definition**
+Zetta is an open-source, API-driven IoT platform built on Node.js for creating real-time, scalable IoT servers that connect devices, sensors, and cloud services using a REST/JSON and WebSocket architecture.
+
+**Types (Components of Zetta)**
+
+* **Zetta Server** – main runtime environment
+* **Zetta Device Drivers** – define device behavior
+* **Zetta Scouts** – discover/connect devices automatically
+* **Zetta API Layer** – REST + WebSocket interface
+* **Zetta Hub / Cloud Integration** – connects multiple Zetta servers
+
+**Working / Steps**
+
+1. Devices are described using **drivers** in Node.js.
+2. **Scouts** detect and register devices to the Zetta server.
+3. Each device becomes a REST/Hypermedia API automatically.
+4. Communication occurs through WebSockets for real-time updates.
+5. Multiple Zetta servers form a distributed IoT network (“Zetta hubs”).
+6. Apps and dashboards interact with devices via REST/WebSocket APIs.
+
+**Diagram (text-based)**
+
+```
+[Devices] → [Driver + Scout]
+                │
+                ▼
+           [Zetta Server]
+        REST / WebSocket API
+                │
+                ▼
+         [Apps / Cloud / Dashboards]
+```
+
+**Advantages**
+
+* API-first architecture for easy integration
+* Real-time communication using WebSockets
+* Lightweight (Node.js-based) and easy to deploy
+* Highly modular with drivers and scouts
+* Can create distributed IoT systems with server federation
+
+**Disadvantages**
+
+* Requires Node.js knowledge
+* Not as feature-rich as AWS/Azure IoT
+* Limited ecosystem and community
+* No built-in large-scale analytics
+
+**Examples**
+
+* Smart home device control server
+* Real-time monitoring dashboards
+* Wearable data streaming
+* Small to medium IoT prototypes and systems
+
+**Applications**
+
+* Smart homes
+* Real-time IoT dashboards
+* Prototyping IoT systems
+* Lightweight industrial monitoring
+* Education and research projects
+
+---
+
+### **Short Note (Points)**
+
+* Zetta is an open-source, Node.js-based IoT platform.
+* Provides REST + WebSocket APIs automatically for devices.
+* Uses drivers + scouts for device modeling and discovery.
+* Supports real-time, distributed IoT systems.
+* Best for lightweight, API-driven IoT applications.

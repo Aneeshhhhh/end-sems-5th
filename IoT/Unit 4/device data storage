@@ -1,0 +1,72 @@
+**Definition**
+Unstructured data storage for IoT refers to storing non-tabular, raw, irregular data such as images, audio, video, logs, and documents either locally on edge devices/gateways or in cloud storage systems.
+
+**Types**
+
+* **Local Storage** – device memory, SD cards, edge servers
+* **Cloud Object Storage** – AWS S3, Azure Blob, Google Cloud Storage
+* **Distributed File Systems** – HDFS, Ceph
+* **NoSQL Databases** – MongoDB, CouchDB
+* **Time-based log storage** – ElasticSearch, Log files
+
+**Working / Steps**
+
+1. Devices capture unstructured data (image, video, logs).
+2. Edge device optionally compresses or preprocesses.
+3. Local storage is used for immediate caching or offline mode.
+4. When connected, data is uploaded to cloud object storage.
+5. Cloud applies indexing, metadata tagging, access control.
+6. Data is retrieved for analytics, ML, or visualization.
+
+**Diagram (text-based)**
+
+```
+[IoT Device]
+      │
+      ▼
+[Local Storage/Cache] ──► [Cloud Object Storage]
+           │                      │
+           ▼                      ▼
+   Immediate Access        Long-term Storage + Analytics
+```
+
+**Advantages**
+
+* Supports images, video, logs, audio (flexible formats)
+* Cloud object storage is scalable and cost-effective
+* Local storage enables offline operation
+* Easy integration with analytics and AI tools
+* Low overhead for storing large binary objects
+
+**Disadvantages**
+
+* Large file sizes → high bandwidth cost when uploading
+* Local storage is limited and vulnerable to failure
+* Unstructured data is harder to query without indexing
+* Security and privacy challenges
+* Requires metadata management
+
+**Examples**
+
+* CCTV video stored locally then uploaded to S3
+* Smart city sound sensors capturing audio logs
+* Wearables storing raw activity logs before sync
+* Industrial machine images for fault detection stored in cloud
+
+**Applications**
+
+* Smart surveillance systems
+* Healthcare wearables
+* Industrial quality inspection
+* Smart city sensors
+* Transportation and fleet monitoring
+
+---
+
+### **Short Note (Points)**
+
+* Stores images, videos, logs, audio as unstructured data.
+* Local storage handles caching + offline operation.
+* Cloud object storage provides scalable long-term storage.
+* Supports analytics, AI, and big data processing.
+* Needs compression, metadata tagging, and security controls.
