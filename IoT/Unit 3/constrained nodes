@@ -1,0 +1,83 @@
+**Definition**
+Constrained nodes are IoT devices with limited processing power, memory, storage, and energy. They operate under strict resource constraints and are designed for low-power, low-cost IoT applications.
+
+---
+
+## **Types**
+
+* **Class 0 (C0):** Extremely constrained, cannot run full IP stack
+* **Class 1 (C1):** Limited resources, can run lightweight IP (6LoWPAN, CoAP)
+* **Class 2 (C2):** Moderate resources, can support richer protocols
+
+---
+
+## **Working / Characteristics**
+
+1. Operate on batteries or energy harvesting.
+2. Use simple microcontrollers (8-bit/16-bit).
+3. Support low-rate communication (LoRa, Zigbee, BLE).
+4. Limited ability to process or store data → depend on gateways/cloud.
+5. Often sleep most of the time to save power.
+
+---
+
+## **Diagram (text-based)**
+
+```
+[Constrained Node]
+   CPU: Low
+   RAM: Low
+   Power: Battery
+   Communication: Low-rate
+        │
+        ▼
+[Gateway/Edge] → Cloud
+```
+
+---
+
+## **Advantages**
+
+* Low cost
+* Low energy consumption
+* Easy deployment in large IoT networks
+* Long battery life (months to years)
+
+---
+
+## **Disadvantages**
+
+* Limited memory and processing power
+* Cannot run complex security or analytics locally
+* Depend heavily on gateways
+* Vulnerable to attacks if not properly secured
+
+---
+
+## **Examples**
+
+* Temperature/humidity sensors
+* Wearables
+* Smart agriculture soil sensors
+* Remote environment monitoring nodes
+* Simple RFID/NFC tags
+
+---
+
+## **Applications**
+
+* Smart homes
+* Environmental monitoring
+* Health and fitness devices
+* Industrial sensor networks
+* Agriculture IoT
+
+---
+
+## **Short Note (Points)**
+
+* Constrained nodes have limited CPU, memory, and power.
+* Classified as **C0, C1, C2** based on capability.
+* Use low-power protocols (CoAP, 6LoWPAN, BLE, LoRa).
+* Depend on gateways for heavy tasks.
+* Ideal for large-scale, battery-powered IoT deployments.

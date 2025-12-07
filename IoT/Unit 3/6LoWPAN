@@ -1,0 +1,92 @@
+**Definition**
+6LoWPAN (IPv6 over Low-Power Wireless Personal Area Networks) is an adaptation layer that allows IPv6 packets to run efficiently on low-power, low-bandwidth IEEE 802.15.4 networks by compressing headers and enabling fragmentation and mesh routing.
+
+---
+
+## **Types**
+
+* **Header Compression Types**
+
+  * IPv6 Header Compression
+  * UDP Header Compression
+* **Routing Types**
+
+  * Mesh-under routing
+  * Route-over routing (often with RPL)
+
+---
+
+## **Working / Steps**
+
+1. IPv6 packets are too large for 802.15.4 (max 127 bytes).
+2. 6LoWPAN **compresses IPv6/UDP headers** to fit small frames.
+3. Performs **fragmentation** to split packets into smaller frames.
+4. Uses **mesh routing** to forward packets through multiple nodes.
+5. At the destination, packets are **reassembled** and delivered as IPv6.
+6. Enables seamless communication with the wider internet.
+
+---
+
+## **Diagram (text-based)**
+
+```
+          IPv6 Packet
+               │
+       [6LoWPAN Adaptation]
+   ┌────────────┬──────────────┬─────────────┐
+   ▼            ▼              ▼
+Compression   Fragmentation   Mesh Routing
+               │
+               ▼
+        IEEE 802.15.4 Network
+               │
+               ▼
+           IoT Devices
+```
+
+---
+
+## **Advantages**
+
+* Enables IPv6 on constrained networks
+* Efficient header compression reduces overhead
+* Supports mesh networking
+* Interoperable with internet protocols
+* Suitable for low-power IoT devices
+
+---
+
+## **Disadvantages**
+
+* Additional processing for compression/fragmentation
+* Limited bandwidth of underlying 802.15.4
+* Requires routing protocols like RPL for scalability
+* Not suitable for high-data-rate applications
+
+---
+
+## **Examples**
+
+* Smart home networks (Thread protocol uses 6LoWPAN)
+* Environmental sensor networks
+* Smart meters and utility systems
+* Industrial wireless sensor networks
+
+---
+
+## **Applications**
+
+* Smart homes (Nest, Thread devices)
+* Smart cities
+* Industrial IoT
+* Agriculture monitoring
+* Health and environmental sensing
+
+---
+
+### **Short Note (Points)**
+
+* 6LoWPAN enables IPv6 on 802.15.4 low-power networks.
+* Performs **compression, fragmentation, mesh routing**.
+* Allows tiny IoT nodes to use internet IP protocols.
+* Used in smart home (Thread), smart city, and industrial IoT systems.

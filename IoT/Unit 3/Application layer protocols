@@ -1,0 +1,107 @@
+**Definition**
+Application layer protocols in IoT define how data is formatted, transmitted, and managed between devices, gateways, and cloud applications at the highest layer of communication.
+
+---
+
+## **Types (Major Application Layer Protocols)**
+
+* **MQTT** – lightweight publish/subscribe messaging
+* **CoAP** – RESTful protocol for constrained devices
+* **HTTP/HTTPS** – standard web communication
+* **AMQP** – reliable message queuing
+* **WebSockets** – real-time full-duplex communication
+* **DDS** – high-performance, real-time data exchange
+* **MQTT-SN** – MQTT for sensor networks
+* **XMPP** – messaging protocol used in some IoT apps
+
+---
+
+## **Working / Steps**
+
+### **MQTT**
+
+1. Device publishes data to a broker.
+2. Broker sends it to subscribers.
+3. Extremely lightweight for IoT.
+
+### **CoAP**
+
+1. Client sends GET/POST/PUT/DELETE using UDP.
+2. Ideal for constrained devices.
+3. Supports observe mode for notifications.
+
+### **HTTP/HTTPS**
+
+1. Request–response interaction.
+2. Works well with web services but heavier for IoT.
+
+### **AMQP**
+
+1. Broker handles message routing, queuing, reliability.
+2. Used in enterprise IoT systems.
+
+### **WebSockets**
+
+1. Persistent, real-time bidirectional communication.
+2. Ideal for dashboards and live updates.
+
+---
+
+## **Diagram (text-based)**
+
+```
+[IoT Device]
+   │
+(MQTT / CoAP / HTTP / AMQP / WebSocket / DDS)
+   │
+   ▼
+[Gateway / Cloud Application]
+```
+
+---
+
+## **Advantages**
+
+* Wide choice for different IoT needs
+* Lightweight options for constrained devices
+* Real-time and reliable options available
+* Easy integration with cloud APIs
+* Supports scalable machine-to-machine communication
+
+---
+
+## **Disadvantages**
+
+* Not all protocols suit low-power networks (e.g., HTTP)
+* Broker-based systems add dependency
+* Security must be implemented separately
+* DDS/AMQP are complex for beginners
+
+---
+
+## **Examples**
+
+* MQTT for telemetry to AWS IoT
+* CoAP for smart home lighting control
+* HTTP/HTTPS for REST APIs in mobile IoT apps
+* WebSockets for real-time dashboards
+* DDS in autonomous vehicles and robotics
+
+---
+
+## **Applications**
+
+* Smart homes
+* Industrial automation
+* Wearables and healthcare
+* Smart cities
+* Robotics and real-time systems
+
+---
+
+### **Short Note (Points)**
+
+* Application layer protocols include **MQTT, CoAP, HTTP, AMQP, WebSockets, DDS**.
+* Provide messaging, request–response, and real-time communication.
+* Lightweight options (MQTT, CoAP) suit constrained IoT devices.
+* Heavy or reliable options (HTTP, AMQP, DDS) suit robust applications.

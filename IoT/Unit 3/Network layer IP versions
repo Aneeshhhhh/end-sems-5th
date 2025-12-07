@@ -1,0 +1,99 @@
+**Definition**
+In IoT, the network layer is responsible for routing, addressing, and forwarding data between devices and cloud servers. *Io versions* refers to the different IP versions and adaptations used in IoT networks—primarily **IPv4**, **IPv6**, and **6LoWPAN** (IPv6 over Low-Power Wireless Personal Area Networks).
+
+---
+
+## **Types (Io/Internet Versions Used in IoT)**
+
+* **IPv4** – traditional 32-bit addressing
+* **IPv6** – 128-bit addressing, supports massive IoT scaling
+* **6LoWPAN** – adaptation layer enabling IPv6 on low-power IoT networks
+* **RPL (Routing Protocol for Low-Power Networks)** – IPv6 routing for IoT
+* **IoT-specific IP adaptations** like Thread (based on 6LoWPAN + IPv6)
+
+---
+
+## **Working / Steps**
+
+### **IPv4**
+
+1. Device assigned a 32-bit IP address.
+2. Routes via traditional internet routing.
+3. Limited address space → unsuitable for massive IoT.
+
+### **IPv6**
+
+1. Device gets 128-bit globally unique address.
+2. Vast address space → supports billions of IoT nodes.
+3. Supports auto-configuration and better multicast.
+
+### **6LoWPAN**
+
+1. Compresses IPv6 headers to fit low-power links (IEEE 802.15.4).
+2. Enables IP-based communication for tiny IoT devices.
+3. Works with mesh topologies via RPL.
+
+---
+
+## **Diagram (text-based)**
+
+```
+        [IoT Devices]
+             │
+    ┌────────┼────────┐
+    ▼        ▼        ▼
+ IPv4     IPv6    6LoWPAN
+             │
+             ▼
+       [Network Layer]
+             │
+             ▼
+     Routing → Cloud/Apps
+```
+
+---
+
+## **Advantages**
+
+* **IPv6:** huge address space, auto-configuration, better security
+* **6LoWPAN:** allows tiny, low-power devices to use IP
+* **Standardization:** easy integration with internet protocols
+* **Scalability:** supports millions of IoT devices
+
+---
+
+## **Disadvantages**
+
+* **IPv4:** limited address space
+* **IPv6:** not fully adopted everywhere
+* **6LoWPAN:** requires adaptation layer, more complex
+* **Interoperability issues** when mixed with legacy networks
+
+---
+
+## **Examples**
+
+* Smart homes using IPv6-based Thread protocol
+* Industrial sensors running 6LoWPAN on IEEE 802.15.4
+* IoT gateways translating 6LoWPAN → IPv6 → Cloud
+* Smart meters using IPv6 addressing
+
+---
+
+## **Applications**
+
+* Smart cities
+* Smart homes (Thread, Nest, Zigbee IP)
+* Industrial IoT
+* Environmental sensor networks
+* Smart agriculture
+
+---
+
+## **Short Note (Points)**
+
+* IoT uses **IPv4, IPv6, and 6LoWPAN** at the network layer.
+* IPv6 provides huge address space for billions of devices.
+* 6LoWPAN adapts IPv6 for low-power IEEE 802.15.4 networks.
+* RPL provides routing for IPv6-based low-power IoT.
+* Ensures scalable, IP-compatible IoT communication.

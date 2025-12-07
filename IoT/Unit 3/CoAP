@@ -1,0 +1,83 @@
+**Definition**
+CoAP (Constrained Application Protocol) is a lightweight, RESTful application-layer protocol designed for constrained IoT devices and networks. It works over UDP and supports low-power, low-bandwidth communication.
+
+---
+
+## **Types**
+
+* **Confirmable Messages (CON)**
+* **Non-confirmable Messages (NON)**
+* **Acknowledgement (ACK)**
+* **Reset (RST)**
+
+---
+
+## **Working / Steps**
+
+1. Follows REST model using **GET, POST, PUT, DELETE**.
+2. Client sends a request to a CoAP server (device or gateway).
+3. Messages sent over **UDP** to reduce overhead.
+4. For reliability, **confirmable messages** require ACK from receiver.
+5. Supports **Observe** option for continuous updates (publish-like behavior).
+6. Responses include payloads in compact binary format.
+
+---
+
+## **Diagram (text-based)**
+
+```
+[CoAP Client]
+     │
+GET/POST/PUT/DELETE (UDP)
+     ▼
+[CoAP Server]
+     │
+  ACK / Response
+```
+
+---
+
+## **Advantages**
+
+* Lightweight and optimized for constrained nodes
+* Low overhead due to UDP
+* Supports multicast
+* Reliable messaging via CON/ACK
+* Works well with 6LoWPAN and low-power WSNs
+
+---
+
+## **Disadvantages**
+
+* UDP may lead to packet loss
+* No built-in security unless DTLS is used
+* Limited payload size
+* Not ideal for high-throughput applications
+
+---
+
+## **Examples**
+
+* Smart home sensors communicating with gateways
+* Environmental monitoring devices
+* CoAP-based actuators (lights, thermostats)
+* IoT networks using 6LoWPAN
+
+---
+
+## **Applications**
+
+* Smart homes and buildings
+* Industrial sensor networks
+* Smart agriculture
+* Healthcare monitoring
+* Environmental sensing
+
+---
+
+### **Short Note (Points)**
+
+* CoAP is a lightweight RESTful protocol for constrained IoT.
+* Uses **UDP**, supports **GET/POST/PUT/DELETE**, and has **CON/NON/ACK**.
+* Works with **6LoWPAN** and low-power networks.
+* Suitable for sensors and actuators in resource-limited environments.

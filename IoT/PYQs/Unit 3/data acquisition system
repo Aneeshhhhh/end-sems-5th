@@ -1,0 +1,79 @@
+**Definition**
+A Data Acquisition System (DAQ) is a system that collects, digitizes, processes, and stores physical-world signals from sensors for monitoring, analysis, and control.
+
+---
+
+## **Types**
+
+* **Analog DAQ systems**
+* **Digital DAQ systems**
+* **Hybrid (Analog + Digital)**
+* **PC-based DAQ**
+* **Embedded DAQ modules**
+
+---
+
+## **Working / Steps**
+
+1. **Sensors** measure physical quantities (temp, pressure, vibration).
+2. **Signal Conditioning** amplifies, filters, and prepares signals.
+3. **ADC (Analog-to-Digital Converter)** converts analog signals to digital.
+4. **DAQ Hardware** collects and packages data.
+5. **Processor/Computer** stores, visualizes, and analyzes data.
+6. Data is used for control, monitoring, or automation.
+
+---
+
+## **Diagram (text-based)**
+
+```
+ Sensors → Signal Conditioning → ADC → DAQ Hardware → Computer/Controller
+```
+
+---
+
+## **Advantages**
+
+* Accurate and fast data collection
+* Easy monitoring and control
+* Supports real-time automation
+* Integrates with software tools for analysis
+* Converts raw physical signals into usable digital data
+
+---
+
+## **Disadvantages**
+
+* Can be expensive for high-precision setups
+* Sensitive to noise and interference
+* Requires calibration and proper configuration
+* Limited by ADC resolution and sampling rate
+
+---
+
+## **Examples**
+
+* Temperature/humidity logging systems
+* Vibration monitoring in machines
+* ECG/EEG medical data acquisition
+* Industrial sensor data collection
+* Environmental monitoring stations
+
+---
+
+## **Applications**
+
+* Industrial automation
+* Healthcare monitoring
+* Smart agriculture
+* Scientific research
+* Environmental sensing
+* Automotive testing
+
+---
+
+### **Short Note (Points)**
+
+* DAQ collects and digitizes sensor data using conditioning + ADC.
+* Components: **sensor → signal conditioning → ADC → DAQ unit → computer**.
+* Used in industry, healthcare, labs, agriculture, and monitoring systems.

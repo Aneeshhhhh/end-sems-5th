@@ -1,0 +1,107 @@
+**Definition**
+MQTT architecture defines how publishers, subscribers, and the broker communicate using organized **topics** and a standardized **MQTT message format** for lightweight IoT messaging.
+
+---
+
+## **Types**
+
+* **Publisher** – sends messages
+* **Subscriber** – receives messages
+* **Broker** – routes messages
+* **QoS Levels** – 0, 1, 2
+* **Message Types** – CONNECT, PUBLISH, SUBSCRIBE, ACK, DISCONNECT
+
+---
+
+## **Working / Steps**
+
+1. Client sends **CONNECT** packet to broker.
+2. Broker accepts connection with **CONNACK**.
+3. Publisher sends **PUBLISH** message to a topic.
+4. Broker forwards message to all matching **SUBSCRIBERS**.
+5. QoS ensures message reliability.
+6. Client disconnects using **DISCONNECT** packet.
+
+---
+
+## **MQTT Message Format (Very Important)**
+
+```
++------------------------------------------------------+
+|      Fixed Header (Message Type, Flags, Length)       |
++------------------------------------------------------+
+|                Variable Header (Depends)              |
++------------------------------------------------------+
+|                    Payload (Data)                     |
++------------------------------------------------------+
+```
+
+### **1. Fixed Header**
+
+* Message type (e.g., PUBLISH, SUBSCRIBE)
+* Flags (DUP, QoS, RETAIN)
+* Remaining length
+
+### **2. Variable Header (varies by message type)**
+
+* Topic name
+* Packet identifier (for QoS 1 & 2)
+
+### **3. Payload**
+
+* Message content (sensor values, commands, etc.)
+
+---
+
+## **Architecture Diagram (text-based)**
+
+```
+ Publisher ──PUBLISH──►
+                       [ MQTT Broker ]
+ Subscriber ◄─SUBSCRIBE/RECEIVE──
+```
+
+---
+
+## **Advantages**
+
+* Very lightweight
+* Perfect for constrained IoT nodes
+* Publish–subscribe → decoupled communication
+* Supports QoS and retained messages
+* Works over unreliable networks
+
+---
+
+## **Disadvantages**
+
+* Broker is a single point of failure
+* Must use TLS for security
+* Not suitable for large binary files
+
+---
+
+## **Examples**
+
+* Sensor sending temperature data using PUBLISH
+* Mobile app subscribing to topic “home/lights”
+* Cloud app receiving GPS data from tracking devices
+
+---
+
+## **Applications**
+
+* Smart homes
+* Industrial IoT
+* Telemetry systems
+* Asset tracking
+* Healthcare wearables
+
+---
+
+### **Short Note (Points)**
+
+* MQTT architecture uses **publisher, subscriber, broker**.
+* Message format includes **Fixed Header + Variable Header + Payload**.
+* Uses topics and QoS for lightweight IoT messaging.
+* Ideal for low-power, unreliable networks.

@@ -1,0 +1,133 @@
+**Definition**
+IEEE 802.15.4 defines the physical and MAC layers for low-power, low-data-rate wireless networks used in IoT. It specifies network topologies and built-in security mechanisms for reliable and safe communication.
+
+---
+
+### **Types**
+
+#### **Topologies**
+
+* **Star Topology**
+* **Peer-to-Peer (Mesh-capable) Topology**
+* **Cluster-Tree Topology**
+
+#### **Security Types**
+
+* **Access Control** – device whitelist/blacklist
+* **Data Encryption (AES-128)**
+* **Integrity Protection (MIC)**
+* **Frame Counter for Replay Protection**
+* **Key Management Methods**
+
+---
+
+### **Working / Steps**
+
+#### **Topology Working**
+
+1. Devices join a PAN (Personal Area Network).
+2. **Star:** All nodes communicate via a PAN Coordinator.
+3. **Peer-to-peer:** Nodes connect directly and form mesh links.
+4. **Cluster-tree:** Routers form hierarchical branches.
+
+#### **Security Working**
+
+1. Sender encrypts payload using AES-128.
+2. A Message Integrity Code (MIC) is added.
+3. Frame counters prevent replay attacks.
+4. Receiver validates MIC and decrypts data.
+5. Key management ensures secure key distribution.
+
+---
+
+### **Diagram (text-based)**
+
+**Topologies**
+
+```
+Star Topology:
+       [Coordinator]
+        /   |   \
+    Node  Node  Node
+
+Peer-to-Peer:
+ Node──Node──Node
+    \       /
+      Node
+
+Cluster-Tree:
+    [Coordinator]
+        │
+     [Router]
+      /    \
+  Node     Node
+```
+
+**Security Flow**
+
+```
+Data → AES-128 Encryption → Add MIC → Transmit
+                                   │
+                        Receiver verifies → Decrypts
+```
+
+---
+
+### **Advantages**
+
+#### *Topology Advantages*
+
+* Star: simple, energy-efficient
+* Mesh: robust, self-healing
+* Cluster-tree: scalable and balanced
+
+#### *Security Advantages*
+
+* Strong AES-128 encryption
+* Built-in replay protection
+* Integrity verification via MIC
+* Flexible key management
+
+---
+
+### **Disadvantages**
+
+#### *Topology Disadvantages*
+
+* Star: coordinator failure collapses network
+* Mesh: higher energy consumption
+* Cluster-tree: complex routing
+
+#### *Security Disadvantages*
+
+* Key management overhead
+* Limited device resources for encryption
+* Vulnerable if weak keys are used
+
+---
+
+### **Examples**
+
+* Zigbee networks using IEEE 802.15.4
+* Wireless sensor networks
+* Smart lighting systems
+* Home automation devices
+
+---
+
+### **Applications**
+
+* Smart homes
+* Industrial wireless sensor networks
+* Environmental monitoring
+* Healthcare wearables
+* Agriculture IoT
+
+---
+
+### **Short Note (Points)**
+
+* IEEE 802.15.4 supports **star, mesh, and cluster-tree** topologies.
+* Provides **AES-128 encryption, MIC integrity, replay protection, access control**.
+* Used in **Zigbee, 6LoWPAN, Thread** networks.
+* Low power, low data rate, ideal for IoT sensor networks.

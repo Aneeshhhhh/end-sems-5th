@@ -1,0 +1,85 @@
+**Definition**
+SCADA (Supervisory Control and Data Acquisition) is an industrial control system used to remotely monitor and control machines, processes, and infrastructure in real time through sensors, RTUs, PLCs, and a central supervisory computer.
+
+---
+
+## **Types**
+
+* **Monolithic SCADA** – standalone mainframe-based
+* **Distributed SCADA** – LAN-based architecture
+* **Networked SCADA** – internet-enabled systems
+* **IoT-enabled SCADA** – cloud-integrated, wireless sensors
+
+---
+
+## **Working / Steps**
+
+1. **Sensors** collect data from machines or processes.
+2. **RTUs/PLCs** interface with physical devices and convert signals into digital data.
+3. Data is transmitted to the **SCADA Master/Server**.
+4. SCADA software displays real-time dashboards, alarms, and trends.
+5. Operators issue control commands → sent back to PLCs/RTUs → actuators perform actions.
+
+---
+
+## **Diagram (text-based)**
+
+```
+ Sensors/Actuators
+        │
+      PLC / RTU
+        │
+  Communication Network
+        │
+   SCADA Master Server
+        │
+   HMI / Dashboard / Control
+```
+
+---
+
+## **Advantages**
+
+* Real-time monitoring and control
+* Early fault detection through alarms
+* Automation reduces human intervention
+* Improves safety and operational efficiency
+* Supports large-scale industrial systems
+
+---
+
+## **Disadvantages**
+
+* Vulnerable to cyberattacks if not secured
+* High installation and maintenance cost
+* Complex configuration and integration
+* Legacy systems may lack flexibility
+
+---
+
+## **Examples**
+
+* Power grid monitoring
+* Water treatment plants
+* Oil & gas pipelines
+* Manufacturing assembly lines
+* Traffic control systems
+
+---
+
+## **Applications**
+
+* Energy and utilities
+* Industrial automation
+* Transportation systems
+* Building management
+* Smart cities infrastructure
+
+---
+
+### **Short Note (Points)**
+
+* SCADA monitors and controls industrial processes remotely.
+* Uses **sensors → PLC/RTU → SCADA server → HMI**.
+* Provides real-time data, alarms, and control actions.
+* Used in power grids, plants, pipelines, and factories.

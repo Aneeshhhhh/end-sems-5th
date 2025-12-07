@@ -1,0 +1,106 @@
+**Definition**
+Application transport methods in IoT are communication protocols used at the application layer to move data between IoT devices, gateways, and cloud services efficiently, reliably, and securely.
+
+---
+
+## **Types (Major IoT Application Transport Methods)**
+
+* **MQTT (Message Queuing Telemetry Transport)**
+* **CoAP (Constrained Application Protocol)**
+* **HTTP/HTTPS**
+* **AMQP (Advanced Message Queuing Protocol)**
+* **WebSockets**
+* **DDS (Data Distribution Service)**
+* **MQTT-SN (MQTT for Sensor Networks)**
+
+---
+
+## **Working / Steps**
+
+### **MQTT**
+
+1. Devices publish messages to a broker.
+2. Broker distributes messages to subscribers.
+3. Designed for low-power, unreliable networks.
+
+### **CoAP**
+
+1. REST-like protocol for constrained devices.
+2. Uses UDP for low-latency communication.
+3. Supports GET/POST/PUT/DELETE like HTTP.
+
+### **HTTP/HTTPS**
+
+1. Client-request/server-response model.
+2. Good for high-capability IoT devices.
+3. Heavier protocol but widely supported.
+
+### **AMQP**
+
+1. Reliable queuing & routing for enterprise IoT.
+2. Uses a broker for guaranteed delivery.
+
+### **WebSockets**
+
+1. Full-duplex, real-time communication.
+2. Ideal for dashboards and live feeds.
+
+### **DDS**
+
+1. Peer-to-peer, real-time communication.
+2. Used for industrial and autonomous systems.
+
+---
+
+## **Diagram (text-based)**
+
+```
+[IoT Device] → (MQTT/CoAP/HTTP/AMQP/WebSockets/DDS) → [Gateway/Cloud]
+```
+
+---
+
+## **Advantages**
+
+* Supports a variety of use cases (low-power to high-speed).
+* Enables flexible communication patterns (request-response, publish-subscribe).
+* Optimized methods exist for constrained IoT devices (MQTT, CoAP).
+* Secure transport possible via TLS/DTLS.
+
+---
+
+## **Disadvantages**
+
+* HTTP is heavy for constrained devices.
+* CoAP and MQTT require brokers/servers.
+* DDS and AMQP are complex to deploy.
+* Security must be managed separately for each protocol.
+
+---
+
+## **Examples**
+
+* MQTT for sensor telemetry to cloud
+* CoAP for smart home devices
+* HTTP for REST APIs in mobile IoT apps
+* WebSockets for real-time dashboards
+* DDS for autonomous vehicles and robotics
+
+---
+
+## **Applications**
+
+* Smart home systems
+* Industrial automation
+* Healthcare wearables
+* Smart cities
+* Autonomous and robotics systems
+
+---
+
+### **Short Note (Points)**
+
+* Application transport methods include **MQTT, CoAP, HTTP, AMQP, WebSockets, DDS**.
+* Support publish-subscribe, request-response, and real-time communication.
+* Optimized for different IoT needs—from low power (CoAP/MQTT) to high performance (DDS).
+* Essential for device ↔ cloud messaging and application-level communication.

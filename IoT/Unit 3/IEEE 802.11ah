@@ -1,0 +1,127 @@
+**Definition**
+IEEE 802.11ah (Wi-Fi HaLow) is a low-power, long-range Wi-Fi standard designed for IoT. It defines network topologies and strong security mechanisms suitable for large IoT deployments.
+
+---
+
+## **Types**
+
+### **Topologies**
+
+* **Star Topology** (AP-centric)
+* **Hierarchical / Grouping Topology** using TIM and RAW
+* **Sub-Net / Multi-AP Topology** for large clusters
+
+### **Security Types**
+
+* **WPA3-SAE** (modern, strong Wi-Fi security)
+* **AES-128 Encryption**
+* **Protected Management Frames (PMF)**
+* **EAP-based authentication**
+* **Access Control Lists (ACLs)**
+
+---
+
+## **Working / Steps**
+
+### **Topology Working**
+
+1. Devices connect to an **Access Point (AP)** in star formation.
+2. For large IoT networks, AP divides stations into **TIM groups** (Traffic Indication Map).
+3. AP allocates **RAW (Restricted Access Window)** to each group to avoid collisions.
+4. Multi-AP deployments extend coverage for large sensor networks.
+
+### **Security Working**
+
+1. Device initiates authentication using **WPA3-SAE** handshake.
+2. AP verifies identity and establishes a secure session key.
+3. All data transmitted using **AES encryption**.
+4. **PMF** protects from deauthentication spoofing.
+5. ACLs and MAC filtering provide additional control.
+
+---
+
+## **Diagram (text-based)**
+
+### **Topology**
+
+```
+         [Access Point]
+        /   |    |     \
+    Device Device Device Device
+         (Star Topology)
+
+TIM Grouping:
+ AP
+ ├── Group 1 (RAW slot 1)
+ ├── Group 2 (RAW slot 2)
+ └── Group 3 (RAW slot 3)
+```
+
+### **Security**
+
+```
+Device → WPA3-SAE Handshake → Secure Key
+       → AES Encryption → Protected Data Channel
+```
+
+---
+
+## **Advantages**
+
+### *Topology Advantages*
+
+* Long range (~1 km)
+* Supports thousands of IoT devices
+* Reduced collisions with RAW scheduling
+* Energy-efficient for sensors
+
+### *Security Advantages*
+
+* WPA3 provides strong protection
+* AES ensures confidentiality
+* PMF protects against spoofing
+* Scalable authentication for IoT networks
+
+---
+
+## **Disadvantages**
+
+### *Topology Disadvantages*
+
+* Single AP acts as central point
+* RAW scheduling increases complexity
+* Less throughput than traditional Wi-Fi
+
+### *Security Disadvantages*
+
+* WPA3 requires more processing power
+* Key management complexity for large deployments
+* Vulnerable if legacy security is incorrectly configured
+
+---
+
+## **Examples**
+
+* Smart city deployments using long-range Wi-Fi
+* Industrial plants with thousands of sensors
+* Agricultural IoT networks
+* Large outdoor sensor installations
+
+---
+
+## **Applications**
+
+* Smart meters
+* Environmental monitoring
+* Smart agriculture
+* Industrial IoT
+* Warehouses & logistics tracking
+
+---
+
+## **Short Note (Points)**
+
+* IEEE 802.11ah uses **star and grouped (TIM/RAW)** topologies to support thousands of IoT devices.
+* Provides **WPA3-SAE, AES encryption, PMF, ACLs** for strong security.
+* Long-range, low-power Wi-Fi ideal for outdoor and industrial IoT.
+* Reduces collisions and energy use via RAW scheduling.

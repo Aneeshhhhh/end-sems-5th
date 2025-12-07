@@ -1,0 +1,82 @@
+**Definition**
+LoRaWAN (Long Range Wide Area Network) is a low-power, long-range wireless communication protocol designed for IoT devices. It operates on unlicensed ISM bands and enables long-distance communication with minimal energy consumption.
+
+---
+
+## **Types**
+
+* **Class A** – lowest power, bi-directional, uplink-initiated
+* **Class B** – scheduled downlink windows
+* **Class C** – continuous listening (lowest latency, highest power)
+
+---
+
+## **Working / Steps**
+
+1. IoT devices (end nodes) send data using LoRa modulation.
+2. LoRa gateways receive packets and forward them to the Network Server.
+3. Network Server filters duplicates, manages security, and routes data.
+4. Application Server processes data for user apps.
+5. Downlink messages sent via gateway when allowed by device class.
+
+---
+
+## **Diagram (text-based)**
+
+```
+ [End Nodes]  →  [LoRa Gateway]  →  [Network Server]  →  [Application Server]
+     |                |                   |                        |
+  Sensors         RF Uplink          Security/ADR            Apps/Dashboards
+```
+
+---
+
+## **Advantages**
+
+* Very long range (up to 10–15 km rural)
+* Ultra low power → multi-year battery life
+* Operates on unlicensed bands
+* Supports thousands of devices
+* Simple star-of-stars topology
+* Strong security with AES-128
+
+---
+
+## **Disadvantages**
+
+* Low data rates (unsuitable for video or large data)
+* Increased latency
+* Duty-cycle restrictions in ISM bands
+* Not suitable for real-time applications
+* Limited payload size (~51 bytes typical)
+
+---
+
+## **Examples**
+
+* Smart metering
+* Environmental monitoring sensors
+* Smart agriculture soil/moisture sensors
+* Asset and livestock tracking
+* Smart parking systems
+
+---
+
+## **Applications**
+
+* Smart cities
+* Industrial IoT
+* Agriculture IoT
+* Utility metering (water/gas/electricity)
+* Building monitoring
+* Logistics and supply chain
+
+---
+
+## **Short Note (Points)**
+
+* LoRaWAN is a **long-range, low-power WAN** protocol for IoT.
+* Uses **star-of-stars** topology with gateways and network servers.
+* Provides **AES-128 end-to-end security**.
+* Classes A, B, C support different power/latency needs.
+* Ideal for smart cities, agriculture, metering, and remote sensors.

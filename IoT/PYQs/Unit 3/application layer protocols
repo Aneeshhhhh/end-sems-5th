@@ -1,0 +1,90 @@
+**Definition**
+Application layer protocols are IoT communication protocols that define how data is formatted, exchanged, and managed between devices, gateways, and cloud applications at the highest layer of the network stack.
+
+---
+
+## **Types**
+
+* **MQTT** – lightweight publish/subscribe
+* **CoAP** – RESTful protocol over UDP
+* **HTTP/HTTPS** – request–response web protocol
+* **AMQP** – reliable message queuing
+* **WebSockets** – full-duplex real-time communication
+* **DDS** – high-performance data distribution
+* **MQTT-SN** – MQTT for sensor networks
+* **XMPP** – messaging protocol for M2M
+
+---
+
+## **Working / Steps**
+
+1. Device prepares application data (sensor values, commands).
+2. Chooses protocol based on bandwidth, reliability, and power needs.
+3. Data is encoded (JSON, CBOR, binary).
+4. Protocol sends data using publish–subscribe or request–response.
+5. Receiver (gateway/cloud) interprets and processes the message.
+6. Optional responses or actions sent back to devices.
+
+---
+
+## **Diagram (text-based)**
+
+```
+   [IoT Device]
+        │
+(MQTT / CoAP / HTTP / AMQP / WebSocket / DDS)
+        │
+        ▼
+  [Gateway / Cloud App]
+```
+
+---
+
+## **Advantages**
+
+* Supports both lightweight (MQTT, CoAP) and rich (HTTP, DDS) communication
+* Enables device-to-cloud and device-to-device messaging
+* Offers real-time, reliable, and asynchronous options
+* Flexible for constrained and high-power IoT devices
+* Easy integration with web services and IoT clouds
+
+---
+
+## **Disadvantages**
+
+* HTTP is heavy for constrained devices
+* MQTT/AMQP require brokers
+* CoAP over UDP may face packet loss
+* DDS/AMQP can be complex and resource-intensive
+* Security must be added separately (TLS/DTLS)
+
+---
+
+## **Examples**
+
+* MQTT telemetry → AWS IoT Core
+* CoAP commands → smart lighting
+* HTTP REST APIs → mobile IoT apps
+* WebSockets → real-time dashboards
+* DDS → autonomous vehicles and robotics
+
+---
+
+## **Applications**
+
+* Smart homes
+* Industrial IoT
+* Healthcare devices
+* Smart cities
+* Real-time monitoring systems
+* Robotics and autonomous systems
+
+---
+
+### **Short Note (Points)**
+
+* Application protocols: **MQTT, CoAP, HTTP, AMQP, WebSockets, DDS**.
+* Support publish–subscribe and request–response models.
+* Lightweight options (MQTT/CoAP) for constrained nodes.
+* Heavy/real-time options (DDS/AMQP) for industrial systems.
+* Enable device ↔ cloud and device ↔ device communication.

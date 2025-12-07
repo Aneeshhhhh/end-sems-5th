@@ -1,0 +1,82 @@
+**Definition**
+A Supervisory Control System is a system used to monitor, supervise, and control industrial processes from a central location using sensors, controllers, and operator interfaces.
+
+---
+
+## **Types**
+
+* **SCADA (Supervisory Control and Data Acquisition)**
+* **DCS (Distributed Control System)**
+* **PLC-based Supervisory Systems**
+* **IoT-enabled Supervisory Systems**
+
+---
+
+## **Working / Steps**
+
+1. **Sensors** measure process variables (temperature, pressure, flow).
+2. **PLCs/RTUs** collect data and execute control logic.
+3. Data is sent to a **supervisory computer/server**.
+4. Operator views real-time data on HMI dashboards.
+5. Operator or automated logic sends commands → actuators perform actions.
+6. System logs events, alarms, and performance data.
+
+---
+
+## **Diagram (text-based)**
+
+```
+ Sensors/Actuators
+        │
+     PLC / RTU
+        │
+  Communication Network
+        │
+ Supervisory Computer (HMI)
+```
+
+---
+
+## **Advantages**
+
+* Centralized monitoring and control
+* Real-time decision-making
+* Reduces human error and increases safety
+* Enables automation of complex processes
+* Supports alarms, logging, and fault detection
+
+---
+
+## **Disadvantages**
+
+* High installation and maintenance cost
+* Vulnerable to cyberattacks if not secured
+* Complex to configure and integrate
+* PLC/RTU failures can disrupt process
+
+---
+
+## **Examples**
+
+* Power plant control
+* Oil and gas pipelines
+* Water treatment and distribution
+* Manufacturing assembly lines
+
+---
+
+## **Applications**
+
+* Industrial automation
+* Energy and utilities
+* Smart city infrastructure
+* Transportation systems
+
+---
+
+### **Short Note (Points)**
+
+* Supervisory control systems monitor and control industrial processes.
+* Use **sensors → PLC/RTU → supervisory server → HMI**.
+* Provide real-time supervision, alarms, and automation.
+* Applied in power, manufacturing, water treatment, and smart infrastructure.

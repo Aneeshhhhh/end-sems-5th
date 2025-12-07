@@ -1,0 +1,86 @@
+**Definition**
+MQTT (Message Queuing Telemetry Transport) is a lightweight, publish–subscribe messaging protocol designed for low-power IoT devices and unreliable networks. It uses a central message broker to route messages between clients.
+
+---
+
+## **Types**
+
+* **QoS 0 – At most once**
+* **QoS 1 – At least once**
+* **QoS 2 – Exactly once**
+* **Message Types** – CONNECT, PUBLISH, SUBSCRIBE, DISCONNECT, etc.
+
+---
+
+## **Working / Steps**
+
+1. Devices connect to an MQTT **broker** (server).
+2. A device **publishes** data to a topic.
+3. Other devices **subscribe** to topics they care about.
+4. Broker forwards messages from publishers to subscribers.
+5. QoS levels ensure delivery reliability.
+6. Persistent sessions allow offline message handling.
+
+---
+
+## **Diagram (text-based)**
+
+```
+        Publisher
+            │
+         PUBLISH
+            ▼
+        [MQTT Broker]
+            ▲
+         SUBSCRIBE
+            │
+        Subscriber
+```
+
+---
+
+## **Advantages**
+
+* Extremely lightweight → ideal for constrained IoT devices
+* Works well on unreliable/low-bandwidth networks
+* Supports QoS for reliable messaging
+* Asynchronous publish–subscribe model
+* Low power usage for battery devices
+
+---
+
+## **Disadvantages**
+
+* Requires a central broker → single point of failure
+* No built-in encryption (must use TLS)
+* Not suitable for large binary data
+* Complex topic hierarchy management
+
+---
+
+## **Examples**
+
+* Sending sensor telemetry to cloud (AWS, Azure IoT)
+* Smart home devices publishing status updates
+* Industrial machines sending periodic data
+* Vehicle tracking systems sending GPS coordinates
+
+---
+
+## **Applications**
+
+* Smart homes
+* Industrial IoT monitoring
+* Connected vehicles
+* Healthcare wearables
+* Agriculture IoT
+
+---
+
+### **Short Note (Points)**
+
+* MQTT is a **publish–subscribe**, broker-based IoT protocol.
+* Lightweight, low-bandwidth, ideal for constrained devices.
+* Uses QoS 0/1/2 for reliable delivery.
+* Needs TLS for secure communication.
+* Widely used in IoT clouds and sensor networks.

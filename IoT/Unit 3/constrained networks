@@ -1,0 +1,86 @@
+**Definition**
+Constrained networks are IoT networks with limited bandwidth, high latency, low data rates, and strict energy and power constraints. They connect constrained nodes using lightweight protocols.
+
+---
+
+## **Types**
+
+* **Low-Power Wireless Networks** – IEEE 802.15.4, Zigbee, 6LoWPAN
+* **LPWAN Networks** – LoRaWAN, Sigfox, NB-IoT, LTE-M
+* **Short-Range Networks** – BLE, RFID
+* **Duty-Cycled Networks** – nodes sleep most of the time to save power
+
+---
+
+## **Working / Characteristics**
+
+1. Nodes operate on batteries → communication minimized.
+2. Use low data rate links (kbps range).
+3. Packets are small, infrequent, and energy-efficient.
+4. Routing protocols like **RPL** designed for low-power networks.
+5. Networks often rely on gateways for cloud connectivity.
+6. Use lightweight protocols (CoAP, MQTT-SN) to reduce overhead.
+
+---
+
+## **Diagram (text-based)**
+
+```
+[Constrained Nodes]
+   │   │   │
+Low-power wireless links (6LoWPAN / LoRa)
+   │
+   ▼
+[Gateway]
+   │
+   ▼
+[Cloud / Applications]
+```
+
+---
+
+## **Advantages**
+
+* Extremely low power consumption
+* Long communication range (LPWAN)
+* Low cost and easy deployment
+* Supports large-scale IoT networks (thousands of nodes)
+
+---
+
+## **Disadvantages**
+
+* Very limited bandwidth
+* High latency and low throughput
+* Small payload size
+* Unreliable links and higher packet loss
+* Cannot support heavy traffic or multimedia
+
+---
+
+## **Examples**
+
+* LoRaWAN networks for agriculture
+* Zigbee mesh networks in smart homes
+* NB-IoT networks for smart meters
+* BLE-based sensor networks
+
+---
+
+## **Applications**
+
+* Smart agriculture
+* Smart cities and street lighting
+* Environmental monitoring
+* Industrial sensor networks
+* Smart metering (water, gas, electricity)
+
+---
+
+### **Short Note (Points)**
+
+* Networks with low bandwidth, low power, and high latency.
+* Use protocols like 6LoWPAN, LoRaWAN, Zigbee, NB-IoT.
+* Designed for constrained IoT nodes.
+* Require lightweight protocols and gateway support.
+* Ideal for large-scale, battery-based IoT deployments.

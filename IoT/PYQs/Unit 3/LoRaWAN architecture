@@ -1,0 +1,102 @@
+**Definition**
+LoRaWAN architecture defines the network structure used for long-range, low-power IoT communication. It uses a **star-of-stars** topology with end devices communicating to gateways, which forward data to centralized network servers.
+
+---
+
+## **Types (Core Components)**
+
+* **End Devices (Sensors/Nodes)**
+* **LoRa Gateways**
+* **Network Server**
+* **Application Server**
+* **Join Server** (for authentication/security)
+
+---
+
+## **Working / Steps**
+
+1. **End devices** send LoRa-modulated uplink messages.
+2. Nearby **gateways** receive messages and forward them via IP to the Network Server.
+3. The **Network Server** handles:
+
+   * Deduplication (same packet from multiple gateways)
+   * Security checks
+   * Adaptive Data Rate (ADR)
+   * Routing to the Application Server
+4. **Application Server** decodes payload for user applications.
+5. **Downlink** messages (commands) are sent back to devices through gateways.
+
+---
+
+## **Diagram (text-based)**
+
+```
+      End Devices (Class A/B/C)
+                │
+             LoRa RF
+                ▼
+          [ LoRa Gateways ]
+                │  IP (Ethernet/4G)
+                ▼
+        [ LoRaWAN Network Server ]
+       ┌──────────────┬──────────────┐
+       ▼              ▼              ▼
+Join Server     Application Server   ADR/Control
+```
+
+---
+
+## **Characteristics**
+
+* Star-of-stars topology
+* Long-range, low-power communication
+* AES-128 security (network + app keys)
+* Supports Classes A, B, C
+* Payloads are small (few bytes)
+
+---
+
+## **Advantages**
+
+* Very long communication range
+* Battery life of years
+* Highly scalable (thousands of nodes)
+* Secure end-to-end communication
+* Low infrastructure cost
+
+---
+
+## **Disadvantages**
+
+* Very low data rate
+* High latency
+* Payload size is small
+* Not suitable for real-time systems
+
+---
+
+## **Examples**
+
+* Smart meter networks
+* Smart irrigation
+* Air quality monitoring
+* Asset tracking
+
+---
+
+## **Applications**
+
+* Smart cities
+* Agriculture IoT
+* Utility metering
+* Industrial monitoring
+* Environmental sensing
+
+---
+
+### **Short Note (Points)**
+
+* LoRaWAN uses **star-of-stars** with **end devices → gateways → network server → application server**.
+* Provides **long-range, low-power** communication.
+* Uses **AES-128**, ADR, and supports device classes A/B/C.
+* Ideal for smart city, agriculture, metering, and environmental IoT.

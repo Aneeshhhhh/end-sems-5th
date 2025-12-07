@@ -1,0 +1,69 @@
+**Definition**
+IoT access technologies are communication methods that allow IoT devices to connect to networks and transmit data to gateways, cloud, or other devices.
+
+**Types**
+
+* **Short-range technologies** – Bluetooth, Zigbee, Z-Wave, Wi-Fi
+* **Medium-range technologies** – Wi-Fi HaLow, RFID, NFC
+* **Long-range (LPWAN)** – LoRaWAN, Sigfox, NB-IoT, LTE-M
+* **Cellular technologies** – 4G, 5G, LTE
+* **Wired technologies** – Ethernet, Modbus, CAN bus
+
+**Working / Steps**
+
+1. Device selects access technology based on range, power, and bandwidth needs.
+2. Signals transmitted to gateway or network base station.
+3. Data routed to cloud for storage and analytics.
+4. Device receives commands or updates via the same channel.
+
+**Diagram (text-based)**
+
+```
+[IoT Devices]
+   │   │    │
+Bluetooth / Zigbee / WiFi / LoRa / NB-IoT / 5G
+   │
+   ▼
+[Gateway / Base Station]
+   │
+   ▼
+[Cloud / Server]
+```
+
+**Advantages**
+
+* Supports diverse IoT applications
+* Energy-efficient options (LoRa, NB-IoT)
+* High-speed options for video (Wi-Fi, 5G)
+* Long-range options for rural IoT (LPWAN)
+
+**Disadvantages**
+
+* Range limitations (short-range tech)
+* Bandwidth limitations (LPWAN)
+* Higher cost for cellular networks
+* Interference in unlicensed bands
+
+**Examples**
+
+* Zigbee for smart home lighting
+* LoRaWAN for agriculture sensors
+* Bluetooth for wearables
+* NB-IoT for smart meters
+* 5G for autonomous vehicles
+
+**Applications**
+
+* Smart homes
+* Smart agriculture
+* Industrial automation
+* Smart cities
+* Healthcare wearables
+
+---
+
+### **Short Note (Points)**
+
+* IoT access technologies enable device connectivity.
+* Include Bluetooth, Wi-Fi, Zigbee, LoRaWAN, NB-IoT, 5G, Ethernet.
+* Chosen based on range, power, bandwidth, and application needs.

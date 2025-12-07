@@ -1,0 +1,61 @@
+**Definition**
+The MAC (Medium Access Control) layer controls how multiple IoT devices share and access a common communication medium, ensuring reliable and collision-free data transmission.
+
+**Types**
+
+* **Contended MAC** – CSMA/CA (Wi-Fi), ALOHA, Slotted ALOHA
+* **Scheduled MAC** – TDMA, FDMA, CDMA
+* **Hybrid MAC** – combination of contention + scheduling (e.g., Zigbee)
+
+**Working / Steps**
+
+1. Determines when a device is allowed to transmit data.
+2. Avoids collisions using contention or scheduling methods.
+3. Provides addressing (MAC addresses) for devices.
+4. Handles frame formatting, error detection, and retransmission.
+5. Coordinates access among multiple nodes in a network.
+
+**Diagram (text-based)**
+
+```
+[Multiple Devices]
+    │   │   │
+ MAC Layer → Decides Access → Transmit Frames → Receiver
+```
+
+**Advantages**
+
+* Efficient sharing of communication medium
+* Reduces collisions and improves reliability
+* Supports device addressing and security functions
+* Helps manage low-power devices (duty cycling)
+
+**Disadvantages**
+
+* Contention-based MAC suffers in high traffic
+* Scheduling requires synchronization
+* Overhead may increase energy consumption
+
+**Examples**
+
+* Wi-Fi MAC using CSMA/CA
+* Zigbee MAC using CSMA/CA + scheduling
+* LoRaWAN MAC using ALOHA
+* Cellular MAC based on TDMA/FDMA
+
+**Applications**
+
+* Wireless sensor networks
+* Smart homes (Zigbee, Wi-Fi)
+* Industrial IoT
+* Smart agriculture
+* Smart city deployments
+
+---
+
+### **Short Note (Points)**
+
+* MAC layer manages medium access and prevents collisions.
+* Uses CSMA/CA, TDMA, ALOHA, etc.
+* Assigns MAC addresses and handles frames.
+* Ensures reliable, shared wireless communication in IoT.

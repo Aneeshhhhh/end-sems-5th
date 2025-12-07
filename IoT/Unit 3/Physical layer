@@ -1,0 +1,59 @@
+**Definition**
+The physical layer is the lowest layer in IoT communication responsible for transmitting raw bits over a physical medium using electrical, radio, optical, or mechanical signals.
+
+**Types**
+
+* **Wired Physical Layer** – Ethernet, USB, RS-232, CAN
+* **Wireless Physical Layer** – Wi-Fi, Bluetooth, Zigbee, LoRa, NB-IoT, 5G
+* **Optical Physical Layer** – Fiber optics
+* **RFID/NFC Physical Channel**
+
+**Working / Steps**
+
+1. Converts digital bits into physical signals (electrical, RF, optical).
+2. Transmits signals over wired/wireless mediums.
+3. Receiver converts signals back into digital bits.
+4. Ensures modulation, coding, synchronization, and signal strength.
+
+**Diagram (text-based)**
+
+```
+Digital Bits → [Modulation] → Physical Signal → [Demodulation] → Digital Bits
+```
+
+**Advantages**
+
+* Enables actual transmission of IoT data
+* Supports various media (wireless, wired, optical)
+* Determines speed, range, and reliability
+
+**Disadvantages**
+
+* Susceptible to noise and interference
+* Limited by distance and medium quality
+* Requires appropriate modulation and power levels
+
+**Examples**
+
+* Wi-Fi radio signals for smart devices
+* LoRa long-range radio modulation
+* Ethernet cable transmission in industrial IoT
+* Bluetooth signals in wearables
+
+**Applications**
+
+* Smart homes
+* Industrial automation
+* Healthcare devices
+* Smart grids
+* Agriculture sensors
+
+---
+
+### **Short Note (Points)**
+
+* Lowest IoT layer responsible for transmitting raw bits.
+* Uses electrical, RF, or optical signals.
+* Performs modulation, coding, and synchronization.
+* Wired: Ethernet; Wireless: Wi-Fi, LoRa, Zigbee.
+* Forms the foundation of IoT communication.

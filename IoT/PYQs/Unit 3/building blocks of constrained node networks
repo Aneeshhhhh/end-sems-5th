@@ -1,0 +1,98 @@
+**Definition**
+Building blocks of constrained node networks are the essential components that enable communication, routing, addressing, and data handling in networks made of low-power, low-memory IoT devices.
+
+---
+
+## **Types (Core Building Blocks)**
+
+1. **Constrained Nodes**
+2. **Constrained Networks / Links**
+3. **Adaptation Layer (6LoWPAN)**
+4. **Routing Protocol (RPL)**
+5. **Transport Protocols (UDP/TCP-lite)**
+6. **Application Protocols (CoAP, MQTT-SN)**
+7. **Security Mechanisms (DTLS, AES)**
+8. **Gateways / Border Routers**
+
+---
+
+## **Working / Steps**
+
+1. **Constrained nodes** sense and generate small data packets.
+2. **Low-power networks** (IEEE 802.15.4, BLE, LoRa) transmit data.
+3. **6LoWPAN layer** compresses IPv6 headers and fragments packets.
+4. **RPL routing** organizes nodes into a low-power mesh (DODAG).
+5. **UDP-based transport** carries lightweight messages.
+6. **CoAP/MQTT-SN** provide application-level communication.
+7. **Security** added using DTLS, AES-128.
+8. **Border router/gateway** connects constrained network to the Internet.
+
+---
+
+## **Diagram (text-based)**
+
+```
+ [Constrained Nodes]
+        │
+ Low-power Links (802.15.4 / BLE / LoRa)
+        │
+        ▼
+   [6LoWPAN Adaptation]
+        │
+        ▼
+     [RPL Routing]
+        │
+        ▼
+  UDP / CoAP / MQTT-SN
+        │
+        ▼
+ [Gateway / Border Router]
+        │
+        ▼
+      Internet
+```
+
+---
+
+## **Advantages**
+
+* Enables IPv6 on tiny devices
+* Low energy consumption
+* Supports mesh routing
+* Works with global Internet standards
+* Highly scalable for sensor networks
+
+---
+
+## **Disadvantages**
+
+* Very limited bandwidth
+* High packet loss probability
+* Complex routing (RPL)
+* Processing overhead for 6LoWPAN/DTLS on small nodes
+
+---
+
+## **Examples**
+
+* Thread-based smart home devices
+* Environmental WSNs using 6LoWPAN + RPL
+* Industrial sensors using constrained mesh networks
+
+---
+
+## **Applications**
+
+* Smart homes
+* Smart agriculture
+* Industrial monitoring
+* Smart cities
+* Remote environmental sensing
+
+---
+
+### **Short Note (Points)**
+
+* Building blocks: **constrained nodes, low-power links, 6LoWPAN, RPL, UDP, CoAP/MQTT-SN, security (DTLS), gateway**.
+* Provide IPv6 communication for low-power IoT.
+* Enable scalable mesh networks for sensors and actuators.
