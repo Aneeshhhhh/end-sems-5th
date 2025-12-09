@@ -1,0 +1,56 @@
+## **Definition**
+
+Floyd’s Algorithm (Floyd–Warshall for shortest paths) is a dynamic programming method used to compute the **shortest distances between every pair of vertices** in a weighted graph (positive or negative weights, but no negative cycles).
+
+---
+
+## **Algorithm (Step-by-Step)**
+
+1. Start with the cost (weight) matrix `D`, where
+
+   * `D[i][j]` = weight of edge `i → j`
+   * `∞` if no direct edge exists
+   * `0` on the diagonal (`D[i][i] = 0`)
+2. For each vertex `k = 1 to n`, allow `k` to be an intermediate vertex in paths.
+3. For each pair `(i, j)`:
+
+   * Check if the path `i → k → j` is shorter than current `D[i][j]`.
+   * Update:
+     `D[i][j] = min( D[i][j], D[i][k] + D[k][j] )`
+4. After all iterations, `D` contains the shortest-path distances between all vertex pairs.
+
+---
+
+## **Pseudocode**
+
+```text
+Floyd(D, n):
+    for k = 1 to n:
+        for i = 1 to n:
+            for j = 1 to n:
+                D[i][j] = min(D[i][j], D[i][k] + D[k][j])
+
+    return D
+```
+
+---
+
+## **Time Complexity**
+
+```
+O(n³)
+```
+
+---
+
+## **Applications**
+
+* Computing all-pairs shortest paths in weighted graphs
+* Routing and navigation systems
+* Preprocessing for graph queries in networks
+* Finding minimum distances in dense graphs
+* Used in compiler design (control flow, basic block analysis)
+
+---
+
+If you want, I can prepare **Warshall**, **Floyd**, **LC Branch & Bound**, **Hamiltonian Path**, **Subset Sum**, etc., all in this exam-perfect structure.

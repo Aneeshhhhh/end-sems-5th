@@ -1,0 +1,52 @@
+Below is the **exam-style answer** in clean sections, ready to write as-is.
+
+---
+
+## **Definition**
+
+Warshall’s Algorithm is a dynamic programming method used to compute the **transitive closure** of a directed graph.
+It determines whether a path exists between every pair of vertices by progressively allowing intermediate vertices.
+
+---
+
+## **Algorithm (Step-by-Step)**
+
+1. Start with the adjacency matrix `A` of the graph.
+2. Initialize the reachability matrix `R` as `R = A`.
+3. For each vertex `k = 1 to n`, treat `k` as an intermediate vertex.
+4. For every pair of vertices `(i, j)`:
+
+   * If a path exists from `i → k` and from `k → j`, then a path exists from `i → j`.
+   * Update:
+     `R[i][j] = R[i][j] OR (R[i][k] AND R[k][j])`
+5. After all vertices `k` are considered, `R` represents the transitive closure of the graph.
+
+---
+
+## **Pseudocode**
+
+```text
+Warshall(A, n):
+    R = A
+
+    for k = 1 to n:
+        for i = 1 to n:
+            for j = 1 to n:
+                R[i][j] = R[i][j] OR (R[i][k] AND R[k][j])
+
+    return R
+```
+
+---
+
+## **Applications**
+
+* Computing reachability in directed graphs
+* Finding all possible paths in a network
+* Preprocessing step in graph algorithms for path queries
+* Determining closures in database dependency analysis
+* Useful in compiler design for control-flow and data-flow analysis
+
+---
+
+If you want this for **Floyd’s Algorithm**, **Hamiltonian Path**, **Subset Sum**, etc., I’ll format them identically.
