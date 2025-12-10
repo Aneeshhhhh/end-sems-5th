@@ -1,0 +1,53 @@
+Here are the **2-mark, crisp, exam-ready explanations** for each term.
+
+---
+
+## **1. Computational Complexity (2 marks)**
+
+Computational complexity is the study of how much **time** and **space** an algorithm requires as a function of the input size.
+It classifies algorithms based on their efficiency and helps compare how fast different algorithms grow as inputs become large.
+Complexity is usually expressed using **Big-O notation** (e.g., O(n), O(n²), O(2ⁿ)).
+
+---
+
+## **2. Decision Problems (2 marks)**
+
+A decision problem is a problem whose output is strictly **YES or NO**.
+These problems are used in complexity theory because they allow precise classification of difficulty (e.g., in P, NP, NP-Complete).
+Examples:
+
+* “Does a path exist between two nodes?”
+* “Is there a subset that sums to 20?”
+
+---
+
+## **3. Deterministic and Non-Deterministic Algorithms (2 marks)**
+
+### **Deterministic Algorithm:**
+
+An algorithm where the next step is uniquely determined by the current state.
+It produces the same output every time for a given input.
+Examples: Merge Sort, Dijkstra (without negative weights).
+
+### **Non-Deterministic Algorithm:**
+
+A theoretical model where the algorithm can **guess** a solution from many possibilities and then verify it in polynomial time.
+Used to define NP.
+E.g., non-deterministic sorting: guess permutation → check if sorted.
+
+---
+
+## **4. Complexity Classes (2 marks)**
+
+Complexity classes group problems based on the computational resources required to solve or verify them.
+Common classes include:
+
+* **P:** solvable in polynomial time
+* **NP:** verifiable in polynomial time
+* **NP-Complete:** hardest problems in NP
+* **NP-Hard:** at least as hard as NP problems
+  These classes help identify how difficult a problem is and whether efficient algorithms exist.
+
+---
+
+If you want, I can prepare a **5-mark or 10-mark** version of each concept too.

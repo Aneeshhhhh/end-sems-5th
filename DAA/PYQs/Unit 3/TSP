@@ -1,0 +1,49 @@
+Here is the **complete exam-ready answer** for **Travelling Salesman Problem (TSP)** with:
+
+* Definition
+* Advantages
+* Disadvantages
+* Applications
+
+All in clean copy-paste format.
+
+---
+
+## **Travelling Salesman Problem (TSP)**
+
+### **Definition**
+
+The Travelling Salesman Problem (TSP) is an optimization problem on a weighted graph where a salesman must start from a city, **visit every other city exactly once**, return to the starting city, and **minimize the total travel cost**.
+Any feasible tour corresponds to a **Hamiltonian cycle** in the graph.
+
+---
+
+## **Advantages**
+
+1. **Models many real-world routing problems** accurately.
+2. **Clear objective function** (minimize total distance or cost).
+3. Forms the basis for several optimization and AI algorithms.
+4. Helps evaluate and compare performance of heuristics, DP, and Branch & Bound.
+
+---
+
+## **Disadvantages**
+
+1. **NP-Hard**: exact solution becomes infeasible for large inputs.
+2. Computational cost grows **factorially** with number of cities.
+3. Requires **approximation or heuristics** for large datasets.
+4. Sensitive to changes in distances or input data.
+
+---
+
+## **Applications**
+
+1. **Route planning and logistics** (couriers, delivery vans, transportation).
+2. **Chip manufacturing / PCB drilling** (minimizing movement of drill heads).
+3. **DNA sequencing and genome assembly** (ordering fragments).
+4. **Manufacturing scheduling** (optimal sequence of tasks).
+5. **Robotics path planning** and autonomous vehicle routing.
+
+---
+
+If you want, I can create similar structured answers for Hamiltonian Path, DP, Greedy, NP-Hard, NP-Complete, Branch & Bound, etc.

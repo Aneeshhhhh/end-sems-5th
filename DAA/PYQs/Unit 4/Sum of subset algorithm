@@ -1,0 +1,35 @@
+## **Definition**
+
+Backtracking is a depth-first search technique in which we build a solution step by step and abandon (backtrack from) any partial solution that violates the required conditions.
+
+**Sum of Subset Problem:**
+Given a set of positive integers and a target value **M**, the task is to find all subsets whose sum is exactly **M**.
+
+---
+
+## **Algorithm to Find Sum of Subset Using Backtracking**
+
+1. Start with an empty subset and set `currentSum = 0`.
+2. At each index `k`, consider two choices:
+
+   * **Include** the element `w[k]` in the subset:
+
+     * Add its value to `currentSum`.
+     * If `currentSum == M`, record this subset as a solution.
+     * If `currentSum < M`, continue to the next element.
+   * **Exclude** the element `w[k]` and move to the next element without changing `currentSum`.
+3. If at any point `currentSum > M` or all elements are considered, **backtrack** (stop exploring that branch).
+4. Continue recursively exploring all include/exclude decisions until all valid subsets have been generated.
+
+---
+
+## **Applications**
+
+* Finding partitions of numbers
+* Resource allocation problems
+* Subset generation in combinatorial search
+* Exact sum checks in finance and cryptography
+
+---
+
+Copy-paste ready.

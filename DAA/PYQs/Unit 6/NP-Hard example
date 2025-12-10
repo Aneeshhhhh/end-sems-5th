@@ -1,0 +1,62 @@
+Here are **additional strong points** you can sprinkle into a 7–9 mark answer on **Why TSP (optimization) is NP-Hard**.
+Use 2–3 of these to push your answer to full marks.
+
+---
+
+# ⭐ **Extra Points You Can Add**
+
+### **4. Exponential Growth of Search Space**
+
+TSP has `(n−1)! / 2` possible tours even in the symmetric case.
+This **factorial growth** is a hallmark of NP-Hard problems with no known polynomial-time solutions.
+
+---
+
+### **5. Reduction From Hamiltonian Cycle**
+
+Hamiltonian Cycle (NP-Complete) reduces to TSP in polynomial time by:
+
+* Giving each existing edge weight 1
+* Giving each non-existing edge weight a large value
+  This shows TSP is **at least as hard** as an NP-Complete problem.
+
+---
+
+### **6. Optimization Problems Derived From NP-Complete Problems Are NP-Hard**
+
+Given that TSP’s decision version is NP-Complete, the **optimization** version becomes NP-Hard by definition (optimization ≥ decision).
+
+---
+
+### **7. No Known Polynomial Time Algorithm Exists**
+
+Despite decades of research, no polynomial solution has been discovered, reinforcing that TSP belongs to NP-Hard class.
+
+---
+
+### **8. NP-Hard Problems Are Not Necessarily in NP**
+
+Optimization TSP does not belong to NP because checking optimality is not polynomial.
+This aligns with NP-Hard’s definition: *“as hard as NP, but not necessarily in NP.”*
+
+---
+
+### **9. TSP Optimization Requires Global Knowledge**
+
+Checking a tour's optimality requires comparing against **every other possible path**, making local verification impossible.
+
+---
+
+### **10. Many Real-World Problems Reduce to TSP**
+
+Job scheduling, routing, DNA sequencing, manufacturing sequencing →
+Reductions show TSP’s central role as a **canonical NP-Hard problem**.
+
+---
+
+# ⭐ Use these in your answer
+
+Pick 2–3 depending on space.
+Together with your 3 core points, you’ll produce a **gold-standard answer** that examiners love.
+
+If you want, I can compile your final answer into a **perfect 9-mark polished version**.

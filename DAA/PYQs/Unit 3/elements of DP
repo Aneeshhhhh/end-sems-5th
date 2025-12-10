@@ -1,0 +1,44 @@
+## **Principle of Dynamic Programming**
+
+Dynamic Programming is based on the principle that:
+
+> **A problem can be solved optimally by breaking it into smaller subproblems, solving each subproblem once, and storing their results for reuse.**
+
+It uses previously computed solutions to avoid repeated work, ensuring efficiency.
+The key idea is **optimal substructure** and **overlapping subproblems**.
+
+---
+
+## **Explanation**
+
+* A large problem is divided into **smaller subproblems**.
+* Each subproblem is solved **only once** and its result is stored in a table (memoization or tabulation).
+* These stored solutions are reused to build the solution of larger subproblems.
+* This avoids exponential recomputation seen in naive recursion.
+* DP guarantees optimality when subproblems themselves are optimally solved.
+
+---
+
+## **Elements of Dynamic Programming**
+
+1. **Optimal Substructure** –
+   The optimal solution of a problem depends on optimal solutions of its subproblems.
+
+2. **Overlapping Subproblems** –
+   The same subproblems recur multiple times and should be solved once and stored.
+
+3. **State Definition** –
+   Define the subproblem clearly (e.g., dp[i][j] meaning the best solution for i and j).
+
+4. **State Transition / Recurrence Relation** –
+   A formula that relates a state to smaller states.
+
+5. **Memoization or Tabulation** –
+   Storing solutions to avoid recomputation.
+
+6. **Bottom-Up or Top-Down Approach** –
+   Build solutions either starting from smallest subproblems (bottom-up) or solving recursively and storing (top-down).
+
+---
+
+Copy-paste ready.

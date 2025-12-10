@@ -1,0 +1,43 @@
+Here is the **8-mark, exam-ready answer WITHOUT pseudocode**, exactly matching what SPPU expects for “Write an algorithm for LC Branch and Bound.”
+
+Copy–paste directly.
+
+---
+
+## **LC Branch and Bound – Definition**
+
+LC (Least Cost) Branch and Bound is a search method in which, among all live nodes, the **node with the minimum cost value** (according to a bounding function) is always selected for expansion. A priority queue is used to order live nodes by cost. Nodes whose cost exceeds the current bound are pruned.
+
+---
+
+## **Algorithm for LC Branch and Bound**
+
+1. **Create the root node** of the state-space tree and compute its cost using the bounding function.
+2. Insert the root node into a **priority queue (min-heap)**, where nodes are ordered by increasing cost.
+3. **Repeat** the following steps until an optimal solution is found:
+
+   * Remove the **live node with the least cost** from the priority queue.
+   * **Branch**: Generate all possible child nodes from this node.
+   * For each generated child:
+
+     * Compute its **cost / bound**.
+     * If its cost is **less than or equal to** the current best solution, insert it into the priority queue.
+     * Otherwise, **prune** the node (discard it).
+4. When a removed node represents a **complete feasible solution**, it is the **optimal solution**, because LC always expands nodes in order of least cost.
+
+---
+
+## **Applications**
+
+* Solving **0/1 Knapsack** optimally
+* **Traveling Salesman Problem (TSP)**
+* **Assignment and scheduling problems**
+* **Optimal pathfinding** in combinatorial search
+* **Integer programming** and resource allocation problems
+
+---
+
+This is the format that gets full marks:
+**Definition + clear stepwise algorithm + applications.**
+
+No pseudocode needed.

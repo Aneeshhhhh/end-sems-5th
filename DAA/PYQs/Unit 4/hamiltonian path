@@ -1,0 +1,49 @@
+## **Definition**
+
+A Hamiltonian Path is a path in a graph that visits **every vertex exactly once**. Backtracking is used to explore all possible vertex sequences and reject those that violate adjacency or repetition constraints.
+
+---
+
+## **Algorithm (Backtracking Method)**
+
+1. **Start with a path array** `path[1..n]` and place any starting vertex in `path[1]`.
+2. For each position `k` from 2 to `n`, try to place a vertex that:
+
+   * is **adjacent** to `path[k−1]`, and
+   * has **not been used** earlier in the path.
+3. If such a vertex exists, place it in `path[k]` and **recurse** for the next position.
+4. If no valid vertex can be placed, **backtrack** to the previous position and try a different vertex.
+5. If all vertices are placed (i.e., `k = n+1`), a **Hamiltonian Path** is found.
+6. If all possibilities are exhausted without filling all positions, **no Hamiltonian Path exists**.
+
+---
+
+## **Pseudocode**
+
+```text
+Hamiltonian_Path(G, path, k):
+    if k > n:
+        return TRUE
+
+    for each vertex v in G:
+        if v is adjacent to path[k-1] AND v not in path:
+            path[k] = v
+            if Hamiltonian_Path(G, path, k+1) == TRUE:
+                return TRUE
+            remove v from path   // backtrack
+
+    return FALSE
+```
+
+---
+
+## **Applications**
+
+* Routing and scheduling problems
+* DNA sequencing
+* Network topology design
+* Solving puzzles like Knight’s tour
+
+---
+
+Copy-paste ready.

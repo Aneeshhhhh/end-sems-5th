@@ -1,0 +1,64 @@
+## **Knapsack Using Backtracking — Definition**
+
+Backtracking explores the solution tree by deciding for each item whether to **include** or **exclude** it.
+Any partial solution whose weight exceeds the knapsack capacity **W** is immediately abandoned.
+
+---
+
+## **Algorithm for 0/1 Knapsack Using Backtracking**
+
+1. **Sort items** by profit/weight ratio (optional but commonly used).
+2. Start with an empty knapsack:
+
+   * `currentWeight = 0`
+   * `currentProfit = 0`
+   * `bestProfit = 0`
+3. At each item `k`, explore two possibilities:
+
+   * **Include item k**:
+
+     * Add its weight to `currentWeight`
+     * Add its profit to `currentProfit`
+     * If `currentWeight ≤ W`, continue to next item
+   * **Exclude item k**:
+
+     * Do not change weight or profit, move to next item
+4. If at any step `currentWeight > W`, **backtrack** from that branch.
+5. Update `bestProfit` whenever a leaf node (end of item list) gives a better feasible profit.
+6. Continue until all include/exclude combinations have been explored.
+
+---
+
+## **Pseudocode (Concise, Exam-Ready)**
+
+```text
+Knapsack_Backtrack(k):
+    if k > n:
+        if currentProfit > bestProfit:
+            bestProfit = currentProfit
+        return
+
+    // Include item k
+    if currentWeight + w[k] <= W:
+        currentWeight += w[k]
+        currentProfit += p[k]
+        Knapsack_Backtrack(k+1)
+        currentWeight -= w[k]
+        currentProfit -= p[k]
+
+    // Exclude item k
+    Knapsack_Backtrack(k+1)
+```
+
+---
+
+## **Applications**
+
+* Resource allocation
+* Investment selection
+* Load planning
+* Budget optimization
+
+---
+
+Copy-paste ready.
