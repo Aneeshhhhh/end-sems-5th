@@ -1,0 +1,42 @@
+**Graph coloring** is a constraint satisfaction problem where each vertex must be assigned a color such that **no two adjacent vertices share the same color**. Backtracking tries colors one by one for each vertex and rejects (prunes) any assignment that creates a conflict.
+
+---
+
+## **Algorithm (Backtracking)**
+
+```
+ColorGraph(v):
+1. If v > n:
+       print the color assignment
+       return
+
+2. For each color c from 1 to m:
+       if isSafe(v, c):
+            color[v] = c
+            ColorGraph(v + 1)
+            color[v] = 0   // backtrack
+```
+
+```
+isSafe(v, c):
+      return TRUE if no adjacent vertex of v has color c
+```
+
+---
+
+## **Example**
+
+Graph:
+Vertices = {1, 2, 3}
+Edges: (1–2), (2–3), (1–3)
+Colors available = 3
+
+* Assign V1 = Color 1
+* V2 cannot use Color 1 → assign Color 2
+* V3 cannot use Color 1 or 2 → assign Color 3
+
+A valid coloring is:
+
+```
+V1 = 1,  V2 = 2,  V3 = 3
+```

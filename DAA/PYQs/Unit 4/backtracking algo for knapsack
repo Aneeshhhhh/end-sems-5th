@@ -1,0 +1,112 @@
+Here is your **rating + exact fixes** to bring this to a **full 7/7 marks** answer.
+
+---
+
+# ⭐ **RATING: 6 / 10**
+
+You have **good intuition**, but for a 7-mark answer:
+
+* You must show **proper problem definition**
+* You must show a **clean backtracking algorithm (with bounding check)**
+* You must NOT mention DP or LCBB — irrelevant to the question
+* You must show the **recursive structure**
+* Your steps must reflect **include/exclude branching (xi = 0/1)**
+* Leaf nodes are not “recorded”; you stop at leaf nodes & update max
+* Backtracking doesn’t “guarantee optimality” unless bounding is correct
+
+Your current answer is *conceptually right*, but **not exam-correct**.
+
+---
+
+# ⭐ **Here is what is correct in your answer**
+
+✔ Good definition of Knapsack
+✔ Good definition of backtracking
+✔ Steps show DFS exploration
+✔ Pruning step is correct
+
+But:
+
+* You missed the **choice variable xi**
+* You missed the **structure of recursion**
+* You missed the **subset (include/exclude) logic**
+* You added unrelated algorithms (DP/BB)
+* “Record all valid leaf nodes” is incorrect — you only track the **bestProfit**
+* Backtracking **does NOT guarantee optimality** unless bounding is correct
+* You didn’t include the **bounding condition** (weight + remaining ≥ bestProfit)
+
+---
+
+# ⭐ **WHAT A PERFECT 7-MARK ANSWER SHOULD LOOK LIKE**
+
+Below is the corrected version you should write in the exam.
+
+---
+
+# ✅ **Corrected 7-Mark Answer (Use This)**
+
+**Knapsack Backtracking Algorithm**
+
+Knapsack is an optimization problem where we choose items such that
+**profit is maximized and total weight ≤ capacity**.
+
+Backtracking explores all possible subsets of items using a DFS manner and prunes branches that cannot lead to a better solution.
+
+---
+
+### **Algorithm**
+
+```
+1. Start from the root node (item 1) and set:
+      currentProfit = 0
+      currentWeight = 0
+      bestProfit = 0
+
+2. At each level i, make two choices:
+      xi = 1  → include item i
+      xi = 0  → exclude item i
+
+3. If xi = 1:
+      currentWeight += weight[i]
+      currentProfit += profit[i]
+
+4. If currentWeight > capacity:
+      prune this node and backtrack.
+
+5. If i = n:
+      if currentProfit > bestProfit:
+           bestProfit = currentProfit
+      return.
+
+6. Apply bounding condition:
+      if currentProfit + remainingProfit ≤ bestProfit:
+            prune branch.
+
+7. Recursively explore:
+      Knapsack(i+1, include)
+      Knapsack(i+1, exclude)
+
+8. Algorithm terminates when all feasible branches are explored.
+```
+
+---
+
+# ⭐ **Advantages**
+
+* Guarantees optimal solution after exploring all valid branches
+* Pruning reduces unnecessary exploration
+
+# ⭐ **Disadvantages**
+
+* Computationally expensive for large n
+* Still explores many branches even with pruning
+
+---
+
+# ⭐ **FINAL RATING AFTER FIXES: 10/10**
+
+If you rewrite your answer using the corrected version above, you will get **full marks**.
+
+---
+
+If you want, I can also produce a **diagram of the backtracking tree** (state space tree) for knapsack — which boosts marks.
