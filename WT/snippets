@@ -1,0 +1,241 @@
+Good. Then do it **intelligently**, not exhaustively.
+
+Assuming **you know ZERO code right now**, here’s the **minimum set of code templates/snippets** you need to memorize so that you can **paste-adapt** answers across **Unit 4 and Unit 5** and partially Unit 3.
+
+I’m not guessing — this is based on **PYQ repetition patterns**.
+
+---
+
+## UNIT-WISE: HOW MANY CODE TEMPLATES YOU ACTUALLY NEED
+
+### **Unit 3 (Angular / React / TS)**
+
+👉 Mostly **theory + diagrams**, **almost no compulsory coding**
+
+**Code templates needed:**
+**2 TOTAL**
+
+1. **TypeScript variables & types**
+
+```ts
+let age: number = 20;
+let name: string = "Aneesh";
+let isActive: boolean = true;
+```
+
+2. **React functional component (bare minimum)**
+
+```js
+function App() {
+  return <h1>Hello World</h1>;
+}
+export default App;
+```
+
+✅ This covers:
+
+* “Explain TS variables”
+* “Explain ReactJS / components”
+* “Explain hooks” (hooks can be explained in theory, snippet optional)
+
+📌 **Unit 3 total: 2 snippets**
+
+---
+
+### **Unit 4 (Node.js / Express / MongoDB)**
+
+👉 This is the **only unit where code matters**
+
+You do **NOT** need full apps.
+You need **generic skeletons**.
+
+**Code templates needed:**
+**5 TOTAL**
+
+#### 1. Node.js HTTP server
+
+```js
+const http = require('http');
+
+http.createServer((req, res) => {
+  res.write("Hello");
+  res.end();
+}).listen(3000);
+```
+
+Covers:
+
+* “Create HTTP server”
+* “Explain Node.js working”
+
+---
+
+#### 2. Express basic app
+
+```js
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send("Home");
+});
+
+app.listen(3000);
+```
+
+Covers:
+
+* Express basics
+* API explanation
+* Node vs Express
+
+---
+
+#### 3. Express Middleware example
+
+```js
+app.use((req, res, next) => {
+  console.log("Middleware");
+  next();
+});
+```
+
+Covers:
+
+* “What is middleware”
+* Types of middleware
+
+---
+
+#### 4. MongoDB connection (Mongoose)
+
+```js
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost:27017/test');
+```
+
+Covers:
+
+* MongoDB connection
+* Mongoose ODM explanation
+
+---
+
+#### 5. CRUD example (ANY one is enough)
+
+```js
+app.post('/add', (req, res) => {
+  res.send("Data Added");
+});
+```
+
+Covers:
+
+* CRUD operations
+* REST APIs
+* Mongo + Node integration (theory fills gaps)
+
+📌 **Unit 4 total: 5 snippets**
+
+---
+
+### **Unit 5 (jQuery Mobile)**
+
+👉 Very repetitive, very mechanical
+
+**Code templates needed:**
+**3 TOTAL**
+
+#### 1. Basic jQuery Mobile page structure
+
+```html
+<div data-role="page">
+  <div data-role="header"><h1>Header</h1></div>
+  <div data-role="content">Content</div>
+  <div data-role="footer"><h4>Footer</h4></div>
+</div>
+```
+
+Covers:
+
+* Page structure
+* Roles
+* Layout questions
+
+---
+
+#### 2. List view
+
+```html
+<ul data-role="listview">
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ul>
+```
+
+Covers:
+
+* Lists
+* Divided lists
+* UI components
+
+---
+
+#### 3. Any one widget (forms OR button)
+
+```html
+<input type="text" placeholder="Name">
+<button>Submit</button>
+```
+
+Covers:
+
+* Form components
+* Widgets
+* Mobile UI
+
+📌 **Unit 5 total: 3 snippets**
+
+---
+
+### **Unit 6 (AWS / Cloud)**
+
+👉 **ZERO code**
+
+Only:
+
+* Steps
+* Diagrams
+* Component lists
+
+📌 **Unit 6 total: 0 snippets**
+
+---
+
+## FINAL COUNT (THIS IS THE NUMBER YOU CARE ABOUT)
+
+| Unit      | Code Snippets Needed |
+| --------- | -------------------- |
+| Unit 3    | **2**                |
+| Unit 4    | **5**                |
+| Unit 5    | **3**                |
+| Unit 6    | **0**                |
+| **TOTAL** | **10 SNIPPETS**      |
+
+---
+
+## HARD TRUTH (IMPORTANT)
+
+* **10 short templates**
+* Each is **5–10 lines**
+* Learning more than this is **wasted effort**
+* Examiners **do not check runtime correctness**, only structure + intent
+
+If you want, next I can:
+
+* Compress these into **one single cheat sheet page**
+* Tell you **which snippets can be skipped safely** if time collapses
+* Convert them into **“write-anywhere” memory hooks**
+
+Say which one.
